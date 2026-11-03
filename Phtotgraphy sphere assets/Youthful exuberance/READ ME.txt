@@ -1,0 +1,25 @@
+YOUTHFUL EXUBERANCE — THE BRIGHTNESS OF BECOMING
+
+This nine-frame series is about the feeling of being fully present: curiosity before certainty, spontaneity, movement, and the small discoveries that make ordinary time feel expansive. "Youthful" describes an emotional register, not a physical ideal. The images should feel lived-in and expressive rather than forced into a standardised idea of youth.
+
+EDITORIAL PRESENTATION
+Collection title: Youthful Exuberance
+Subtitle: The Brightness of Becoming
+Format: Nine-scene photo essay
+Cover: SCENE 1_THE ALBUM COVER.png
+Sequence: Scene 01 to Scene 09
+
+SUGGESTED FRAME TITLES
+01 — The First Spark
+02 — The World Opens
+03 — A Little Unruliness
+04 — Between Heartbeats
+05 — The Rush of Being Here
+06 — Nothing Stays Still
+07 — A Day Without Edges
+08 — Bright Detours
+09 — Still Becoming
+
+Keep the photographs' original colour and atmosphere. Use an image-led sequence with varied scale and gentle transitions. Do not over-animate the work or apply a single preset to every frame. The full editorial statement and Framer content guidance are in Editorial Notes/02_YOUTHFUL_EXUBERANCE.md.
+
+Source filenames and image bytes are intentionally preserved. Confirm visual pairings before adding literal image descriptions or alt text.
