@@ -11,6 +11,7 @@ This repository is the source of truth for the current portfolio imagery. The or
 - [Youthful Exuberance](Editorial%20Notes/02_YOUTHFUL_EXUBERANCE.md) — the dedicated creative statement and sequence for the nine-scene photography series.
 - [Album and image title map](Editorial%20Notes/03_ALBUM_AND_IMAGE_TITLE_MAP.md) — proposed album, subfolder, and individual image display titles mapped to the canonical filenames.
 - [Standalone images](Editorial%20Notes/04_STANDALONE_IMAGES.md) — independent photographs that must remain visible as individual works.
+- [Film stills and posters](Editorial%20Notes/05_FILM_STILLS_AND_POSTERS.md) — refined film-project titles, all 45 film stills, and poster export handling.
 
 ## Asset archive
 
