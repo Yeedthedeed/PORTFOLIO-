@@ -1,0 +1,87 @@
+YOUTHFUL EXUBERANCE — BETWEEN US
+A monochrome study of gesture, proximity, and shared space
+
+ARTIST
+Salim Bakhouch
+
+COLLECTION TITLE
+Youthful Exuberance — Between Us
+
+SUBTITLE
+A monochrome study of gesture, proximity, and shared space.
+
+EDITORIAL STATEMENT
+
+Youthful Exuberance is a carefully composed black-and-white photographic sequence built around two figures and the visual language of their interaction. It explores gesture, expression, proximity, mirrored forms, and the shifting distance between two people.
+
+The energy of the series does not come from colour, spectacle, or exaggerated movement. It comes from the exchange between bodies, hands, faces, and the negative space that separates or connects them. A pair of profiles creates a visual counterpoint; hands become improvised frames; a turn of the head changes the direction of the composition; an arm crossing the foreground connects two separate planes within one image.
+
+The word “youthful” is used here as an emotional register rather than a physical ideal. The series is interested in spontaneity, curiosity, play, and the expressive freedom of communicating through gesture. It should not be presented as a statement about how young people should look. Its subject is the act of interaction and the photographic possibilities created by it.
+
+The monochrome treatment gives the sequence a coherent visual grammar. Light and shadow describe form; the open background gives gestures room to read; the close framings make small changes in expression and position significant. The photographs should retain their original tonal character. Do not colourise, heavily retouch, crop, or apply a uniform digital preset.
+
+SEQUENCE AND DISPLAY TITLES
+
+01 — Youthful Exuberance — Opening Frame
+Source: SCENE 1_THE ALBUM COVER.png
+Caption: The cover image for a nine-scene monochrome study of gesture, proximity, and shared space.
+
+02 — Near Contact
+Source: SCENE-2-.png
+Caption: Two faces approach across a narrow interval; the bright negative space between them becomes part of the composition.
+
+03 — Mirrored Gesture
+Source: SCENE-3-.png
+Caption: Two figures face one another with mirrored hand gestures, turning the space between them into a visual exchange.
+
+04 — A Frame Made by Hands
+Source: Scene-4-.png
+Caption: Raised fingers form an improvised frame around a partially concealed gaze.
+
+05 — The Face Between Fingers
+Source: SCENE-5-.png
+Caption: A frontal portrait uses symmetrical hand placement to create a playful graphic interruption across the face.
+
+06 — An Affectionate Gesture
+Source: Scene-6-.png
+Caption: One figure places a hand on the other's head as the two lean toward one another, creating a close, trusting gesture.
+
+07 — Back-to-Back
+Source: Scene-7-.png
+Caption: The two figures turn in opposing directions, creating a back-to-back arrangement and a clear division of attention.
+
+08 — Counterpoint in Space
+Source: Scene-8-.png
+Caption: Two turned profiles and raised arms create a vertical counterpoint against the open background.
+
+09 — A Shared Portrait
+Source: Scene-9-.png
+Caption: A close two-person portrait is layered by an arm crossing the foreground, connecting the figures within one frame.
+
+PRESENTATION
+
+Keep the nine photographs together as one numbered sequence. The album gallery must follow Scene 01 through Scene 09, regardless of the order in which individual frames appear in the sphere. Do not randomise the sequence.
+
+The sphere features three photographs:
+- Scene 01 — cover / opening entry
+- Scene 03 — Mirrored Gesture
+- Scene 09 — A Shared Portrait
+
+Selecting any of these three sphere entries opens the same Youthful Exuberance album, with the selected image retained as the initial context.
+
+The album introduction should show:
+- Title: Youthful Exuberance — Between Us
+- Subtitle: A monochrome study of gesture, proximity, and shared space.
+- Short description: A black-and-white photographic sequence exploring how gesture, expression, and the space between two figures can become a visual language.
+- Photograph count: 9
+- Cover: SCENE 1_THE ALBUM COVER.png
+
+LAYOUT AND TONE
+
+Use a measured, editorial layout. Let the white background and black-and-white photographs establish the series' visual identity. Vary image scale to create rhythm, but avoid an arbitrary collage. Give the strongest frames enough space to register. Transitions should be quiet and should not compete with the photographs.
+
+Keep the visual distinction of this album inside the wider Etherealism portfolio: the main filmmaker presentation can remain cinematic and restrained, while this sequence is presented as a direct, monochrome photographic essay.
+
+ASSET RULES
+
+Preserve all nine original source filenames and image files. Use the proposed display titles in the Framer CMS only. Do not use the poetic display titles as factual alt text; write alt text from each image's visible content. Keep the source image order, aspect ratio, and tonal treatment intact.
