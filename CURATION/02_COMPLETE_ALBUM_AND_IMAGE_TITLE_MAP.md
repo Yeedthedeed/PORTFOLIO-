@@ -1,254 +1,313 @@
-# Complete Photography Album & Image Title Map
-## All 81 source photographs — sphere and album-only items
+# Complete Photography Archive
+## Album and individual-photograph title map — Curatorial Edition 2.1
 
-**Source snapshot:** current `main` branch, `Phtotgraphy sphere assets/`  
-**Coverage:** 81 image files · 16 albums · 36 sphere selections · 45 album-only photographs
+**Current source inventory:** 81 original photographs  
+**Structure:** 16 albums · 36 sphere entries · 45 album-only photographs  
+**Canonical repository:** `Yeedthedeed/PORTFOLIO-` · `main` branch
 
-This document maps every existing image file to an album, editorial display title, and short supporting caption. All source filenames remain unchanged. Captions are editorial copy for the portfolio, not factual alt text; write image-specific alt text after visual inspection.
+This is the complete website-facing title and caption register. Every photograph has an individual display title and an individual caption. The source filename remains the canonical asset reference; only the website-facing title and caption are refined.
 
-## 1. Display folder and subfolder names
+## 1. Album and subfolder names
 
-| Existing source folder | Proposed display name |
+| Original source folder | Proposed display name |
 |---|---|
-| `Phtotgraphy sphere assets` | **Photography Archive** |
-| `Architectural Photography` | **Built in Stillness** |
-| `Black & white` | **Monochrome Studies** |
+| `Phtotgraphy sphere assets` | **The Photography Archive** |
+| `Architectural Photography` | **The Measure of Space** |
+| `Black & white` | **Silver / Shadow** |
 | `Black & white / Mermaid` | **Mermaid — A Fable in Silver** |
 | `Comertial shooting` | **Commercial Studies** |
-| `Comertial shooting / Cosmito shooting colored` | **Cosmito / Chromatic Edition** |
-| `Comertial shooting / Cosmito shooting B&W` | **Cosmito / Monochrome Edition** |
-| `Elring` | **Elring — Character & Craft** |
-| `Fitness` | **Melek — In Motion** |
-| `IYED` | **IYED — The Shape of Presence** |
-| `Lilith` | **Lilith — A Study in Presence** |
-| `Nighthawks` | **Nighthawks — After Hours** |
-| `Skate up` | **Skate Up — Open Sessions** |
-| `Skate up / Mael` | **Mael — Lines in Motion** |
-| `Skate up / Willy` | **Willy — Moonwalk & Descent** |
-| `Skate up / Yan` | **Yan — In the Air of the Moment** |
+| `Comertial shooting / Cosmito shooting colored` | **Cosmito — Chromatic Edition** |
+| `Comertial shooting / Cosmito shooting B&W` | **Cosmito — Monochrome Edition** |
+| `Elring` | **Elring — The Human Detail** |
+| `Fitness` | **Melek — A Study in Motion** |
+| `IYED` | **IYED — Notes on Presence** |
+| `Lilith` | **Lilith — In Her Own Light** |
+| `Nighthawks` | **Nighthawks — The City Thins** |
+| `Photography root images` | **Outside the Sequence** |
+| `Skate up` | **Skate Up — The Ground in Motion** |
+| `Skate up / Mael` | **Mael — A Different Gravity** |
+| `Skate up / Willy` | **Willy — Moonwalk / The Great Descent** |
+| `Skate up / Yan` | **Yan — Between Air and Ground** |
 | `Theatrical Photography` | **Theatre of Shadows** |
-| `Youthful exuberance` | **Youthful Exuberance — Between Us** |
+| `Youthful exuberance` | **Between Us — Youthful Exuberance** |
 
-The misspelling in the original `Phtotgraphy sphere assets` and `Comertial shooting` paths is intentionally preserved on disk. The corrected display names are used only in the interface and documentation.
+The original folder spelling is intentionally preserved on disk. The corrected display names are used in the website and documentation only.
 
 ## 2. Complete 81-image register
 
-### Built in Stillness — ARCH-01
+### The Measure of Space — ARCH-01
 
-A photographic study of built environments and visual rhythm, focusing on structure, proportion, and the way light gives a place its character.
+*Five architectural photographs on proportion, structure, and the passage of light.*
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| ARCH-001 | `The Album Cover.jpg` | **The Grammar of Place** | 01 | A companion photograph from the architectural collection, extending its study of built form and light. |
-| ARCH-002 | `LR-111.jpg` | **A Measured Horizon** | 02 | A companion photograph from the architectural collection, extending its study of built form and light. |
-| ARCH-003 | `LR-13.jpg` | **Order and Interval** | — | A companion photograph from the architectural collection, extending its study of built form and light. |
-| ARCH-004 | `LR-6.jpg` | **The Built Horizon** | — | A companion photograph from the architectural collection, extending its study of built form and light. |
-| ARCH-005 | `LR-8.jpg` | **Quiet Geometry** | — | A companion photograph from the architectural collection, extending its study of built form and light. |
+A study of the built environment as more than a subject to record. The sequence considers how space is organised, how structure directs the eye, and how light gives architecture its changing character.
 
-### Monochrome Studies — MONO-01
+**Recommended cover record:** `ARCH-001`
 
-A compact monochrome collection that explores tonal character and photographic presence. Mermaid remains a separate child album.
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| ARCH-001 | `The Album Cover.jpg` | 01 | **A Grammar of Distance** | An architectural photograph considered through the relationship between constructed space and the openness around it. |
+| ARCH-002 | `LR-111.jpg` | 02 | **A Place for Light** | Here, light is treated as an organising force—revealing the rhythm and proportion of the built environment. |
+| ARCH-003 | `LR-13.jpg` | — | **An Interval of Form** | A study in the pause between structure and space, where what is absent becomes part of the composition. |
+| ARCH-004 | `LR-6.jpg` | — | **The Built Horizon** | A frame that considers architecture at the point where the constructed world meets distance. |
+| ARCH-005 | `LR-8.jpg` | — | **What the Walls Hold** | A closing thought on the character of a place: its boundaries, its scale, and the atmosphere they create. |
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| MONO-001 | `1668461934421 (1).jpg` | **The Tonal Pause** | 03 | A monochrome photograph from the archive; retain the collection's separate album structure. |
-| MONO-002 | `DSC_0213.jpg` | **Shadow / Silver** | 04 | A monochrome photograph from the archive; retain the collection's separate album structure. |
+### Silver / Shadow — MONO-01
+
+*Two monochrome studies, pared back to tone and atmosphere.*
+
+A concise monochrome pairing that places the tonal language of the photograph at the centre. The nested Mermaid series retains its own identity within the wider collection.
+
+**Recommended cover record:** `MONO-001`
+
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| MONO-001 | `1668461934421 (1).jpg` | 03 | **A World in Silver** | The monochrome image is reduced to its essentials: tone, contrast, and the quiet authority of black and white. |
+| MONO-002 | `DSC_0213.jpg` | 04 | **Where the Shadow Settles** | A companion study in tonal weight, extending the parent collection's restrained language without repeating its first note. |
 
 ### Mermaid — A Fable in Silver — MER-01
 
-A distinct nested monochrome sequence; retain its own cover and companion frame.
+*A two-frame monochrome series nested within Silver / Shadow.*
 
-**Parent collection:** Monochrome Studies.
+A self-contained visual fable within the monochrome archive. The title is deliberately left open: the two photographs should suggest a world without having a story imposed on them.
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| MER-001 | `album cover 5 .JPG` | **Mermaid** | 05 | A monochrome photograph from the archive; retain the collection's separate album structure. |
-| MER-002 | `LR-17.JPG` | **The Mermaid's Counterpoint** | 06 | A monochrome photograph from the archive; retain the collection's separate album structure. |
+**Parent album:** Silver / Shadow.
 
-### Cosmito — Light, Form & Finish — COS-01
+**Recommended cover record:** `MER-001`
 
-One commercial campaign with two parallel photographic editions: colour (8 files) and monochrome (6 files). Preserve the editions as child groupings within one album.
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| MER-001 | `album cover 5 .JPG` | 05 | **Mermaid — The First Enchantment** | The opening image of a small photographic fable, inviting the viewer into the Mermaid sequence without explaining its mystery. |
+| MER-002 | `LR-17.JPG` | 06 | **The Myth, Reframed** | A second image that leaves the Mermaid story unresolved; its strength lies in suggestion rather than illustration. |
 
-**Edition structure:** one album containing the Chromatic Edition (8 files) and Monochrome Edition (6 files).
+### Cosmito — The Surface of Light — COS-01
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| COS-001 | `tHE ALBUM COVER +_DSC8919-2.jpg` | **Cosmito — Chromatic Opening** | 07 | A colour-edition frame from the unified Cosmito commercial campaign. |
-| COS-002 | `_DSC8884.jpg` | **Cosmito — Chromatic Study 01** | 08 | A colour-edition frame from the unified Cosmito commercial campaign. |
-| COS-003 | `_DSC8889-2.jpg` | **Cosmito — Chromatic Study 02** | — | A colour-edition frame from the unified Cosmito commercial campaign. |
-| COS-004 | `_DSC8892-2.jpg` | **Cosmito — Chromatic Study 03** | 09 | A colour-edition frame from the unified Cosmito commercial campaign. |
-| COS-005 | `_DSC8897.jpg` | **Cosmito — Chromatic Study 04** | — | A colour-edition frame from the unified Cosmito commercial campaign. |
-| COS-006 | `_DSC8899-2.jpg` | **Cosmito — Chromatic Study 05** | — | A colour-edition frame from the unified Cosmito commercial campaign. |
-| COS-007 | `_DSC8901-2.jpg` | **Cosmito — Chromatic Study 06** | — | A colour-edition frame from the unified Cosmito commercial campaign. |
-| COS-008 | `_DSC8916-4.jpg` | **Cosmito — Chromatic Study 07** | — | A colour-edition frame from the unified Cosmito commercial campaign. |
-| COS-009 | `_DSC8889-3.jpg` | **Cosmito — Monochrome Study 01** | — | A monochrome-edition frame from the unified Cosmito commercial campaign. |
-| COS-010 | `_DSC8897-2.jpg` | **Cosmito — Monochrome Study 02** | — | A monochrome-edition frame from the unified Cosmito commercial campaign. |
-| COS-011 | `_DSC8901.jpg` | **Cosmito — Monochrome Study 03** | — | A monochrome-edition frame from the unified Cosmito commercial campaign. |
-| COS-012 | `_DSC8911-2.jpg` | **Cosmito — Monochrome Study 04** | 10 | A monochrome-edition frame from the unified Cosmito commercial campaign. |
-| COS-013 | `_DSC8918-4.jpg` | **Cosmito — Monochrome Study 05** | — | A monochrome-edition frame from the unified Cosmito commercial campaign. |
-| COS-014 | `_DSC8987.jpg` | **Cosmito — Monochrome Study 06** | — | A monochrome-edition frame from the unified Cosmito commercial campaign. |
+*One commercial commission, two distinct visual treatments.*
 
-### Elring — Character & Craft — ELR-01
+A unified Cosmito campaign presented through two editions: colour and monochrome. The separation is visual, not structural. Both treatments belong to the same commission and should be browsed as one album, with the edition label making the tonal shift clear.
 
-A project-led photographic collection, retaining its cover, individual studies, and supplied MH portrait reference.
+**Edition structure:** Chromatic Edition (8 photographs) and Monochrome Edition (6 photographs). Both remain within one Cosmito album.
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| ELR-001 | `album cover 1 .jpg` | **Elring — Opening Frame** | 11 | A photograph from the Elring project folder, preserved in the complete album sequence. |
-| ELR-002 | `french painter MH.jpg` | **MH — The Painter's Portrait** | 12 | A photograph from the Elring project folder, preserved in the complete album sequence. |
-| ELR-003 | `DSC_0054.jpg` | **Elring — Character Study 01** | — | A photograph from the Elring project folder, preserved in the complete album sequence. |
-| ELR-004 | `DSC_0058.jpg` | **Elring — Character Study 02** | — | A photograph from the Elring project folder, preserved in the complete album sequence. |
-| ELR-005 | `DSC_0062.jpg` | **Elring — Character Study 03** | — | A photograph from the Elring project folder, preserved in the complete album sequence. |
+**Recommended cover record:** `COS-001`
 
-### Melek — In Motion — FIT-01
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| COS-001 | `tHE ALBUM COVER +_DSC8919-2.jpg` | 07 | **The Campaign in Colour** | The chromatic edition introduces the visual identity of the Cosmito commission and sets the terms for the images that follow. |
+| COS-002 | `_DSC8884.jpg` | 08 | **Hue, Held** | A colour-edition photograph that contributes to the campaign's wider visual language; colour is treated as structure, not ornament. |
+| COS-003 | `_DSC8889-2.jpg` | — | **A Measured Palette** | A further chromatic interpretation of the Cosmito brief, where the palette becomes part of the photograph's identity. |
+| COS-004 | `_DSC8892-2.jpg` | 09 | **The Chromatic Accent** | An image from the colour edition that adds another register to the campaign's considered presentation. |
+| COS-005 | `_DSC8897.jpg` | — | **Colour as Character** | A colour-edition frame that belongs to the same visual conversation while retaining its own place in the series. |
+| COS-006 | `_DSC8899-2.jpg` | — | **A Brighter Register** | The campaign moves into another chromatic note; the title marks a change in register without inventing a specific subject. |
+| COS-007 | `_DSC8901-2.jpg` | — | **The Final Hue** | A late frame in the colour sequence, preserving the edition's original order and visual continuity. |
+| COS-008 | `_DSC8916-4.jpg` | — | **Chromatic Afterword** | The closing colour-edition photograph acts as the campaign's final note before the monochrome interpretation. |
+| COS-009 | `_DSC8889-3.jpg` | — | **Reduced to Form** | The monochrome edition begins by returning the same commercial commission to shape, tone, and visual economy. |
+| COS-010 | `_DSC8897-2.jpg` | — | **Tonal Geometry** | A second black-and-white interpretation, extending the campaign through a more reduced tonal vocabulary. |
+| COS-011 | `_DSC8901.jpg` | — | **The Monochrome Argument** | This edition makes contrast part of the campaign's identity rather than a secondary treatment. |
+| COS-012 | `_DSC8911-2.jpg` | 10 | **Contrast, in Balance** | A further monochrome frame, adding a measured counterpoint to the colour sequence. |
+| COS-013 | `_DSC8918-4.jpg` | — | **Surface / Tone** | The image belongs to the quieter end of the monochrome edit, where tonal relationships carry the visual emphasis. |
+| COS-014 | `_DSC8987.jpg` | — | **The Last Monochrome** | The closing photograph of the black-and-white edition completes the campaign's second visual reading. |
 
-A compact fitness and movement-oriented photographic set.
+### Elring — The Human Detail — ELR-01
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| FIT-001 | `album cover 2.jpg` | **Melek — In Motion** | 13 | A movement-oriented photograph from the Melek set; keep the original image and framing unchanged. |
-| FIT-002 | `DSC_0035 - body flex melek pos 1.jpg` | **Melek — Gesture Study** | — | A movement-oriented photograph from the Melek set; keep the original image and framing unchanged. |
+*A project collection with a portrait at its centre.*
 
-### IYED — The Shape of Presence — IYD-01
+A compact Elring collection that brings the project's photographs and the separately named MH painter portrait into one editorial sequence. The title balances the project's identity with the human point of view already present in the folder.
 
-A subject-led six-image portrait sequence.
+**Recommended cover record:** `ELR-001`
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| IYD-001 | `album cover 3.png` | **IYED — Opening Portrait** | 14 | A frame from the IYED portrait sequence, retained in the complete album gallery. |
-| IYD-002 | `DSC02454.png` | **IYED — Portrait Study 01** | — | A frame from the IYED portrait sequence, retained in the complete album gallery. |
-| IYD-003 | `DSC02463.png` | **IYED — Portrait Study 02** | — | A frame from the IYED portrait sequence, retained in the complete album gallery. |
-| IYD-004 | `DSC02464.png` | **IYED — Portrait Study 03** | — | A frame from the IYED portrait sequence, retained in the complete album gallery. |
-| IYD-005 | `DSC02474.png` | **A Moment in Between** | 15 | A frame from the IYED portrait sequence, retained in the complete album gallery. |
-| IYD-006 | `DSC02499.png` | **IYED — Portrait Study 05** | — | A frame from the IYED portrait sequence, retained in the complete album gallery. |
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| ELR-001 | `album cover 1 .jpg` | 11 | **Elring — First Impression** | The opening image gives the Elring collection its first visual point of entry and establishes the project's photographic register. |
+| ELR-002 | `french painter MH.jpg` | 12 | **MH — The Painter** | The folder's separately named portrait remains a distinct work. The initials are retained because no fuller verified credit is supplied. |
+| ELR-003 | `DSC_0054.jpg` | — | **A Human Detail** | This photograph widens the Elring sequence beyond its anchor portrait, preserving the project's identity as a complete body of work. |
+| ELR-004 | `DSC_0058.jpg` | — | **The Art of Attention** | A quieter chapter within the Elring set, allowing the collection to breathe between its more identifiable images. |
+| ELR-005 | `DSC_0062.jpg` | — | **Elring — Final Impression** | The final image returns the viewer to the project's central identity without forcing a narrative resolution. |
 
-### Lilith — A Study in Presence — LIL-01
+### Melek — A Study in Motion — FIT-01
 
-A distinct four-image portrait collection.
+*A two-image portrait and movement series.*
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| LIL-001 | `album cover 4.jpg` | **Lilith — Opening Portrait** | 16 | A companion photograph from the Lilith series, retained in its original sequence. |
-| LIL-002 | `DSC_0160_1.jpg` | **Lilith — Portrait Study 01** | — | A companion photograph from the Lilith series, retained in its original sequence. |
-| LIL-003 | `DSC_0173_1copy.jpg` | **Lilith — A Different Light** | 17 | A companion photograph from the Lilith series, retained in its original sequence. |
-| LIL-004 | `DSC_0182_1.jpg` | **Lilith — Portrait Study 03** | — | A companion photograph from the Lilith series, retained in its original sequence. |
+A focused two-image study built around Melek and the language of movement. Keep the presentation direct and photograph-led; the writing should describe the visual study, not make claims about physical ideals or performance.
 
-### Nighthawks — After Hours — NHT-01
+**Recommended cover record:** `FIT-001`
 
-A nocturnal photographic sequence; keep location and date unassigned unless verified.
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| FIT-001 | `album cover 2.jpg` | 13 | **Melek — The Opening Gesture** | The cover image introduces the two-photograph movement study and establishes the album's subject-led point of view. |
+| FIT-002 | `DSC_0035 - body flex melek pos 1.jpg` | — | **Motion, Made Visible** | The companion photograph shifts attention from a single pose to the expressive language of movement itself. |
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| NHT-001 | `LR-2.JPG` | **Nighthawks — Opening Study** | 18 | A frame from the Nighthawks nocturnal series; location and date remain unassigned until verified. |
-| NHT-002 | `LR-3.JPG` | **Nighthawks — City Interval** | — | A frame from the Nighthawks nocturnal series; location and date remain unassigned until verified. |
-| NHT-003 | `LR-5.JPG` | **The Last Window** | 19 | A frame from the Nighthawks nocturnal series; location and date remain unassigned until verified. |
-| NHT-004 | `LR-6.JPG` | **Night Passage** | 20 | A frame from the Nighthawks nocturnal series; location and date remain unassigned until verified. |
+### IYED — Notes on Presence — IYD-01
 
-### Independent Works — Loose Frames — IND-01
+*A six-frame portrait sequence.*
 
-Four images at the photography root, presented as intentional standalone works rather than unsorted leftovers.
+A dedicated portrait album that unfolds through six photographs. The title gives the series a quiet editorial identity without pretending to explain the subject in advance; the photographs remain responsible for the character of the collection.
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| IND-001 | `Portals.png` | **Portals** | 21 | An independent work retained under its original title and presented outside the named album series. |
-| IND-002 | `The Uprising.png` | **The Uprising** | 22 | An independent work retained under its original title and presented outside the named album series. |
-| IND-003 | `Untitled-2.jpg` | **Untitled Work 01** | — | An intentionally untitled independent photograph; preserve the author's untitled status in the display copy. |
-| IND-004 | `Untitled-3.jpg` | **Untitled Work 02** | — | An intentionally untitled independent photograph; preserve the author's untitled status in the display copy. |
+**Recommended cover record:** `IYD-001`
 
-### Skate Up — Open Sessions — SKT-01
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| IYD-001 | `album cover 3.png` | 14 | **IYED — First Encounter** | The cover portrait opens the six-frame sequence, introducing the collection without deciding in advance how the subject should be read. |
+| IYD-002 | `DSC02454.png` | — | **A Portrait, Unscripted** | A supporting image in the IYED series, offering another encounter with the subject beyond the album's first impression. |
+| IYD-003 | `DSC02463.png` | — | **The Interval of a Look** | A portrait framed as a moment of attention; the title gives the image room without assigning it an invented story. |
+| IYD-004 | `DSC02464.png` | — | **A Different Register** | This frame shifts the visual tone of the IYED sequence while remaining within the same portrait-led conversation. |
+| IYD-005 | `DSC02474.png` | 15 | **A Moment in Between** | A pause within the series, where the space between one expression and the next becomes its own subject. |
+| IYD-006 | `DSC02499.png` | — | **The Last Word is a Look** | The closing portrait leaves the series open, allowing the final image to remain an encounter rather than a conclusion. |
 
-The parent-level Skate Up set. Mael, Willy, and Yan remain separate nested subject albums.
+### Lilith — In Her Own Light — LIL-01
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| SKT-001 | `the album cover.JPG` | **Skate Up — Open Sessions** | 23 | A frame from Skate Up — Open Sessions; preserve its place within the original Skate Up grouping. |
-| SKT-002 | `LR-10.JPG` | **Skate Up — Open Session 01** | 24 | A frame from Skate Up — Open Sessions; preserve its place within the original Skate Up grouping. |
-| SKT-003 | `LR-15.JPG` | **Skate Up — Open Session 02** | — | A frame from Skate Up — Open Sessions; preserve its place within the original Skate Up grouping. |
-| SKT-004 | `LR-9.JPG` | **Skate Up — Open Session 03** | — | A frame from Skate Up — Open Sessions; preserve its place within the original Skate Up grouping. |
-| SKT-005 | `LR-HIGH JPEG SAV-66.JPG` | **Skate Up — Open Session 04** | — | A frame from Skate Up — Open Sessions; preserve its place within the original Skate Up grouping. |
+*A four-image portrait series.*
 
-### Mael — Lines in Motion — MAE-01
+A self-contained portrait sequence with its own cover and three supporting images. The title is intimate without imposing a story on the subject. Present the frames as a considered series, not as interchangeable portrait variations.
 
-A six-frame subject-led sub-album nested within Skate Up.
+**Recommended cover record:** `LIL-001`
 
-**Parent collection:** Skate Up — Open Sessions.
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| LIL-001 | `album cover 4.jpg` | 16 | **Lilith — The Introduction** | The opening portrait establishes the four-image series and gives the subject the first word. |
+| LIL-002 | `DSC_0160_1.jpg` | — | **The Unscripted Frame** | A companion portrait that adds a second register to Lilith's sequence without forcing a narrative onto the subject. |
+| LIL-003 | `DSC_0173_1copy.jpg` | 17 | **A Different Kind of Stillness** | A further image in the collection, giving the sequence a distinct visual beat beyond its opening portrait. |
+| LIL-004 | `DSC_0182_1.jpg` | — | **The Closing Look** | The final photograph returns attention to the subject, allowing the short series to end with presence rather than explanation. |
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| MAE-001 | `LR-17.JPG` | **Mael — Flight** | 25 | A frame from Mael — Lines in Motion; preserve its place within the original Skate Up grouping. |
-| MAE-002 | `LR-60.JPG` | **Mael — Motion Study 02** | — | A frame from Mael — Lines in Motion; preserve its place within the original Skate Up grouping. |
-| MAE-003 | `LR-61.JPG` | **Mael — Motion Study 03** | — | A frame from Mael — Lines in Motion; preserve its place within the original Skate Up grouping. |
-| MAE-004 | `LR-62.JPG` | **Mael — Second Perspective** | 26 | A frame from Mael — Lines in Motion; preserve its place within the original Skate Up grouping. |
-| MAE-005 | `LR-63.JPG` | **Mael — Motion Study 05** | — | A frame from Mael — Lines in Motion; preserve its place within the original Skate Up grouping. |
-| MAE-006 | `LR-67.JPG` | **Mael — Motion Study 06** | — | A frame from Mael — Lines in Motion; preserve its place within the original Skate Up grouping. |
+### Nighthawks — The City Thins — NHT-01
 
-### Willy — Moonwalk & Descent — WIL-01
+*Four nocturnal frames from the hours beyond the rush.*
 
-A six-frame sub-album with its own named cover and a frame titled The Great Descent.
+A night-photography sequence shaped around the changing atmosphere of the city after dark. The album should feel suspended and observant rather than overtly noir; let the actual images determine how much narrative the viewer brings to them.
 
-**Parent collection:** Skate Up — Open Sessions.
+**Recommended cover record:** `NHT-001`
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| WIL-001 | `moonwalk-the album cover.JPG` | **Willy — Moonwalk** | 27 | A frame from Willy — Moonwalk & Descent; preserve its place within the original Skate Up grouping. |
-| WIL-002 | `the gret descend_2__.jpg` | **The Great Descent** | 28 | A frame from Willy — Moonwalk & Descent; preserve its place within the original Skate Up grouping. |
-| WIL-003 | `LR-62_3_.jpg` | **Willy — Motion Study 01** | — | A frame from Willy — Moonwalk & Descent; preserve its place within the original Skate Up grouping. |
-| WIL-004 | `LR-79.JPG` | **Willy — Motion Study 02** | — | A frame from Willy — Moonwalk & Descent; preserve its place within the original Skate Up grouping. |
-| WIL-005 | `LR-80.1..jpg` | **Willy — Motion Study 03** | — | A frame from Willy — Moonwalk & Descent; preserve its place within the original Skate Up grouping. |
-| WIL-006 | `LR-82.JPG` | **Willy — Motion Study 04** | — | A frame from Willy — Moonwalk & Descent; preserve its place within the original Skate Up grouping. |
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| NHT-001 | `LR-2.JPG` | 18 | **After the Rush** | The opening image enters the nocturnal world of Nighthawks after the city's daytime rhythm has receded. |
+| NHT-002 | `LR-3.JPG` | — | **An Hour Between Hours** | A night photograph held in the interval when the familiar pace of the city gives way to another atmosphere. |
+| NHT-003 | `LR-5.JPG` | 19 | **The Last Window** | A strong existing title retained for its directness; it gives this selected frame a memorable place in the night sequence. |
+| NHT-004 | `LR-6.JPG` | 20 | **Night, in Passing** | A closing passage through the Nighthawks collection, leaving the city and its atmosphere deliberately unresolved. |
 
-### Yan — In the Air of the Moment — YAN-01
+### Outside the Sequence — IND-01
 
-A four-frame subject-led sub-album nested within Skate Up.
+*Four independent photographs, each allowed to stand alone.*
 
-**Parent collection:** Skate Up — Open Sessions.
+These four images sit outside the named album folders and should remain visible as an intentional collection of independent works. The album is a frame for their independence, not an invented common subject. Preserve the original titles Portals and The Uprising, and retain the untitled status of the other two works.
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| YAN-001 | `1.JPG` | **Yan — First Passage** | 29 | A frame from Yan — In the Air of the Moment; preserve its place within the original Skate Up grouping. |
-| YAN-002 | `2.JPG` | **Yan — Study 02** | — | A frame from Yan — In the Air of the Moment; preserve its place within the original Skate Up grouping. |
-| YAN-003 | `3.png` | **Yan — Study 03** | 30 | A frame from Yan — In the Air of the Moment; preserve its place within the original Skate Up grouping. |
-| YAN-004 | `4.JPG` | **Yan — Study 04** | — | A frame from Yan — In the Air of the Moment; preserve its place within the original Skate Up grouping. |
+**Recommended cover record:** `IND-001`
+
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| IND-001 | `Portals.png` | 21 | **Portals** | The supplied title is retained. Its independence is part of the work's identity; no unsupported project story is added. |
+| IND-002 | `The Uprising.png` | 22 | **The Uprising** | The original title remains intact, allowing the photograph to stand on its own terms within the independent-works album. |
+| IND-003 | `Untitled-2.jpg` | — | **Untitled I** | The work remains untitled. The Roman numeral is only a discreet gallery distinction, not a replacement artwork title. |
+| IND-004 | `Untitled-3.jpg` | — | **Untitled II** | The second untitled work is preserved as such; the label distinguishes it in the interface without inventing a subject. |
+
+### Skate Up — The Ground in Motion — SKT-01
+
+*The parent collection and the three subject-led chapters beneath it.*
+
+The parent-level Skate Up photographs establish the wider series. Mael, Willy, and Yan remain separate child albums, each with its own sequence and identity. Do not merge their images into a single undifferentiated skate gallery.
+
+**Recommended cover record:** `SKT-001`
+
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| SKT-001 | `the album cover.JPG` | 23 | **Skate Up — Open Sessions** | The cover establishes the parent-level Skate Up archive, separate from the three named subject chapters. |
+| SKT-002 | `LR-10.JPG` | 24 | **The First Push** | A selected photograph from the parent Skate Up folder, kept outside the Mael, Willy, and Yan sub-albums. |
+| SKT-003 | `LR-15.JPG` | — | **A Turn in the Sequence** | This parent-level frame adds a new beat to the wider session without being assigned to an individual skater's album. |
+| SKT-004 | `LR-9.JPG` | — | **Concrete Rhythm** | A further frame from the main Skate Up collection, carrying the visual cadence of the wider series. |
+| SKT-005 | `LR-HIGH JPEG SAV-66.JPG` | — | **The Session Continues** | The final parent-level image keeps the main Skate Up album distinct from its nested subject collections. |
+
+### Mael — A Different Gravity — MAE-01
+
+*A six-frame subject series within Skate Up.*
+
+A dedicated Mael sequence within the wider Skate Up archive. Its title suggests the suspended instant and altered sense of weight that make skate photography compelling, without assigning a specific trick or action to an unseen frame.
+
+**Parent album:** Skate Up — The Ground in Motion.
+
+**Recommended cover record:** `MAE-001`
+
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| MAE-001 | `LR-17.JPG` | 25 | **The Suspended Instant** | A selected frame from Mael's dedicated series; the title evokes the decisive pause without naming an unverified trick. |
+| MAE-002 | `LR-60.JPG` | — | **The Instant Before** | A second Mael photograph, named for the anticipation that gives movement photography its tension. |
+| MAE-003 | `LR-61.JPG` | — | **A Line Through Space** | A frame from Mael's sequence that gives the series a visual thread rather than a literal play-by-play. |
+| MAE-004 | `LR-62.JPG` | 26 | **The Second Landing** | A companion photograph from Mael's album, with navigation kept inside this six-image sequence. |
+| MAE-005 | `LR-63.JPG` | — | **Held in Motion** | A further image in the Mael series, centred on the tension between movement and the decisive instant. |
+| MAE-006 | `LR-67.JPG` | — | **After the Arc** | The closing Mael photograph completes this subject-led chapter within the wider Skate Up archive. |
+
+### Willy — Moonwalk / The Great Descent — WIL-01
+
+*A six-frame sequence with two named anchor images.*
+
+Willy's folder already contains two strong pieces of language: Moonwalk and The Great Descent. The album title brings them together as the two poles of a single movement-led sequence. Preserve both names as key moments within the gallery.
+
+**Parent album:** Skate Up — The Ground in Motion.
+
+**Recommended cover record:** `WIL-001`
+
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| WIL-001 | `moonwalk-the album cover.JPG` | 27 | **Willy — Moonwalk** | The distinctive source title is retained as the anchor image of Willy's dedicated Skate Up sequence. |
+| WIL-002 | `the gret descend_2__.jpg` | 28 | **The Great Descent** | The original working title is corrected for display while the source filename stays unchanged; it is the second named anchor in the sequence. |
+| WIL-003 | `LR-62_3_.jpg` | — | **An Arc of Momentum** | A supporting image in Willy's album, extending the movement-led language established by Moonwalk. |
+| WIL-004 | `LR-79.JPG` | — | **Gravity, Interrupted** | A further Willy frame, titled to give it an independent identity within the six-image sequence. |
+| WIL-005 | `LR-80.1..jpg` | — | **The Long Approach** | A supporting photograph that keeps the rhythm of Willy's sequence moving between its two named anchor images. |
+| WIL-006 | `LR-82.JPG` | — | **The Aftermotion** | The final frame in Willy's series, completing the movement-led chapter without leaving the album's own visual world. |
+
+### Yan — Between Air and Ground — YAN-01
+
+*A four-frame subject series within Skate Up.*
+
+A four-image Yan sequence nested inside Skate Up. The title holds the tension that gives skate photography its visual charge—the instant between departure and return—without prescribing what each frame must depict.
+
+**Parent album:** Skate Up — The Ground in Motion.
+
+**Recommended cover record:** `YAN-001`
+
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| YAN-001 | `1.JPG` | 29 | **Yan — First Passage** | The first numbered image introduces Yan's four-frame subject series within the Skate Up archive. |
+| YAN-002 | `2.JPG` | — | **A Change of Direction** | The second photograph continues the numbered sequence while receiving its own individual title. |
+| YAN-003 | `3.png` | 30 | **Suspended Between** | A selected frame from Yan's collection, named for the interval that makes movement photography compelling. |
+| YAN-004 | `4.JPG` | — | **The Return Path** | The final numbered photograph completes Yan's self-contained sub-album. |
 
 ### Theatre of Shadows — THR-01
 
-A three-image theatrical collection retaining its original working titles.
+*Three theatrical images, held between character and stage.*
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| THR-001 | `Revelation.JPG` | **Revelation** | 31 | A theatrical image retained within the three-frame performance and stage-photography collection. |
-| THR-002 | `Stage Of Shadows.JPG` | **Stage of Shadows** | 32 | A theatrical image retained within the three-frame performance and stage-photography collection. |
-| THR-003 | `the witch.png` | **The Witch** | 33 | A theatrical image retained within the three-frame performance and stage-photography collection. |
+A compact theatrical triptych. Retain Revelation, Stage of Shadows, and The Witch as the individual image titles; the album title supplies a shared atmosphere without flattening their different identities.
 
-### Youthful Exuberance — Between Us — YEX-01
+**Recommended cover record:** `THR-001`
 
-A composed black-and-white sequence about gesture, proximity, mirrored forms, and shared space.
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| THR-001 | `Revelation.JPG` | 31 | **Revelation** | The supplied title is retained: concise, declarative, and strong enough to stand without embellishment. |
+| THR-002 | `Stage Of Shadows.JPG` | 32 | **Stage of Shadows** | The original title is retained with corrected display capitalisation, preserving its theatrical identity. |
+| THR-003 | `the witch.png` | 33 | **The Witch** | The supplied title remains untouched; its directness gives the theatrical triptych a memorable final character. |
 
-| Photo ID | Original filename | Proposed display title | Sphere | Caption |
-|---|---|---|:---:|---|
-| YEX-001 | `SCENE 1_THE ALBUM COVER.png` | **Youthful Exuberance — Opening Frame** | 34 | The cover image for a nine-scene monochrome study of gesture, proximity, and shared space. |
-| YEX-002 | `SCENE-2-.png` | **Near Contact** | — | Two faces approach across a narrow interval; the bright negative space between them becomes part of the composition. |
-| YEX-003 | `SCENE-3-.png` | **Mirrored Gesture** | 35 | Two figures face one another with mirrored hand gestures, turning the space between them into a visual exchange. |
-| YEX-004 | `Scene-4-.png` | **A Frame Made by Hands** | — | Raised fingers form an improvised frame around a partially concealed gaze. |
-| YEX-005 | `SCENE-5-.png` | **The Face Between Fingers** | — | A frontal portrait uses symmetrical hand placement to create a playful graphic interruption across the face. |
-| YEX-006 | `Scene-6-.png` | **An Affectionate Gesture** | — | One figure places a hand on the other's head as the two lean toward one another, creating a close, trusting gesture. |
-| YEX-007 | `Scene-7-.png` | **Back-to-Back** | — | The two figures turn in opposing directions, creating a back-to-back arrangement and a clear division of attention. |
-| YEX-008 | `Scene-8-.png` | **Counterpoint in Space** | — | Two turned profiles and raised arms create a vertical counterpoint against the open background. |
-| YEX-009 | `Scene-9-.png` | **A Shared Portrait** | 36 | A close two-person portrait is layered by an arm crossing the foreground, connecting the figures within one frame. |
+### Between Us — Youthful Exuberance — YEX-01
 
-## 3. Independent works — all four stay in the portfolio
+*Nine monochrome studies of gesture, proximity, and shared space.*
 
-The four files directly in the photography root are not to be discarded or forced into unrelated projects. They form **Independent Works — Loose Frames**. Portals and The Uprising are the two sphere entries; Untitled Work 01 and Untitled Work 02 remain accessible in the album gallery.
+A carefully composed black-and-white sequence built around two figures and the visual language of their interaction. The series moves through mirrored gestures, facial framing, changing distance, and the negative space that separates or connects the figures. Its energy comes from the exchange between them—not from colour or spectacle.
 
-## 4. Naming rules
+**Recommended cover record:** `YEX-001`
 
-- Use the proposed display title in Framer and CMS fields; never overwrite the original filename.
-- Use the album ID as the relationship key, not the title string.
-- Keep folder hierarchy in the collection/parent-album relationship.
-- Keep album sequence independent of sphere-slot order.
-- Keep Cosmito's two editions inside one album.
-- Keep Mermaid nested within Monochrome Studies.
-- Keep Mael, Willy, and Yan nested within Skate Up.
-- Keep the Youthful Exuberance nine-frame sequence in its original Scene 01–09 order.
-- Leave year empty until verified. Do not fabricate dates.
-- The caption is editorial display copy. Do not use it as factual alt text.
+| Photo ID | Original filename | Sphere slot | Curated title | Caption |
+|---|---|:---:|---|---|
+| YEX-001 | `SCENE 1_THE ALBUM COVER.png` | 34 | **Between Us — Opening Frame** | The opening photograph introduces the two-figure study and establishes the sequence's visual grammar of proximity and shared space. |
+| YEX-002 | `SCENE-2-.png` | — | **Near Contact** | Two faces approach across a narrow interval; the bright negative space between them becomes part of the composition. |
+| YEX-003 | `SCENE-3-.png` | 35 | **A Mirror of Hands** | The figures face one another with mirrored hand gestures, turning the space between them into a visual exchange. |
+| YEX-004 | `Scene-4-.png` | — | **The Hand-Made Frame** | Raised fingers create an improvised frame around a partially concealed gaze. |
+| YEX-005 | `SCENE-5-.png` | — | **A Face, Interrupted** | Symmetrical hand placement interrupts the frontal portrait, making gesture as prominent as expression. |
+| YEX-006 | `Scene-6-.png` | — | **The Gesture of Trust** | One figure places a hand on the other's head as they lean toward one another, creating a close, trusting gesture. |
+| YEX-007 | `Scene-7-.png` | — | **Back-to-Back, Still Connected** | The figures turn in opposing directions; their backs create a strong division while keeping them within one shared frame. |
+| YEX-008 | `Scene-8-.png` | — | **The Space Between** | Turned profiles and raised arms create a vertical counterpoint against the open background. |
+| YEX-009 | `Scene-9-.png` | 36 | **A Shared Frame** | A foreground arm crosses the close portrait, layering the two figures and binding them within one composition. |
+
+## 3. Editorial controls
+
+- Use proposed titles in Framer CMS fields only; never overwrite original filenames.
+- Keep the parent/child relationships. Mermaid remains nested in Silver / Shadow; Mael, Willy, and Yan remain nested in Skate Up.
+- Keep Cosmito's two editions in one album with clear edition labels.
+- Keep all four independent works visible in Outside the Sequence. Retain Portals and The Uprising under their supplied titles, and preserve the untitled status of the other two photographs.
+- Preserve Youthful Exuberance in Scene 01–09 order.
+- Titles and captions are editorial copy, not factual alt text.
+- Do not invent dates, locations, subjects, client details, or backstories.
