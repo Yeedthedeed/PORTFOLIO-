@@ -1,24 +1,14 @@
 # ETHEREALISM — PHOTOGRAPHY CURATION INDEX
 
-The canonical photography archive currently contains **81 source images**. This curation defines **36 sphere previews**, **16 albums**, and a complete route to every remaining photograph.
+Canonical archive: **81 photographs** · **16 albums** · **36 sphere entries** · **45 album-only photographs**.
 
-## Read in this order
+Read the documents in this order:
 
-1. [36-image sphere curation](CURATION/01_36_IMAGE_SPHERE_CURATION.md) — sphere slots, photo IDs, display titles, album mapping, captions, and verified counts.
-2. [Complete album and image title map](CURATION/02_COMPLETE_ALBUM_AND_IMAGE_TITLE_MAP.md) — all 81 source files, including every sphere and album-only image.
-3. [Structured photo manifest](CURATION/03_PHOTOGRAPHY_ASSET_MANIFEST.json) — machine-readable collections, albums, photograph records, canonical paths, URLs, captions, and sphere-slot references.
-4. [Youthful Exuberance editorial text](CURATION/04_YOUTHFUL_EXUBERANCE.txt) — the explanatory statement and all nine scene titles/captions.
-5. [Framer / Arena implementation rules](CURATION/05_FRAMER_IMPLEMENTATION_RULES.md) — data model, contextual navigation, return-state preservation, and asset-integrity constraints.
+1. [36-image sphere curation — Curatorial Edition 2.1](CURATION/01_36_IMAGE_SPHERE_CURATION.md) — definitive album titles, sphere titles, captions, and introductions.
+2. [Complete 81-image title map — Curatorial Edition 2.1](CURATION/02_COMPLETE_ALBUM_AND_IMAGE_TITLE_MAP.md) — every original filename, refined display title, caption, and album relationship.
+3. [Structured photography manifest](CURATION/03_PHOTOGRAPHY_ASSET_MANIFEST.json) — machine-readable collections, albums, photo records, canonical URLs, and sphere slots.
+4. [Youthful Exuberance editorial text](CURATION/04_YOUTHFUL_EXUBERANCE.txt) — the complete nine-frame statement with visually grounded scene titles and captions.
+5. [Framer / Arena implementation rules](CURATION/05_FRAMER_IMPLEMENTATION_RULES.md) — sphere preservation, album-specific navigation, and exact return-state requirements.
+6. [Curatorial language and display-copy standard](CURATION/06_CURATORIAL_LANGUAGE_AND_DISPLAY_COPY.md) — album-title rationale and the distinction between title, caption, alt text, and source filename.
 
-## Key editorial decisions
-
-- Cosmito is **one campaign album** with colour and monochrome editions, not two unrelated projects.
-- Mermaid remains nested inside Monochrome Studies.
-- Mael, Willy, and Yan remain nested subject albums inside Skate Up.
-- The four images at the photography root form Independent Works. All four are included in the site gallery; Portals and The Uprising also enter the sphere.
-- Youthful Exuberance is a nine-frame black-and-white sequence about gesture, proximity, and shared space.
-- The existing 36-image sphere and its interactions are preserved. The curation changes its content mapping and adds album-level navigation, not its geometry or physics.
-
-## Preservation
-
-The original source folders and filenames are unchanged. Proposed editorial titles are for Framer display only. Do not physically rename or move image files until the implementation has been checked against these canonical paths.
+This is **Curatorial Edition 2.1**. All display titles are Framer-facing editorial copy. They do not rename or move source assets. The original file structure remains canonical.
