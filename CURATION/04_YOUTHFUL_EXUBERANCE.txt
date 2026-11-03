@@ -1,0 +1,73 @@
+BETWEEN US — YOUTHFUL EXUBERANCE
+Nine monochrome studies of gesture, proximity, and shared space.
+
+EDITORIAL STATEMENT
+
+Between Us is a nine-frame black-and-white photographic sequence built around two figures and the visual language of their interaction. The series moves through mirrored gestures, hand-made frames, shifts of distance, opposing directions, and moments of close attention.
+
+Its subject is not youth as an appearance or an ideal. “Youthful Exuberance” names an emotional register: curiosity, spontaneity, play, and the freedom to communicate through gesture. The photographs make this visible through bodies and hands in relation, through faces that approach or turn away, and through the negative space that becomes active between the figures.
+
+The monochrome treatment is essential to the series' coherence. It reduces the visual language to shape, tonal contrast, expression, and spatial rhythm. The open background gives the gestures room to read; the close framings make small shifts in position significant. The photographs should remain in their original black-and-white treatment, without colourisation or a homogenising preset.
+
+THE NINE FRAMES
+
+01 — Between Us (Opening Frame)
+Source: SCENE 1_THE ALBUM COVER.png
+Caption: The opening photograph introduces the two-figure study and establishes the sequence's visual grammar of proximity and shared space.
+
+02 — Near Contact
+Source: SCENE-2-.png
+Caption: Two faces approach across a narrow interval; the bright negative space between them becomes part of the composition.
+
+03 — A Mirror of Hands
+Source: SCENE-3-.png
+Caption: The figures face one another with mirrored hand gestures, turning the space between them into a visual exchange.
+
+04 — The Hand-Made Frame
+Source: Scene-4-.png
+Caption: Raised fingers create an improvised frame around a partially concealed gaze.
+
+05 — A Face, Interrupted
+Source: SCENE-5-.png
+Caption: Symmetrical hand placement interrupts the frontal portrait, making gesture as prominent as expression.
+
+06 — The Gesture of Trust
+Source: Scene-6-.png
+Caption: One figure places a hand on the other's head as they lean toward one another, creating a close, trusting gesture.
+
+07 — Back-to-Back, Still Connected
+Source: Scene-7-.png
+Caption: The figures turn in opposing directions; their backs create a strong division while keeping them within one shared frame.
+
+08 — The Space Between
+Source: Scene-8-.png
+Caption: Turned profiles and raised arms create a vertical counterpoint against the open background.
+
+09 — A Shared Frame
+Source: Scene-9-.png
+Caption: A foreground arm crosses the close portrait, layering the two figures and binding them within one composition.
+
+FRAMER PRESENTATION
+
+Album title: Between Us — Youthful Exuberance
+Subtitle: Nine monochrome studies of gesture, proximity, and shared space.
+Intro: A black-and-white photographic sequence exploring how gesture, expression, and the space between two figures can become a visual language.
+Count: 9
+Cover: SCENE 1_THE ALBUM COVER.png
+
+Sphere entries:
+- Scene 01 — Between Us (Opening Frame)
+- Scene 03 — A Mirror of Hands
+- Scene 09 — A Shared Frame
+
+Selecting any of these sphere photographs opens the same complete nine-frame album. The gallery preserves the original Scene 01–09 order.
+
+PRESENTATION
+
+Treat the sequence as a photographic essay, not a fast slideshow. Give the cover space to establish the visual grammar; vary image scale with intention; let close frames and more open compositions create a measured rhythm. Keep the interface restrained so the gestures remain the subject.
+
+The series belongs within the wider Etherealism archive as a distinctly monochrome, human-centred photographic chapter. It should not be forced into the same treatment as the commercial, architectural, night, or skate collections.
+
+ASSET AND ACCESSIBILITY RULES
+
+Preserve all nine source files, their original names, aspect ratios, order, and tonal treatment. Use the curated titles and captions as display copy only. Do not use poetic titles as alt text; add concise factual alt text after inspecting the original images.
