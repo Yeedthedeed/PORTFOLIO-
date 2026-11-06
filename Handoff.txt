@@ -1,0 +1,29 @@
+AI Agent Handoff & Task List
+Welcome! This document serves as the blueprint for taking over this project. Do NOT rewrite the entire codebase from scratch. The current architecture (React + Framer Motion) is functioning well. Your job is to implement the specific fixes listed below.
+Note: The live Arena preview URL is currently inactive. Refer to the provided screenshots or run the project locally to view the current state.
+🚨 Core Rules for the Agent
+Maintain the Manifest: Do not alter the structure of photographyManifest.ts. Use it to drive the UI.
+Keep it Modular: Extract inline styles to CSS modules or standard classes if necessary, but keep the DOM manipulation logic intact.
+Test Aspect Ratios: Ensure images are never stretched, squished, or cropped.
+📋 The Actionable Bug List
+1. Remove Placeholder Shapes (ScrollSphere.tsx)
+Issue: Photographs are displaying background holders, borders, and box-shadows, making them look like framed cards rather than floating images.
+Fix: Remove the border, box-shadow, and solid background color from the .face and <img> elements in ScrollSphere.tsx. The photographs should float cleanly.
+2. Fix Filmography Layout Mismatch (FilmographyGallery.tsx)
+Issue: The filmography landing page (FilmSphere.tsx) uses a spiral/ribbon layout, but the full gallery view (FilmographyGallery.tsx) uses a sphere layout. This breaks the visual metaphor.
+Fix: Replace the buildSpherePositions logic in FilmographyGallery.tsx with the RIBBON_* (spiral) positioning logic found in FilmSphere.tsx.
+3. Thin Out Film Frames
+Issue: The film frames in the filmography sections are too heavy. They currently feature detailed sprocket holes and vertical number strips.
+Fix: Simplify the frame design. Remove the sprocket holes and number strips. Replace them with a very thin, minimalist border (e.g., 1px solid rgba(180,160,120,0.15)) and a subtle shadow to retain the film-strip feel without the visual bulk.
+4. Image Aspect Ratios & Orientation (ScrollSphere.tsx)
+Issue: Horizontal and vertical photos are forced into predefined CARD_DEFS (fixed portrait, landscape, or square dimensions). This causes letterboxing and mismatched placeholders.
+Fix: Remove the hardcoded fixed sizes. Let the images dictate their own card size using max-width and max-height constraints (e.g., max-width: 140px; max-height: 140px; object-fit: contain) so horizontal photos stay horizontal and vertical photos stay vertical.
+5. Implement Full Album Curation Logic (ScrollSphere.tsx Viewer)
+Issue: When a user clicks a photo, the viewer overlay only shows viewer.photo_id, viewer.caption, and viewer.album_title. It completely ignores the rich album data.
+Fix: Update the viewer overlay to display the album's subtitle and intro from photographyManifest.ts. The viewer must display the full curatorial context (Album Title + Subtitle + Intro + Photo Caption).
+✅ Definition of Done
+The sphere floats without visible boxes.
+The filmography gallery matches the spiral landing page.
+Film frames are thin and elegant.
+Horizontal and vertical photos display in their natural orientation without distortion.
+Clicking a photo displays the full album curation text.
