@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Photography — Salim Bakhouch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300;400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<style>
+/* ═══════════════════════════════════════════════════
+   TOKENS — harmonised with main Etherealism palette
+═══════════════════════════════════════════════════ */
+:root {
+  --bg:           #050709;
+  --ink:          #eef3fa;
+  --ink-dim:      #b8c4d4;
+  --muted:        #495869;
+  --accent:       #3d9fff;
+  --accent-bright:#7ec4ff;
+  --accent-glow:  rgba(61,159,255,0.5);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans:    "Space Grotesk", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", monospace;
+  --ease-expo:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-cinema:  cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* ═══════════════════════════════════════════════════
+   RESET + BASE
+═══════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; background: none; border: none; cursor: pointer; color: inherit; }
+img { display: block; }
+
+/* hide OS cursor on fine pointer */
+@media (pointer: fine) { *, a, button { cursor: none; } }
+
+::selection { background: var(--accent); color: #02090f; }
+
+/* ═══════════════════════════════════════════════════
+   GRAIN OVERLAY
+═══════════════════════════════════════════════════ */
+#grain {
+  position: fixed; inset: -60%; width: 220%; height: 220%;
+  pointer-events: none; z-index: 200;
+  opacity: 0.055; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.2 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation: grainDrift 0.9s steps(3) infinite;
+  will-change: transform;
+}
+@keyframes grainDrift {
+  0%  { transform: translate3d(0,0,0); }
+  33% { transform: translate3d(-4%,3%,0); }
+  66% { transform: translate3d(3%,-4%,0); }
+}
+
+/* ═══════════════════════════════════════════════════
+   VIGNETTE
+═══════════════════════════════════════════════════ */
+#vignette {
+  position: fixed; inset: 0; z-index: 190; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 52%, transparent 30%, rgba(0,0,0,0.65) 100%),
+    radial-gradient(circle at 50% 44%, rgba(61,159,255,0.04), transparent 55%);
+}
+
+/* ═══════════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════════ */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 150;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: clamp(1.25rem,2.5vw,2rem) clamp(1.5rem,4vw,3.5rem);
+  pointer-events: none;
+}
+#nav a, #nav button { pointer-events: auto; }
+
+#nav-back {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--muted); opacity: 0.75;
+  transition: opacity 0.4s;
+  text-decoration: none;
+}
+#nav-back:hover { opacity: 1; }
+#nav-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+#nav-title {
+  font-family: var(--font-display); font-weight: 350;
+  font-size: clamp(0.85rem,1.2vw,1rem);
+  letter-spacing: -0.01em; color: var(--ink); opacity: 0.75;
+}
+#nav-title em { font-style: italic; color: var(--accent); }
+
+#nav-count {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--muted); opacity: 0.7;
+}
+
+/* ═══════════════════════════════════════════════════
+   3D SCENE
+═══════════════════════════════════════════════════ */
+#scene-wrap {
+  position: fixed; inset: 0; z-index: 10;
+  perspective: 1100px;
+  perspective-origin: 50% 48%;
+}
+#scene {
+  position: absolute; inset: 0;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+/* ═══════════════════════════════════════════════════
+   FRAMES
+═══════════════════════════════════════════════════ */
+.frame {
+  position: absolute;
+  transform-style: preserve-3d;
+  will-change: transform;
+  /* centred on its own x/y via translate(-50%,-50%) in JS */
+}
+.frame a {
+  display: block;
+  position: relative;
+  outline: none;
+}
+.frame img {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(0.08) contrast(1.06) brightness(0.92);
+  transition: filter 0.7s ease;
+  pointer-events: none; /* let the <a> handle events */
+}
+
+/* depth-based blur & opacity set inline via JS */
+.frame.far img { filter: saturate(0.06) contrast(1.03) brightness(0.7); }
+
+/* HOVER state */
+.frame.hovered img {
+  filter: saturate(0.12) contrast(1.08) brightness(1.04);
+}
+
+/* reticle */
+.frame-reticle {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease-expo);
+}
+.frame.hovered .frame-reticle { opacity: 1; }
+/* corner L-brackets */
+.frame-reticle::before,
+.frame-reticle::after {
+  content: "";
+  position: absolute;
+  width: 18px; height: 18px;
+  border-color: var(--accent);
+  border-style: solid;
+  opacity: 0.85;
+}
+.frame-reticle::before {
+  top: 8px; left: 8px;
+  border-width: 1.5px 0 0 1.5px;
+}
+.frame-reticle::after {
+  bottom: 8px; right: 8px;
+  border-width: 0 1.5px 1.5px 0;
+}
+/* extra two corners via sibling spans */
+.frame-reticle .rc-tr {
+  position: absolute; top: 8px; right: 8px;
+  width: 18px; height: 18px;
+  border-top: 1.5px solid var(--accent);
+  border-right: 1.5px solid var(--accent);
+  opacity: 0.85;
+}
+.frame-reticle .rc-bl {
+  position: absolute; bottom: 8px; left: 8px;
+  width: 18px; height: 18px;
+  border-bottom: 1.5px solid var(--accent);
+  border-left: 1.5px solid var(--accent);
+  opacity: 0.85;
+}
+/* centre cross */
+.frame-reticle .cross {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 14px; height: 14px;
+}
+.frame-reticle .cross::before,
+.frame-reticle .cross::after {
+  content: "";
+  position: absolute;
+  background: var(--accent);
+  opacity: 0.75;
+}
+.frame-reticle .cross::before { width: 1px; height: 100%; left: 50%; transform: translateX(-50%); }
+.frame-reticle .cross::after  { height: 1px; width: 100%; top: 50%;  transform: translateY(-50%); }
+
+/* thin outer accent border on hover */
+.frame a::after {
+  content: "";
+  position: absolute; inset: 0;
+  border: 1px solid rgba(61,159,255,0);
+  transition: border-color 0.5s var(--ease-expo);
+  pointer-events: none;
+}
+.frame.hovered a::after { border-color: rgba(61,159,255,0.4); }
+
+/* caption */
+.frame-caption {
+  position: absolute;
+  bottom: -28px; left: 0; right: 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 9px; letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis;
+  transition: opacity 0.45s var(--ease-expo);
+  pointer-events: none;
+}
+.frame.hovered .frame-caption { opacity: 0.85; }
+
+/* keyboard focus */
+.frame a:focus-visible ~ .frame-reticle { opacity: 1; }
+.frame a:focus-visible { outline: 1px solid var(--accent); outline-offset: 3px; }
+
+/* ═══════════════════════════════════════════════════
+   DETAIL VIEW
+═══════════════════════════════════════════════════ */
+#detail {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  background: rgba(5,7,9,0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: opacity 0.6s var(--ease-expo);
+}
+#detail.open { opacity: 1; pointer-events: auto; }
+
+#detail-inner {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center;
+  gap: clamp(1.25rem,2.5vw,2rem);
+  max-width: min(90vw, 680px);
+  width: 100%;
+  transform: translateY(24px);
+  transition: transform 0.7s var(--ease-expo);
+}
+#detail.open #detail-inner { transform: translateY(0); }
+
+#detail-img-wrap {
+  position: relative; width: 100%;
+  max-height: 65vh; overflow: hidden;
+  border: 1px solid rgba(238,243,250,0.09);
+}
+#detail-img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  filter: saturate(0.1) contrast(1.06) brightness(0.95);
+  display: block;
+  max-height: 65vh;
+}
+/* subtle frame lines around detail image */
+#detail-img-wrap::before,
+#detail-img-wrap::after {
+  content: ""; position: absolute;
+  border-color: var(--accent);
+  border-style: solid;
+  width: 20px; height: 20px;
+  opacity: 0.5;
+}
+#detail-img-wrap::before { top: 8px; left: 8px; border-width: 1px 0 0 1px; }
+#detail-img-wrap::after  { bottom: 8px; right: 8px; border-width: 0 1px 1px 0; }
+
+#detail-meta {
+  width: 100%;
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 1.5rem; flex-wrap: wrap;
+}
+#detail-title {
+  font-family: var(--font-display);
+  font-weight: 350; font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  line-height: 1; letter-spacing: -0.03em;
+  color: var(--ink);
+}
+#detail-right {
+  display: flex; flex-direction: column;
+  align-items: flex-end; gap: 0.35rem; flex-shrink: 0;
+}
+#detail-cat, #detail-year {
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--muted);
+}
+#detail-year { color: var(--accent); opacity: 0.8; }
+
+#detail-note {
+  width: 100%;
+  font-family: var(--font-sans); font-weight: 300;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  line-height: 1.72; color: var(--ink-dim);
+  border-top: 1px solid rgba(238,243,250,0.08);
+  padding-top: 1rem;
+}
+
+#detail-controls {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.det-btn {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted); opacity: 0.8;
+  transition: opacity 0.3s, color 0.3s;
+  padding: 0.5rem;
+}
+.det-btn:hover { opacity: 1; color: var(--ink); }
+.det-btn svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+.det-btn:disabled { opacity: 0.2; pointer-events: none; }
+
+#det-close {
+  position: absolute;
+  top: -3rem; right: 0;
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--muted); opacity: 0.7;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: opacity 0.3s;
+}
+#det-close:hover { opacity: 1; }
+
+#det-counter {
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted); opacity: 0.6;
+}
+
+/* ═══════════════════════════════════════════════════
+   CUSTOM CURSOR
+═══════════════════════════════════════════════════ */
+#cursor-dot {
+  position: fixed; z-index: 300; pointer-events: none;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent-bright);
+  box-shadow: 0 0 10px var(--accent-glow);
+  transform: translate(-50%,-50%);
+  transition: opacity 0.2s;
+  top: 0; left: 0;
+}
+#cursor-ring {
+  position: fixed; z-index: 299; pointer-events: none;
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 1px solid rgba(238,243,250,0.45);
+  transform: translate(-50%,-50%);
+  top: 0; left: 0;
+  transition: width 0.35s var(--ease-expo),
+              height 0.35s var(--ease-expo),
+              border-color 0.35s,
+              opacity 0.2s;
+}
+body.cursor-hover #cursor-ring {
+  width: 52px; height: 52px;
+  border-color: rgba(61,159,255,0.55);
+  background: rgba(61,159,255,0.05);
+}
+body.cursor-hidden #cursor-dot,
+body.cursor-hidden #cursor-ring { opacity: 0; }
+
+/* ═══════════════════════════════════════════════════
+   LOADING INDICATOR
+═══════════════════════════════════════════════════ */
+#loader {
+  position: fixed; inset: 0; z-index: 500;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1.5rem; background: var(--bg);
+  transition: opacity 0.9s var(--ease-expo);
+}
+#loader.hidden { opacity: 0; pointer-events: none; }
+#loader-bar-wrap {
+  width: min(320px, 80vw); height: 1px;
+  background: rgba(238,243,250,0.1);
+  position: relative; overflow: hidden;
+}
+#loader-bar {
+  position: absolute; top: 0; left: 0; height: 100%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+  width: 0%;
+  transition: width 0.4s var(--ease-expo);
+}
+#loader-name {
+  font-family: var(--font-display); font-weight: 350;
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  letter-spacing: -0.03em; line-height: 0.9;
+  text-align: center;
+}
+#loader-name em { font-style: italic; color: var(--accent); }
+#loader-label {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ═══════════════════════════════════════════════════
+   MOBILE / REDUCED MOTION
+═══════════════════════════════════════════════════ */
+@media (max-width: 700px) {
+  #nav-count { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame, #detail, #detail-inner {
+    transition: none !important;
+    animation: none !important;
+  }
+  #grain { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Grain + Vignette ─────────────────────────── -->
+<div id="grain" aria-hidden="true"></div>
+<div id="vignette" aria-hidden="true"></div>
+
+<!-- ── Custom cursor ───────────────────────────── -->
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<!-- ── Loader ──────────────────────────────────── -->
+<div id="loader" role="status" aria-live="polite">
+  <div id="loader-name">
+    <em>Salim</em><br>Bakhouch
+  </div>
+  <div id="loader-label">Photography Archive</div>
+  <div id="loader-bar-wrap">
+    <div id="loader-bar"></div>
+  </div>
+</div>
+
+<!-- ── Nav ─────────────────────────────────────── -->
+<nav id="nav" aria-label="Photography archive navigation">
+  <a id="nav-back" href="index.html" aria-label="Back to portfolio">
+    <svg viewBox="0 0 14 14" aria-hidden="true"><polyline points="9,2 4,7 9,12"/></svg>
+    Portfolio
+  </a>
+  <span id="nav-title"><em>Salim</em> Bakhouch</span>
+  <span id="nav-count" aria-live="polite"></span>
+</nav>
+
+<!-- ── 3D Scene ─────────────────────────────────── -->
+<div id="scene-wrap" aria-label="Photography gallery, 3D floating frames">
+  <div id="scene" role="list"></div>
+</div>
+
+<!-- ── Detail View ──────────────────────────────── -->
+<div id="detail" role="dialog" aria-modal="true" aria-label="Project detail" tabindex="-1">
+  <div id="detail-inner">
+    <button id="det-close" aria-label="Close detail view">
+      Close
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <line x1="1" y1="1" x2="11" y2="11"/><line x1="11" y1="1" x2="1" y2="11"/>
+      </svg>
+    </button>
+
+    <div id="detail-img-wrap">
+      <img id="detail-img" src="" alt="" loading="lazy" />
+    </div>
+
+    <div id="detail-meta">
+      <h2 id="detail-title"></h2>
+      <div id="detail-right">
+        <span id="detail-cat"></span>
+        <span id="detail-year"></span>
+      </div>
+    </div>
+
+    <p id="detail-note"></p>
+
+    <div id="detail-controls">
+      <button class="det-btn" id="det-prev" aria-label="Previous work">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><polyline points="9,2 4,7 9,12"/></svg>
+        Prev
+      </button>
+      <span id="det-counter"></span>
+      <button class="det-btn" id="det-next" aria-label="Next work">
+        Next
+        <svg viewBox="0 0 14 14" aria-hidden="true"><polyline points="5,2 10,7 5,12"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   DATA — single source of truth
+   Replace src/full with real photography URLs when ready.
+═══════════════════════════════════════════════════════════════ */
+const WORKS = [
+  { id:"w01", thumb:"https://picsum.photos/seed/w01/600/800",  full:"https://picsum.photos/seed/w01/900/1200", title:"Blue Hour, Lisbon",        category:"Personal",    year:"2024", note:"A quiet evening drift through Alfama, chasing the last gradient of available light before the sky closed." },
+  { id:"w02", thumb:"https://picsum.photos/seed/w02/600/800",  full:"https://picsum.photos/seed/w02/900/1200", title:"Transmission",             category:"Music Video", year:"2024", note:"On-set stills from a single-take performance video shot under practical tungsten, no playback monitors on set." },
+  { id:"w03", thumb:"https://picsum.photos/seed/w03/600/800",  full:"https://picsum.photos/seed/w03/900/1200", title:"Carte Blanche",            category:"Editorial",   year:"2025", note:"A fashion editorial exploring negative space and the geometry of garments in empty industrial rooms." },
+  { id:"w04", thumb:"https://picsum.photos/seed/w04/600/800",  full:"https://picsum.photos/seed/w04/900/1200", title:"Nocturne No. 3",           category:"Personal",    year:"2023", note:"Long-exposure night studies made during an insomnia period. No tripod — only braced breath and a wall." },
+  { id:"w05", thumb:"https://picsum.photos/seed/w05/600/800",  full:"https://picsum.photos/seed/w05/900/1200", title:"Soft Architecture",        category:"Commercial",  year:"2024", note:"Interior campaign for a minimalist residential project outside Berlin. Shot on overcast days exclusively." },
+  { id:"w06", thumb:"https://picsum.photos/seed/w06/600/800",  full:"https://picsum.photos/seed/w06/900/1200", title:"Membrane",                 category:"Album Cover", year:"2025", note:"Cover art for an ambient record. Concept: the skin between waking and sleep, between water and air." },
+  { id:"w07", thumb:"https://picsum.photos/seed/w07/600/800",  full:"https://picsum.photos/seed/w07/900/1200", title:"The Waiting Room",         category:"Editorial",   year:"2023", note:"Portrait series shot in transit spaces — airports, stations — between the hours of 2 and 5 am." },
+  { id:"w08", thumb:"https://picsum.photos/seed/w08/600/800",  full:"https://picsum.photos/seed/w08/900/1200", title:"Salt Flats, February",     category:"Personal",    year:"2024", note:"Three days alone on the Salar de Atacama with a 35mm body and six rolls of Kodak Tri-X." },
+  { id:"w09", thumb:"https://picsum.photos/seed/w09/600/800",  full:"https://picsum.photos/seed/w09/900/1200", title:"Echo",                     category:"Music Video", year:"2025", note:"Behind-the-scenes archive from a 16mm music video shoot in an abandoned textile factory." },
+  { id:"w10", thumb:"https://picsum.photos/seed/w10/600/800",  full:"https://picsum.photos/seed/w10/900/1200", title:"Meridian",                 category:"Commercial",  year:"2024", note:"Lookbook photography for a sustainable menswear label. Shot entirely under natural north-facing light." },
+  { id:"w11", thumb:"https://picsum.photos/seed/w11/600/800",  full:"https://picsum.photos/seed/w11/900/1200", title:"Found Footage",            category:"Personal",    year:"2023", note:"A self-assigned project: re-photograph the analog prints found in a flea market in Porto." },
+  { id:"w12", thumb:"https://picsum.photos/seed/w12/600/800",  full:"https://picsum.photos/seed/w12/900/1200", title:"The Glass Room",           category:"Album Cover", year:"2025", note:"Architectural cover photography — long exposures inside a decommissioned greenhouse at dawn." },
+  { id:"w13", thumb:"https://picsum.photos/seed/w13/600/800",  full:"https://picsum.photos/seed/w13/900/1200", title:"Frequency",                category:"Editorial",   year:"2024", note:"A science magazine editorial visualising the invisible — wave patterns, diffraction, resonance." },
+  { id:"w14", thumb:"https://picsum.photos/seed/w14/600/800",  full:"https://picsum.photos/seed/w14/900/1200", title:"Vigil",                    category:"Personal",    year:"2023", note:"Candlelit portraiture made during a Ramadan night in Marseille. Available light only." },
+  { id:"w15", thumb:"https://picsum.photos/seed/w15/600/800",  full:"https://picsum.photos/seed/w15/900/1200", title:"Compound",                 category:"Commercial",  year:"2025", note:"Product photography campaign for precision optical equipment — shot in controlled darkness with a single source." },
+  { id:"w16", thumb:"https://picsum.photos/seed/w16/600/800",  full:"https://picsum.photos/seed/w16/900/1200", title:"Aftermath",                category:"Music Video", year:"2023", note:"Still photography on the set of a short-form video exploring grief and domestic space." },
+  { id:"w17", thumb:"https://picsum.photos/seed/w17/600/800",  full:"https://picsum.photos/seed/w17/900/1200", title:"Palimpsest",               category:"Personal",    year:"2024", note:"Double-exposed film exploring memory: the same roll shot twice, six months apart, in the same locations." },
+  { id:"w18", thumb:"https://picsum.photos/seed/w18/600/800",  full:"https://picsum.photos/seed/w18/900/1200", title:"Residue",                  category:"Editorial",   year:"2025", note:"Post-production portrait series — subjects photographed after, not during, the event they attended." },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   UTILITIES
+═══════════════════════════════════════════════════════════════ */
+const $ = id => document.getElementById(id);
+const rand = (a, b) => a + Math.random() * (b - a);
+const randSign = () => Math.random() < 0.5 ? 1 : -1;
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isMobile = () => window.innerWidth <= 700;
+
+/* ═══════════════════════════════════════════════════════════════
+   STATE
+═══════════════════════════════════════════════════════════════ */
+let currentId  = null;
+let currentIdx = 0; // index into WORKS of the open detail
+let fieldRetracted = false;
+
+/* ═══════════════════════════════════════════════════════════════
+   CUSTOM CURSOR
+═══════════════════════════════════════════════════════════════ */
+const cursorDot  = $("cursor-dot");
+const cursorRing = $("cursor-ring");
+let cursorX = 0, cursorY = 0;
+let ringX = 0,   ringY   = 0;
+
+if (!isMobile() && !prefersReducedMotion) {
+  document.addEventListener("mousemove", e => {
+    cursorX = e.clientX; cursorY = e.clientY;
+    gsap.set(cursorDot, { x: cursorX, y: cursorY });
+  }, { passive: true });
+
+  (function animateRing() {
+    ringX += (cursorX - ringX) * 0.14;
+    ringY += (cursorY - ringY) * 0.14;
+    gsap.set(cursorRing, { x: ringX, y: ringY });
+    requestAnimationFrame(animateRing);
+  })();
+
+  document.addEventListener("mouseleave", () => document.body.classList.add("cursor-hidden"));
+  document.addEventListener("mouseenter", () => document.body.classList.remove("cursor-hidden"));
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUILD FRAMES
+═══════════════════════════════════════════════════════════════ */
+const scene      = $("scene");
+const sceneWrap  = $("scene-wrap");
+const frameNodes = [];
+
+// On mobile, show fewer frames
+const displayWorks = isMobile()
+  ? WORKS.filter((_,i) => i % 2 === 0).slice(0, 9)
+  : WORKS;
+
+// Frame size ranges — portrait oriented
+const SIZES = [
+  { w: 140, h: 185 },
+  { w: 170, h: 225 },
+  { w: 120, h: 158 },
+  { w: 155, h: 205 },
+  { w: 130, h: 172 },
+];
+
+displayWorks.forEach((work, i) => {
+  const size = SIZES[i % SIZES.length];
+
+  // Scatter params
+  const xPct   = rand(12, 88);       // % of viewport width
+  const yPct   = rand(10, 90);       // % of viewport height
+  const zBase  = rand(-400, 120);    // depth
+  const rotX0  = rand(-18, 18);
+  const rotY0  = rand(-22, 22);
+  const rotZ0  = rand(-14, 14);
+
+  // Depth-based visuals
+  const depthT = (zBase + 400) / 520; // 0 = far, 1 = near
+  const blur   = prefersReducedMotion ? 0 : Math.round((1 - depthT) * 3.5);
+  const alpha  = 0.55 + depthT * 0.45;
+
+  // Frame wrapper
+  const frame = document.createElement("div");
+  frame.className = "frame";
+  frame.setAttribute("role", "listitem");
+  frame.style.cssText = `
+    width:${size.w}px; height:${size.h}px;
+    left:${xPct}%; top:${yPct}%;
+    margin-left:-${size.w/2}px; margin-top:-${size.h/2}px;
+  `;
+
+  // Link
+  const link = document.createElement("a");
+  link.href = `#work/${work.id}`;
+  link.setAttribute("aria-label", `${work.title} — ${work.category}, ${work.year}`);
+  link.style.cssText = `width:${size.w}px; height:${size.h}px;`;
+
+  // Img
+  const img = document.createElement("img");
+  img.src = work.thumb;
+  img.alt = work.title;
+  img.loading = "lazy";
+  img.width  = size.w;
+  img.height = size.h;
+  img.style.cssText = `
+    width:${size.w}px; height:${size.h}px;
+    filter: saturate(0.08) contrast(1.06) brightness(${alpha.toFixed(2)});
+    ${blur ? `filter: saturate(0.06) contrast(1.04) brightness(${(alpha*0.85).toFixed(2)}) blur(${blur}px);` : ""}
+  `;
+
+  // Reticle
+  const reticle = document.createElement("div");
+  reticle.className = "frame-reticle";
+  reticle.innerHTML = `<span class="rc-tr"></span><span class="rc-bl"></span><span class="cross"></span>`;
+
+  // Caption
+  const caption = document.createElement("div");
+  caption.className = "frame-caption";
+  caption.textContent = `${String(i+1).padStart(2,"0")} · ${work.title} · ${work.category}`;
+
+  link.appendChild(img);
+  link.appendChild(reticle);
+  frame.appendChild(link);
+  frame.appendChild(caption);
+  scene.appendChild(frame);
+
+  // Set initial 3D transform
+  gsap.set(frame, {
+    x: 0, y: 0,
+    z: zBase,
+    rotationX: rotX0,
+    rotationY: rotY0,
+    rotationZ: rotZ0,
+    transformOrigin: "center center",
+  });
+
+  frameNodes.push({ frame, link, img, work, idx: i, zBase, rotX0, rotY0, rotZ0, size, depthT, blur, alpha });
+});
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTINUOUS DRIFT ANIMATION
+═══════════════════════════════════════════════════════════════ */
+function startDrift(node) {
+  if (prefersReducedMotion) return;
+  const { frame, zBase, rotX0, rotY0, rotZ0 } = node;
+
+  // Each frame gets unique timing so nothing synchronises
+  const dur = rand(10, 22);
+
+  const drift = () => {
+    if (node.hovered || node.paused) return;
+    const dz   = rand(-30, 30);
+    const drx  = rand(-12, 12);
+    const dry  = rand(-16, 16);
+    const drz  = rand(-8,  8);
+    const dx   = rand(-18, 18);
+    const dy   = rand(-14, 14);
+    gsap.to(frame, {
+      duration: dur,
+      ease: "sine.inOut",
+      x:         `+=${dx}`,
+      y:         `+=${dy}`,
+      z:         zBase + dz,
+      rotationX: rotX0 + drx,
+      rotationY: rotY0 + dry,
+      rotationZ: rotZ0 + drz,
+      onComplete: drift,
+    });
+  };
+  // Stagger start so they don't all kick off simultaneously
+  gsap.delayedCall(rand(0, 4), drift);
+}
+
+frameNodes.forEach(startDrift);
+
+/* ═══════════════════════════════════════════════════════════════
+   SCENE PARALLAX (mouse tilt whole field)
+═══════════════════════════════════════════════════════════════ */
+if (!isMobile() && !prefersReducedMotion) {
+  let sceneRX = 0, sceneRY = 0;
+  let targetRX = 0, targetRY = 0;
+
+  document.addEventListener("mousemove", e => {
+    if (fieldRetracted) return;
+    const nx = (e.clientX / window.innerWidth)  * 2 - 1; // -1..1
+    const ny = (e.clientY / window.innerHeight) * 2 - 1;
+    targetRY =  nx * 6;   // tilt opposite cursor
+    targetRX = -ny * 4;
+  }, { passive: true });
+
+  (function animateScene() {
+    sceneRX += (targetRX - sceneRX) * 0.04;
+    sceneRY += (targetRY - sceneRY) * 0.04;
+    gsap.set(scene, { rotationX: sceneRX, rotationY: sceneRY });
+    requestAnimationFrame(animateScene);
+  })();
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOVER INTERACTION
+═══════════════════════════════════════════════════════════════ */
+frameNodes.forEach(node => {
+  const { frame, link, img } = node;
+
+  const onEnter = () => {
+    if (currentId) return; // detail open
+    node.hovered = true;
+    frame.classList.add("hovered");
+    document.body.classList.add("cursor-hover");
+
+    // Pause drift in place, scale slightly up
+    gsap.killTweensOf(frame);
+    gsap.to(frame, {
+      scale: 1.06,
+      duration: 0.7,
+      ease: "power3.out",
+    });
+  };
+
+  const onLeave = () => {
+    node.hovered = false;
+    frame.classList.remove("hovered");
+    document.body.classList.remove("cursor-hover");
+
+    // Resume drift from current position
+    gsap.to(frame, { scale: 1, duration: 0.6, ease: "power3.out",
+      onComplete: () => startDrift(node),
+    });
+  };
+
+  link.addEventListener("mouseenter", onEnter);
+  link.addEventListener("mouseleave", onLeave);
+  link.addEventListener("focus",      onEnter);
+  link.addEventListener("blur",       onLeave);
+
+  // Click → open detail
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    openDetail(node.work.id);
+  });
+});
+
+/* ═══════════════════════════════════════════════════════════════
+   DETAIL VIEW
+═══════════════════════════════════════════════════════════════ */
+function openDetail(id) {
+  const idx = WORKS.findIndex(w => w.id === id);
+  if (idx === -1) return;
+  currentId  = id;
+  currentIdx = idx;
+
+  populateDetail(idx);
+
+  // Retract the field
+  fieldRetracted = true;
+  gsap.to(scene, {
+    scale: 0.88,
+    duration: 0.9,
+    ease: "power3.inOut",
+  });
+  gsap.to(sceneWrap, {
+    filter: "blur(4px) brightness(0.55)",
+    duration: 0.7,
+    ease: "power2.out",
+  });
+
+  // Open panel
+  const detail = $("detail");
+  detail.classList.add("open");
+  detail.focus();
+
+  // URL
+  history.pushState({ id }, "", `#work/${id}`);
+}
+
+function populateDetail(idx) {
+  const w = WORKS[idx];
+  $("detail-img").src = w.full;
+  $("detail-img").alt = w.title;
+  $("detail-title").textContent = w.title;
+  $("detail-cat").textContent   = w.category;
+  $("detail-year").textContent  = w.year;
+  $("detail-note").textContent  = w.note;
+  $("det-counter").textContent  = `${String(idx+1).padStart(2,"0")} / ${String(WORKS.length).padStart(2,"0")}`;
+  $("det-prev").disabled = idx === 0;
+  $("det-next").disabled = idx === WORKS.length - 1;
+  $("nav-count").textContent = `${w.category} · ${w.year}`;
+}
+
+function closeDetail() {
+  if (!currentId) return;
+  currentId = null;
+  fieldRetracted = false;
+
+  $("detail").classList.remove("open");
+  $("nav-count").textContent = `${displayWorks.length} works`;
+
+  // Restore field
+  gsap.to(scene, { scale: 1, duration: 0.9, ease: "power3.out" });
+  gsap.to(sceneWrap, { filter: "none", duration: 0.7, ease: "power2.out" });
+
+  history.pushState({}, "", window.location.pathname);
+}
+
+$("det-close").addEventListener("click", closeDetail);
+$("detail").addEventListener("click", e => { if (e.target === $("detail")) closeDetail(); });
+
+$("det-prev").addEventListener("click", () => {
+  if (currentIdx > 0) { currentIdx--; populateDetail(currentIdx); history.replaceState({ id: WORKS[currentIdx].id }, "", `#work/${WORKS[currentIdx].id}`); }
+});
+$("det-next").addEventListener("click", () => {
+  if (currentIdx < WORKS.length - 1) { currentIdx++; populateDetail(currentIdx); history.replaceState({ id: WORKS[currentIdx].id }, "", `#work/${WORKS[currentIdx].id}`); }
+});
+
+// Keyboard
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeDetail();
+  if (currentId) {
+    if (e.key === "ArrowLeft"  || e.key === "ArrowUp")   $("det-prev").click();
+    if (e.key === "ArrowRight" || e.key === "ArrowDown")  $("det-next").click();
+  }
+});
+
+// Hash routing
+function handleHash() {
+  const match = location.hash.match(/^#work\/(.+)$/);
+  if (match) {
+    openDetail(match[1]);
+  } else if (currentId) {
+    closeDetail();
+  }
+}
+window.addEventListener("hashchange", handleHash);
+
+/* ═══════════════════════════════════════════════════════════════
+   LOADER
+═══════════════════════════════════════════════════════════════ */
+const loader    = $("loader");
+const loaderBar = $("loader-bar");
+let progress = 0;
+
+const progressInterval = setInterval(() => {
+  progress = Math.min(progress + rand(4, 12), 95);
+  loaderBar.style.width = progress + "%";
+}, 120);
+
+window.addEventListener("load", () => {
+  clearInterval(progressInterval);
+  loaderBar.style.width = "100%";
+
+  setTimeout(() => {
+    loader.classList.add("hidden");
+    $("nav-count").textContent = `${displayWorks.length} works`;
+
+    // Check hash on first load
+    handleHash();
+  }, 600);
+});
+
+// Fallback if load never fires
+setTimeout(() => {
+  if (!loader.classList.contains("hidden")) {
+    clearInterval(progressInterval);
+    loaderBar.style.width = "100%";
+    loader.classList.add("hidden");
+    $("nav-count").textContent = `${displayWorks.length} works`;
+    handleHash();
+  }
+}, 4000);
+</script>
+</body>
+</html>
