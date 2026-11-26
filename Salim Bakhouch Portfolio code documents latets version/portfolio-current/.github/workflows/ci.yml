@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "portfolio-current"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Type-check and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Type-check
+        run: npx tsc --noEmit
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify single-file artefact
+        run: |
+          test -f dist/index.html
+          files=$(find dist -maxdepth 1 -type f | wc -l)
+          echo "dist files: $files"
+          test "$files" -eq 1
+
+      - name: Confirm previews are baked
+        run: |
+          count=$(grep -o 'data:image/webp' dist/index.html | wc -l)
+          echo "baked previews: $count"
+          test "$count" -ge 169
+
+      - name: Upload artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-dist
+          path: dist
+          retention-days: 14
