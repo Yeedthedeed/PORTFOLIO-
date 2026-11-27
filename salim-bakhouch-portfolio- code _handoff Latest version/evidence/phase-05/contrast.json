@@ -1,0 +1,160 @@
+[
+  {
+    "name": "hero quote",
+    "color": "rgb(184, 196, 212)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "18.4px",
+    "weight": "350",
+    "contrast": 11.27,
+    "passAA": true,
+    "inView": true
+  },
+  {
+    "name": "nav link",
+    "color": "rgb(184, 196, 212)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "11px",
+    "weight": "300",
+    "contrast": 11.27,
+    "passAA": true,
+    "inView": true
+  },
+  {
+    "name": "eyebrow",
+    "color": "rgb(127, 147, 170)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "8.5px",
+    "weight": "300",
+    "contrast": 6.31,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "spatial subtitle",
+    "color": "rgb(169, 187, 208)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "8px",
+    "weight": "300",
+    "contrast": 10.15,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "film chapter index",
+    "color": "rgb(126, 196, 255)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "8.5px",
+    "weight": "300",
+    "contrast": 10.65,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "film logline label",
+    "color": "rgb(126, 196, 255)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "8.5px",
+    "weight": "300",
+    "contrast": 10.65,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "film meta",
+    "color": "rgb(127, 147, 170)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "7.5px",
+    "weight": "300",
+    "contrast": 6.31,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "film logline",
+    "color": "rgb(184, 196, 212)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "14.72px",
+    "weight": "300",
+    "contrast": 11.27,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "watch CTA",
+    "color": "rgb(3, 16, 29)",
+    "bg": "rgb(61, 159, 255)",
+    "size": "8.5px",
+    "weight": "300",
+    "contrast": 6.94,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "featured kicker",
+    "color": "rgb(127, 147, 170)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "10px",
+    "weight": "300",
+    "contrast": 6.31,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "about body",
+    "color": "rgb(184, 196, 212)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "31.68px",
+    "weight": "350",
+    "contrast": 11.27,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "stat label",
+    "color": "rgb(127, 147, 170)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "10px",
+    "weight": "300",
+    "contrast": 6.31,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "contact meta",
+    "color": "rgb(127, 147, 170)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "10px",
+    "weight": "300",
+    "contrast": 6.31,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "legal",
+    "color": "rgb(127, 147, 170)",
+    "bg": "rgb(5, 9, 18)",
+    "size": "9px",
+    "weight": "300",
+    "contrast": 6.31,
+    "passAA": true,
+    "inView": false
+  },
+  {
+    "name": "delusion index",
+    "color": "rgb(126, 196, 255)",
+    "bg": "rgb(5, 9, 18)",
+    "contrast": 10.65
+  },
+  {
+    "name": "zakia index",
+    "color": "rgb(215, 230, 106)",
+    "bg": "rgb(5, 9, 18)",
+    "contrast": 14.62
+  },
+  {
+    "name": "birth index",
+    "color": "rgb(183, 196, 85)",
+    "bg": "rgb(5, 9, 18)",
+    "contrast": 10.47
+  }
+]

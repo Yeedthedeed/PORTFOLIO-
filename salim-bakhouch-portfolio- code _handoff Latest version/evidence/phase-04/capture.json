@@ -1,0 +1,128 @@
+{
+  "light 1920x1080": {
+    "lighting": "active",
+    "layer": 1,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "base 1920x1080": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "light 1440x900": {
+    "lighting": "active",
+    "layer": 1,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "base 1440x900": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "light 1024x768": {
+    "lighting": "active",
+    "layer": 1,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "base 1024x768": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "light 768x1024": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "base 768x1024": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "light 390x844": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "base 390x844": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "light 360x800": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "base 360x800": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "light 844x390": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  },
+  "base 844x390": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "dock": 0,
+    "errors": []
+  }
+}

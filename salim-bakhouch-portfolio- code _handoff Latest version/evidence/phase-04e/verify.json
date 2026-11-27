@@ -1,0 +1,123 @@
+{
+  "1920x1080": {
+    "overflow": 0,
+    "bloom": 0,
+    "geo": 8,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "halo": false,
+    "portrait": 1312,
+    "errors": []
+  },
+  "1440x900": {
+    "overflow": 0,
+    "bloom": 0,
+    "geo": 8,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "halo": false,
+    "portrait": 1312,
+    "errors": []
+  },
+  "1024x768": {
+    "overflow": 0,
+    "bloom": 0,
+    "geo": 8,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "halo": false,
+    "portrait": 1312,
+    "errors": []
+  },
+  "768x1024": {
+    "overflow": 0,
+    "bloom": 0,
+    "geo": 8,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "halo": false,
+    "portrait": 1312,
+    "errors": []
+  },
+  "390x844": {
+    "overflow": 0,
+    "bloom": 0,
+    "geo": 8,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "halo": false,
+    "portrait": 1312,
+    "errors": []
+  },
+  "360x800": {
+    "overflow": 0,
+    "bloom": 0,
+    "geo": 8,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "halo": false,
+    "portrait": 1312,
+    "errors": []
+  },
+  "844x390": {
+    "overflow": 0,
+    "bloom": 0,
+    "geo": 8,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "halo": false,
+    "portrait": 1312,
+    "errors": []
+  },
+  "contrast": [
+    {
+      "name": "hero quote",
+      "size": "18.4px",
+      "contrast": 11.42,
+      "pass": true
+    },
+    {
+      "name": "photo eyebrow",
+      "size": "8.5px",
+      "contrast": 2.75,
+      "pass": false
+    },
+    {
+      "name": "film meta",
+      "size": "7.5px",
+      "contrast": 2.77,
+      "pass": false
+    },
+    {
+      "name": "film logline",
+      "size": "14.72px",
+      "contrast": 11.41,
+      "pass": true
+    },
+    {
+      "name": "featured kicker",
+      "size": "10px",
+      "contrast": 2.75,
+      "pass": false
+    },
+    {
+      "name": "about body",
+      "size": "31.68px",
+      "contrast": 11.42,
+      "pass": true
+    },
+    {
+      "name": "contact meta",
+      "size": "10px",
+      "contrast": 2.77,
+      "pass": false
+    }
+  ]
+}

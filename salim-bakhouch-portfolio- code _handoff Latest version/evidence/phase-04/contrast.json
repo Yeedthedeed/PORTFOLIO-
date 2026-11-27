@@ -1,0 +1,56 @@
+[
+  {
+    "name": "hero kicker",
+    "size": "9px",
+    "contrast": 2.77,
+    "pass": false
+  },
+  {
+    "name": "hero h1",
+    "size": "18.4px",
+    "contrast": 11.42,
+    "pass": true
+  },
+  {
+    "name": "nav tagline",
+    "size": "10px",
+    "contrast": 2.77,
+    "pass": false
+  },
+  {
+    "name": "photo eyebrow",
+    "size": "8.5px",
+    "contrast": 2.77,
+    "pass": false
+  },
+  {
+    "name": "film meta",
+    "size": "7.5px",
+    "contrast": 2.77,
+    "pass": false
+  },
+  {
+    "name": "film logline",
+    "size": "14.72px",
+    "contrast": 11.42,
+    "pass": true
+  },
+  {
+    "name": "featured kicker",
+    "size": "10px",
+    "contrast": 2.77,
+    "pass": false
+  },
+  {
+    "name": "about body",
+    "size": "31.68px",
+    "contrast": 11.42,
+    "pass": true
+  },
+  {
+    "name": "contact meta",
+    "size": "10px",
+    "contrast": 2.77,
+    "pass": false
+  }
+]

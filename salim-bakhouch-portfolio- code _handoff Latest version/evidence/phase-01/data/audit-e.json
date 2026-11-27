@@ -1,0 +1,76 @@
+{
+  "errors": [],
+  "failed": [],
+  "tabOrder": [
+    {
+      "tag": "A",
+      "label": "SKIP TO CONTENT",
+      "cls": "skip-link"
+    },
+    {
+      "tag": "A",
+      "label": "SALIM BAKHOUCH",
+      "cls": ""
+    },
+    {
+      "tag": "A",
+      "label": "WORK",
+      "cls": "link-underline hidden font"
+    },
+    {
+      "tag": "A",
+      "label": "ABOUT",
+      "cls": "link-underline hidden font"
+    },
+    {
+      "tag": "A",
+      "label": "CONTACT",
+      "cls": "link-underline hidden font"
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Mute audio",
+      "cls": ""
+    },
+    {
+      "tag": "INPUT",
+      "label": "Volume",
+      "cls": "audio-volume-slider"
+    },
+    {
+      "tag": "A",
+      "label": "REEL",
+      "cls": "nav-reel flex items-center"
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Open navigation",
+      "cls": "flex h-10 w-10 items-cente"
+    },
+    {
+      "tag": "DIV",
+      "label": "Inspect portrait through cinema viewfinder",
+      "cls": ""
+    },
+    {
+      "tag": "BUTTON",
+      "label": "BROWSE ALL ALBUMS ↗",
+      "cls": "text-action"
+    },
+    {
+      "tag": "DIV",
+      "label": "Open A Grammar of Distance, from the album",
+      "cls": "ps-card is-active"
+    },
+    {
+      "tag": "DIV",
+      "label": "Open A Place for Light, from the album The",
+      "cls": "ps-card is-active"
+    },
+    {
+      "tag": "DIV",
+      "label": "Open A World in Silver, from the album Sil",
+      "cls": "ps-card is-active"
+    }
+  ]
+}

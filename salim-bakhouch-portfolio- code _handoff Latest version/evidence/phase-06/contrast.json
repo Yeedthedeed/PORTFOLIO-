@@ -1,0 +1,50 @@
+[
+  {
+    "name": "hero quote",
+    "size": "18.4px",
+    "contrast": 11.27,
+    "pass": true
+  },
+  {
+    "name": "nav link",
+    "size": "11px",
+    "contrast": 11.27,
+    "pass": true
+  },
+  {
+    "name": "photo eyebrow",
+    "size": "8.5px",
+    "contrast": 6.31,
+    "pass": true
+  },
+  {
+    "name": "film index",
+    "size": "8.5px",
+    "contrast": 10.65,
+    "pass": true
+  },
+  {
+    "name": "film meta",
+    "size": "7.5px",
+    "contrast": 6.31,
+    "pass": true
+  },
+  {
+    "name": "film logline",
+    "size": "14.72px",
+    "contrast": 11.27,
+    "pass": true
+  },
+  {
+    "name": "about body",
+    "size": "31.68px",
+    "contrast": 11.27,
+    "pass": true
+  },
+  {
+    "name": "contact meta",
+    "size": "10px",
+    "contrast": 6.31,
+    "pass": true
+  }
+]

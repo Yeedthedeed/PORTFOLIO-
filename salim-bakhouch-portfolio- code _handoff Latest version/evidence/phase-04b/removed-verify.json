@@ -1,0 +1,72 @@
+{
+  "1920x1080": {
+    "rigs": 0,
+    "lightingLayer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "dock": 0,
+    "errors": []
+  },
+  "1440x900": {
+    "rigs": 0,
+    "lightingLayer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "dock": 0,
+    "errors": []
+  },
+  "1024x768": {
+    "rigs": 0,
+    "lightingLayer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "dock": 0,
+    "errors": []
+  },
+  "768x1024": {
+    "rigs": 0,
+    "lightingLayer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "dock": 0,
+    "errors": []
+  },
+  "390x844": {
+    "rigs": 0,
+    "lightingLayer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "dock": 0,
+    "errors": []
+  },
+  "360x800": {
+    "rigs": 0,
+    "lightingLayer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "dock": 0,
+    "errors": []
+  },
+  "844x390": {
+    "rigs": 0,
+    "lightingLayer": 0,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "dock": 0,
+    "errors": []
+  }
+}

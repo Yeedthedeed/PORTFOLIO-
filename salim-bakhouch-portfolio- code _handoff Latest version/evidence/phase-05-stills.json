@@ -1,0 +1,278 @@
+{
+  "Delusion of Negation": {
+    "sampledFrames": [
+      "delusion-01",
+      "delusion-05",
+      "delusion-09",
+      "delusion-13",
+      "delusion-17",
+      "delusion-21"
+    ],
+    "frameCount": 6,
+    "perFrame": [
+      {
+        "key": "delusion-01",
+        "meanL": 0.424,
+        "meanC": 0.007,
+        "shadowHue": 169,
+        "shadowL": 0.13,
+        "highlightHue": 197,
+        "highlightL": 0.77
+      },
+      {
+        "key": "delusion-05",
+        "meanL": 0.355,
+        "meanC": 0.005,
+        "shadowHue": 236,
+        "shadowL": 0.21,
+        "highlightHue": 180,
+        "highlightL": 0.74
+      },
+      {
+        "key": "delusion-09",
+        "meanL": 0.194,
+        "meanC": 0.02,
+        "shadowHue": 205,
+        "shadowL": 0.13,
+        "highlightHue": 139,
+        "highlightL": 0.33
+      },
+      {
+        "key": "delusion-13",
+        "meanL": 0.248,
+        "meanC": 0.02,
+        "shadowHue": 255,
+        "shadowL": 0.17,
+        "highlightHue": 240,
+        "highlightL": 0.45
+      },
+      {
+        "key": "delusion-17",
+        "meanL": 0.293,
+        "meanC": 0.016,
+        "shadowHue": 68,
+        "shadowL": 0.16,
+        "highlightHue": 56,
+        "highlightL": 0.47
+      },
+      {
+        "key": "delusion-21",
+        "meanL": 0.301,
+        "meanC": 0.016,
+        "shadowHue": 141,
+        "shadowL": 0.13,
+        "highlightHue": 65,
+        "highlightL": 0.64
+      }
+    ],
+    "saturationMean": 0.014,
+    "chromaticShare": 0.082,
+    "warmCoolRatio": 0.75,
+    "dominantHueFamilies": [
+      {
+        "hueRange": "30-60",
+        "share": 0.266
+      },
+      {
+        "hueRange": "210-240",
+        "share": 0.253
+      },
+      {
+        "hueRange": "240-270",
+        "share": 0.23
+      },
+      {
+        "hueRange": "0-30",
+        "share": 0.146
+      },
+      {
+        "hueRange": "330-360",
+        "share": 0.047
+      }
+    ]
+  },
+  "Zakia's Clock": {
+    "sampledFrames": [
+      "zakia-01",
+      "zakia-09",
+      "zakia-17",
+      "zakia-25",
+      "zakia-33",
+      "zakia-41"
+    ],
+    "frameCount": 6,
+    "perFrame": [
+      {
+        "key": "zakia-01",
+        "meanL": 0.593,
+        "meanC": 0.035,
+        "shadowHue": 158,
+        "shadowL": 0.36,
+        "highlightHue": 130,
+        "highlightL": 0.86
+      },
+      {
+        "key": "zakia-09",
+        "meanL": 0.5,
+        "meanC": 0.033,
+        "shadowHue": 68,
+        "shadowL": 0.23,
+        "highlightHue": 87,
+        "highlightL": 0.75
+      },
+      {
+        "key": "zakia-17",
+        "meanL": 0.437,
+        "meanC": 0.031,
+        "shadowHue": 93,
+        "shadowL": 0.22,
+        "highlightHue": 102,
+        "highlightL": 0.71
+      },
+      {
+        "key": "zakia-25",
+        "meanL": 0.555,
+        "meanC": 0.045,
+        "shadowHue": 59,
+        "shadowL": 0.26,
+        "highlightHue": 83,
+        "highlightL": 0.86
+      },
+      {
+        "key": "zakia-33",
+        "meanL": 0.514,
+        "meanC": 0.028,
+        "shadowHue": 226,
+        "shadowL": 0.28,
+        "highlightHue": 185,
+        "highlightL": 0.92
+      },
+      {
+        "key": "zakia-41",
+        "meanL": 0.499,
+        "meanC": 0.038,
+        "shadowHue": 245,
+        "shadowL": 0.26,
+        "highlightHue": 232,
+        "highlightL": 0.62
+      }
+    ],
+    "saturationMean": 0.0348,
+    "chromaticShare": 0.641,
+    "warmCoolRatio": 1.09,
+    "dominantHueFamilies": [
+      {
+        "hueRange": "210-240",
+        "share": 0.316
+      },
+      {
+        "hueRange": "60-90",
+        "share": 0.253
+      },
+      {
+        "hueRange": "150-180",
+        "share": 0.116
+      },
+      {
+        "hueRange": "90-120",
+        "share": 0.109
+      },
+      {
+        "hueRange": "30-60",
+        "share": 0.082
+      }
+    ]
+  },
+  "The Birth Permit": {
+    "sampledFrames": [
+      "birth-11",
+      "birth-23",
+      "birth-31",
+      "birth-41",
+      "birth-50",
+      "birth-58"
+    ],
+    "frameCount": 6,
+    "perFrame": [
+      {
+        "key": "birth-11",
+        "meanL": 0.32,
+        "meanC": 0.044,
+        "shadowHue": 115,
+        "shadowL": 0.15,
+        "highlightHue": 95,
+        "highlightL": 0.55
+      },
+      {
+        "key": "birth-23",
+        "meanL": 0.491,
+        "meanC": 0.042,
+        "shadowHue": 181,
+        "shadowL": 0.16,
+        "highlightHue": 82,
+        "highlightL": 0.87
+      },
+      {
+        "key": "birth-31",
+        "meanL": 0.497,
+        "meanC": 0.031,
+        "shadowHue": 103,
+        "shadowL": 0.07,
+        "highlightHue": 109,
+        "highlightL": 0.83
+      },
+      {
+        "key": "birth-41",
+        "meanL": 0.489,
+        "meanC": 0.028,
+        "shadowHue": 116,
+        "shadowL": 0.12,
+        "highlightHue": 49,
+        "highlightL": 0.83
+      },
+      {
+        "key": "birth-50",
+        "meanL": 0.278,
+        "meanC": 0.041,
+        "shadowHue": 89,
+        "shadowL": 0.14,
+        "highlightHue": 53,
+        "highlightL": 0.53
+      },
+      {
+        "key": "birth-58",
+        "meanL": 0.281,
+        "meanC": 0.028,
+        "shadowHue": 228,
+        "shadowL": 0.1,
+        "highlightHue": 183,
+        "highlightL": 0.65
+      }
+    ],
+    "saturationMean": 0.0353,
+    "chromaticShare": 0.47,
+    "warmCoolRatio": 6.71,
+    "dominantHueFamilies": [
+      {
+        "hueRange": "30-60",
+        "share": 0.317
+      },
+      {
+        "hueRange": "60-90",
+        "share": 0.298
+      },
+      {
+        "hueRange": "90-120",
+        "share": 0.188
+      },
+      {
+        "hueRange": "180-210",
+        "share": 0.06
+      },
+      {
+        "hueRange": "0-30",
+        "share": 0.043
+      }
+    ]
+  }
+}

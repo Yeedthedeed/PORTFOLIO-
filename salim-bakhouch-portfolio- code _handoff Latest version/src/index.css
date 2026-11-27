@@ -1,0 +1,5332 @@
+@import "tailwindcss";
+
+/* ============================================================
+   ETHEREALISM — CSS FOUNDATION (restored)
+   ============================================================ */
+
+:root {
+  /* Restored ETHEREALISM tokens — original appearance preserved. */
+  --bg:  var(--c-abyss);
+  --bg-2: var(--c-navy);
+  --bg-3: var(--c-mineral);
+  --bg-base: var(--bg);
+  --ink:      #eef3fa;
+  --ink-dim:  #b8c4d4;
+  --ink-faint: var(--c-silver);
+  --ink-ghost: rgba(238,243,250,0.35);
+  --muted:    var(--c-mist);
+  --hairline:        rgba(238, 243, 250, 0.08);
+  --hairline-strong: rgba(238, 243, 250, 0.14);
+  --accent:       var(--c-sapphire);
+  --accent-bright:var(--c-ice);
+  --accent-deep:  #1660c0;
+  --accent-rgb:   61 159 255;
+  --accent-glow:  rgba(61, 159, 255, 0.5);
+  --accent-haze:  rgba(61, 159, 255, 0.06);
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans:    "Space Grotesk", system-ui, sans-serif;
+  --font-body:    var(--font-sans);
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-circ:   cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-cinema: cubic-bezier(0.76, 0, 0.24, 1);
+  --gutter: clamp(1.5rem, 4vw, 3.5rem);
+  --section-gap: clamp(5rem, 10vw, 10rem);
+
+  /* Semantic aliases (no visual change) */
+  --surface-base: var(--bg);
+  --surface-raised: var(--bg-2);
+  --surface-panel: var(--bg-3);
+  --text-primary: var(--ink);
+  --text-secondary: var(--ink-dim);
+  --text-tertiary: var(--ink-faint);
+  --line-hair: var(--hairline);
+  --line-soft: var(--hairline-strong);
+  --blue-core: var(--accent);
+  --blue-bright: var(--accent-bright);
+
+  /* ══════════════════════════════════════════════════════════
+     BLUE HOUR / CHROMATIC COUNTERLIGHT
+     One blue world. One contrasting family. Image-derived accents.
+     OKLCH values are the source of truth; hex fallbacks below them.
+     ────────────────────────────────────────────────────────── */
+
+  /* Environment — 78% of the visible field */
+  --c-abyss:        #050912;   /* oklch(0.135 0.020 262) */
+  --c-navy:         #09172c;   /* oklch(0.223 0.048 258) */
+  --c-mineral:      #173d5b;   /* oklch(0.345 0.070 245) */
+
+  /* Chroma — structure, seams, active surfaces */
+  --c-sapphire:     #3d9fff;   /* oklch(0.691 0.168 251) */
+  --c-ice:          #7ec4ff;   /* oklch(0.790 0.112 240) */
+
+  /* Neutral axis — 18% of the field */
+  --c-pearl:        #edf3f8;   /* oklch(0.958 0.008 240) */
+  --c-silver:       #a9bbd0;   /* oklch(0.784 0.032 250) */
+  --c-mist:         #7f93aa;   /* oklch(0.646 0.034 252) */
+
+  /* The one contrasting family — MONOCHROMATIC ORANGE, 2–4% of the field.
+     A single hue arc (~40–55°) in five tonal steps. Never yellow, gold,
+     mustard, lemon or amber: every step keeps chroma within the orange band. */
+  --c-ember:        #793921;   /* oklch(0.457 0.088 44)  deepest  */
+  --c-burnt:        #a94f32;   /* oklch(0.567 0.122 42)           */
+  --c-copper:       #cd6742;   /* oklch(0.639 0.137 41)  primary  */
+  --c-tangerine:    #e58359;   /* oklch(0.716 0.126 45)           */
+  --c-apricot:      #f2b18f;   /* oklch(0.807 0.082 53)  lightest */
+
+  /* Per-film accents, derived from the actual frames:
+     Delusion — achromatic (chroma 0.014); retains the shared ice identity.
+     Zakia    — 36% yellow-green families, yellow highlights => lichen.
+     Birth    — 80% yellow-ochre-green, warm highlights => deep lichen.
+     Featured — the poster's own blue field => ice. */
+  --film-ice:       var(--c-ice);
+  --film-orange:    var(--c-copper);
+  --film-orange-d:  var(--c-burnt);
+
+  /* Compatibility aliases keep existing components working. */
+  --signal-full: var(--c-copper);
+  --signal-half: var(--c-burnt);
+  --signal-pale: var(--c-tangerine);
+  --ink-bone: var(--c-pearl);
+  --counter-ice: var(--c-ice);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0; padding: 0;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth  { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Native cursor restored — the former central cursor bubble is retired. */
+
+::selection { background: var(--accent); color: #02090f; }
+
+/* ── Typography ─────────────────────────────────────────── */
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 350;
+  letter-spacing: -0.025em;
+  line-height: 1.0;
+}
+.font-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.font-sans { font-family: var(--font-sans); }
+.tracking-label  { letter-spacing: 0.3em; }
+.tracking-tight  { letter-spacing: -0.03em; }
+
+/* ── Global overlays ─────────────────────────────────────── */
+
+/* Film grain — two-layer analog texture */
+.grain {
+  position: fixed;
+  inset: -50%;
+  width: 200%; height: 200%;
+  pointer-events: none;
+  z-index: 90;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.2 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  will-change: transform;
+  animation: grainDrift 0.85s steps(3) infinite;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n2'><feTurbulence type='fractalNoise' baseFrequency='1.3' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.92 0 0 0 0 0.92 0 0 0 0 0.96 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n2)'/></svg>");
+  animation: grainDrift 1.2s steps(4) infinite reverse;
+}
+@keyframes grainDrift {
+  0%   { transform: translate3d(0,   0,   0); }
+  33%  { transform: translate3d(-4%, 3%,  0); }
+  66%  { transform: translate3d(3%, -4%,  0); }
+  100% { transform: translate3d(0,   0,   0); }
+}
+
+/* Negative fill — directional edge weighting, never a centred ring. */
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 85;
+  background:
+    linear-gradient(152deg, transparent 46%, rgba(0, 0, 0, 0.40) 82%, rgba(0, 0, 0, 0.58) 100%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.34) 0%, transparent 26%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.26) 0%, transparent 12%);
+}
+
+
+/* Scanlines — subtle, felt not seen */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 84;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.012) 0px,
+    rgba(255,255,255,0.012) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(255,255,255,0.008) 0px,
+    rgba(255,255,255,0.008) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+}
+
+/* ── Marquee ─────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.marquee-track {
+  animation: marquee 48s linear infinite;
+  will-change: transform;
+}
+
+/* Haze drift removed — now driven procedurally by Background RAF loop */
+
+/* ── Loader specific ─────────────────────────────────────── */
+@keyframes recBlink {
+  0%, 44%  { opacity: 1; }
+  50%, 94% { opacity: 0.15; }
+  100%     { opacity: 1; }
+}
+.rec-blink { animation: recBlink 1.6s steps(1) infinite; }
+
+/* ── Link underline ──────────────────────────────────────── */
+.link-underline { position: relative; display: inline-block; }
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.65s var(--ease-expo);
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+/* ── Tag pill ────────────────────────────────────────────── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.65rem;
+  border: 1px solid rgba(238,243,250,0.11);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── Works section ───────────────────────────────────────── */
+.work-item-media {
+  overflow: hidden;
+  position: relative;
+}
+.work-item-media img {
+  transition: transform 1.2s var(--ease-expo), filter 0.8s ease;
+  will-change: transform;
+}
+.work-item:hover .work-item-media img {
+  transform: scale(1.02);
+}
+
+/* Placeholder shimmer */
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to   { background-position:  200% 0; }
+}
+.placeholder-media {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.028) 0%,
+    rgba(255,255,255,0.065) 50%,
+    rgba(255,255,255,0.028) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+/* Scrollbar hidden */
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+
+/* Utility */
+.will-gpu  { will-change: transform; }
+a { color: inherit; text-decoration: none; }
+
+/* ============================================================
+   ACCESSIBILITY PRIMITIVES
+   ============================================================ */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+:where(a, button, [role="button"], [tabindex]):focus-visible {
+  outline: 1px solid var(--accent-bright);
+  outline-offset: 4px;
+}
+button { font: inherit; color: inherit; }
+button:disabled { cursor: default; }
+kbd {
+  display: inline-block;
+  padding: 1px 4px;
+  border: 1px solid rgba(238,243,250,0.14);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  line-height: 1.4;
+  color: rgba(238,243,250,0.5);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  z-index: 5;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding:
+    clamp(6.5rem, 11vh, 8.5rem)
+    var(--gutter)
+    clamp(1.75rem, 4vh, 3rem);
+}
+.hero-grid {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+  align-items: end;
+  gap: clamp(1.5rem, 5vw, 5rem);
+}
+.hero-copy { position: relative; z-index: 4; padding-bottom: clamp(0.25rem, 3vh, 2.5rem); }
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero-kicker::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
+}
+.hero-name {
+  margin: 0.7rem 0 1.4rem;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(4.4rem, 10.6vw, 10.5rem);
+  line-height: 0.79;
+  letter-spacing: -0.055em;
+  color: var(--ink);
+}
+.hero-name span { display: block; }
+.hero-name em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent-bright);
+}
+.hero-lede {
+  max-width: 40ch;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: clamp(0.9rem, 1.15vw, 1.02rem);
+  line-height: 1.76;
+  color: var(--ink-dim);
+}
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 0.65rem; margin-top: clamp(1.4rem, 3vh, 2rem); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.82rem 1.15rem;
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: color 0.35s var(--ease-expo), background 0.35s var(--ease-expo), border-color 0.35s, transform 0.35s var(--ease-expo);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--accent); color: #03101d; box-shadow: 0 0 28px rgba(61,159,255,0.16); }
+.btn-primary:hover { background: var(--accent-bright); }
+.btn-ghost { border-color: var(--hairline-strong); background: rgba(238,243,250,0.025); color: var(--ink-dim); }
+.btn-ghost:hover { color: var(--ink); border-color: rgba(238,243,250,0.3); }
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.25rem, 3.5vw, 3.25rem);
+  margin-top: clamp(1.75rem, 4vh, 2.75rem);
+  padding-top: 1rem;
+  border-top: 1px solid var(--hairline);
+}
+.hero-meta div { display: flex; flex-direction: column; gap: 0.25rem; }
+.hero-meta dt,
+.hero-meta .meta-label {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero-meta dd,
+.hero-meta .meta-value {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(0.9rem, 1.25vw, 1.08rem);
+  color: var(--ink-dim);
+  letter-spacing: -0.015em;
+}
+.hero-portrait {
+  position: relative;
+  height: clamp(370px, 70svh, 750px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1.25rem;
+}
+.hero-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 4% -12% 0;
+  background: radial-gradient(ellipse at 55% 45%, rgba(61,159,255,0.14), rgba(20,60,110,0.04) 42%, transparent 70%);
+  filter: blur(36px);
+  pointer-events: none;
+}
+.hero-portrait img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  /* The original artwork is shown without colour grading or masks. */
+}
+.hero-now {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  bottom: clamp(0.5rem, 3vh, 1.75rem);
+  max-width: 218px;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--hairline);
+  background: rgba(5,7,9,0.66);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.hero-now-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero-now-label i {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  animation: recBlink 2.2s steps(1) infinite;
+}
+.hero-now strong {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 350;
+  font-size: 1.05rem;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.hero-now small {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero-side {
+  position: absolute;
+  right: 0.35rem;
+  top: 22%;
+  writing-mode: vertical-rl;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(238,243,250,0.22);
+  pointer-events: none;
+}
+.hero-foot {
+  width: 100%;
+  max-width: 1400px;
+  margin: clamp(1rem, 3vh, 2rem) auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(238,243,250,0.28);
+}
+.hero-scroll { display: inline-flex; align-items: center; gap: 0.6rem; }
+.hero-scroll i {
+  display: block;
+  width: 1px; height: 26px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: heroScrollPulse 2.6s ease-in-out infinite;
+}
+@keyframes heroScrollPulse { 0%, 100% { transform: scaleY(0.35); opacity: 0.4; } 50% { transform: scaleY(1); opacity: 1; } }
+
+/* ============================================================
+   SHARED SECTION CHROME
+   ============================================================ */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.eyebrow-line { display: inline-block; width: 18px; height: 1px; background: var(--accent); }
+.spatial-header {
+  position: absolute;
+  z-index: 24;
+  top: clamp(3.4rem, 8vh, 5.4rem);
+  left: 0; right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+  pointer-events: none;
+}
+.spatial-header .eyebrow { justify-content: center; }
+.spatial-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+.spatial-title em { font-style: italic; color: var(--accent-bright); }
+.spatial-subtitle {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-silver);   /* was rgba(...,0.3) at 2.21:1; colour-only lift */
+  opacity: 0.86;
+}
+.text-action {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+  padding: 0.35rem 0;
+  border: 0;
+  border-bottom: 1px solid rgba(238,243,250,0.14);
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  transition: color 0.3s, border-color 0.3s;
+}
+.text-action:hover { color: var(--ink); border-color: var(--accent); }
+
+/* ============================================================
+   PHOTOGRAPHY SPHERE — images float, no frames / holders
+   ============================================================ */
+.sphere-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  cursor: grab;
+}
+.sphere-wrap:active { cursor: grabbing; }
+.ps-card {
+  position: absolute;
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  transform-origin: center center;
+}
+.ps-card img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: clamp(62px, 9vw, 142px);
+  max-height: clamp(52px, 13.5vh, 138px);
+  object-fit: contain;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  pointer-events: none;
+  transition: filter 0.4s var(--ease-expo), transform 0.55s var(--ease-expo);
+}
+.ps-card.is-active img { transform: scale(1.012); }
+.ps-card:focus-visible img { outline: 1px solid rgba(126,196,255,0.9); outline-offset: 5px; }
+.ps-caption {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 188px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+.ps-card.is-active .ps-caption { opacity: 0.9; }
+
+/* ============================================================
+   FILM ARCHIVE
+   ============================================================ */
+.film-archive {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(31,32,35,0.55), transparent 65%),
+    var(--bg);
+}
+.film-archive-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  gap: 1rem;
+  padding: clamp(1.1rem, 2.4vw, 1.85rem) var(--gutter);
+  pointer-events: none;
+}
+.film-archive-header > * { pointer-events: auto; }
+.film-archive-header > .text-action { justify-self: start; margin-top: 0.2rem; }
+.film-archive-heading { text-align: center; }
+.film-archive-heading .eyebrow { justify-content: center; margin-bottom: 0.3rem; }
+.film-archive-heading .spatial-title { font-size: clamp(1.25rem, 2vw, 1.8rem); }
+.film-archive-tools {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.film-archive-count {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ============================================================
+   FILM DETAIL
+   ============================================================ */
+.film-detail {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(3.5rem, 8vh, 5.5rem) clamp(1rem, 4vw, 3rem) clamp(1.5rem, 4vh, 2.5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: rgba(5,7,9,0.965);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.film-detail-inner {
+  position: relative;
+  width: min(94vw, 900px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.9rem, 2.2vh, 1.4rem);
+}
+.film-detail-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 57vh;
+}
+.film-detail-frame img {
+  display: block;
+  max-width: 100%;
+  max-height: 57vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid rgba(180,160,120,0.15);
+  background: transparent;
+}
+.film-detail-copy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  border-top: 1px solid var(--hairline);
+  padding-top: 1rem;
+}
+.film-detail-copy h2 {
+  margin: 0.2rem 0 0.35rem;
+  font-size: clamp(1.5rem, 3.2vw, 2.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.film-detail-note {
+  max-width: 56ch;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--ink-dim);
+}
+.film-detail-meta { display: flex; gap: 1.5rem; flex-shrink: 0; }
+.film-detail-meta dt {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.film-detail-meta dd {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--ink-dim);
+}
+.film-detail-meta a { border-bottom: 1px solid var(--hairline-strong); }
+.film-detail-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--hairline);
+}
+.film-detail-nav button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  transition: color 0.3s;
+}
+.film-detail-nav button:hover:not(:disabled) { color: var(--accent-bright); }
+.film-detail-nav button:disabled { opacity: 0.25; }
+.film-detail-counter {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.overlay-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 999px;
+  background: rgba(5,7,9,0.55);
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+.overlay-close:hover { color: var(--ink); border-color: rgba(238,243,250,0.3); }
+.film-detail .overlay-close { position: fixed; top: 1.25rem; right: var(--gutter); z-index: 4; }
+
+/* ============================================================
+   PHOTOGRAPHY VIEWER — full curatorial context
+   ============================================================ */
+.ps-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(3.5rem, 8vh, 5rem) clamp(1rem, 4vw, 3rem) clamp(1.25rem, 3vh, 2rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: rgba(5,7,9,0.97);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.ps-viewer-close { position: fixed; top: 1.2rem; right: clamp(1rem, 4vw, 3rem); z-index: 5; }
+.ps-viewer-grid {
+  width: min(1180px, 96vw);
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(290px, 0.8fr);
+  align-items: center;
+  gap: clamp(1.25rem, 3.2vw, 3rem);
+}
+.ps-viewer-image {
+  min-width: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ps-viewer-image img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 70svh;
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.ps-viewer-image figcaption {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.ps-viewer-panel {
+  align-self: stretch;
+  max-height: 76svh;
+  overflow-y: auto;
+  padding: 0.25rem 0.5rem 0.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  overscroll-behavior: contain;
+}
+.ps-viewer-panel .eyebrow { justify-content: flex-start; }
+.ps-album-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+.ps-album-subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 350;
+  font-size: clamp(0.92rem, 1.35vw, 1.08rem);
+  line-height: 1.45;
+  color: var(--ink-dim);
+}
+.ps-album-intro {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.72;
+  color: var(--muted);
+}
+.ps-photo-notes {
+  margin-top: 0.35rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--hairline);
+}
+.ps-photo-notes .eyebrow { justify-content: flex-start; margin-bottom: 0.4rem; }
+.ps-photo-notes h4 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 350;
+  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+  line-height: 1.2;
+  color: var(--ink);
+}
+.ps-photo-notes p {
+  margin-top: 0.3rem;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.68;
+  color: var(--ink-dim);
+}
+.ps-filmstrip {
+  display: flex;
+  gap: 0.35rem;
+  overflow-x: auto;
+  padding: 0.35rem 0 0.55rem;
+  border-top: 1px solid var(--hairline);
+  scrollbar-width: thin;
+}
+.ps-thumb {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid transparent;
+  background: transparent;
+  opacity: 0.42;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+.ps-thumb img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 0;
+}
+.ps-thumb span {
+  position: absolute;
+  bottom: -0.45rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 6px;
+  color: var(--muted);
+}
+.ps-thumb:hover { opacity: 0.8; }
+.ps-thumb[aria-current="true"] { opacity: 1; border-color: rgba(126,196,255,0.55); }
+.ps-viewer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--hairline);
+}
+.ps-viewer-nav button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  transition: color 0.3s;
+}
+.ps-viewer-nav button:hover:not(:disabled) { color: var(--accent-bright); }
+.ps-viewer-nav button:disabled { opacity: 0.22; }
+.ps-viewer-nav > span {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.ps-source-link {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(61,159,255,0.25);
+  padding-bottom: 1px;
+}
+
+/* ============================================================
+   RESPONSIVE / MOBILE GPU
+   ============================================================ */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr); gap: 1.25rem; }
+  .hero-name { font-size: clamp(4rem, 11.5vw, 7rem); }
+  .hero-portrait { height: clamp(340px, 60svh, 560px); }
+  .ps-viewer { align-items: flex-start; }
+  .ps-viewer-grid {
+    grid-template-columns: 1fr;
+    width: min(92vw, 720px);
+    padding-top: 1.5rem;
+    gap: 1.25rem;
+  }
+  .ps-viewer-image img { max-height: 44svh; }
+  .ps-viewer-panel { max-height: none; overflow: visible; padding-right: 0; }
+  .film-detail-copy { flex-direction: column; align-items: flex-start; gap: 0.9rem; }
+  .film-detail-frame, .film-detail-frame img { max-height: 46vh; }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 100svh;
+    padding-top: 6.2rem;
+    padding-bottom: 1.5rem;
+    justify-content: flex-start;
+  }
+  .hero-grid { grid-template-columns: 1fr; gap: 0.5rem; align-items: start; }
+  .hero-copy { padding-bottom: 0; }
+  .hero-name { font-size: clamp(3.6rem, 17vw, 5.4rem); margin: 0.55rem 0 0.9rem; }
+  .hero-lede { max-width: 100%; font-size: 0.83rem; line-height: 1.65; }
+  .hero-actions { margin-top: 1rem; gap: 0.5rem; }
+  .btn { padding: 0.72rem 0.9rem; font-size: 8px; letter-spacing: 0.18em; }
+  .hero-meta { display: none; }
+  .hero-portrait { height: clamp(260px, 38svh, 390px); margin-top: 0.25rem; }
+  .hero-now { display: none; }
+  .hero-side { display: none; }
+  .hero-foot { margin-top: 0.5rem; font-size: 7px; letter-spacing: 0.18em; }
+  .hero-foot > span:last-child { display: none; }
+  .spatial-header { top: 4.1rem; gap: 0.3rem; }
+  .spatial-title { font-size: 1.45rem; }
+  .spatial-subtitle { display: none; }
+  .spatial-header .text-action { margin-top: 0.1rem; font-size: 8px; }
+  .sphere-wrap { perspective: 820px; }
+  .ps-card img { max-width: clamp(58px, 16vw, 82px); max-height: clamp(48px, 10svh, 84px); }
+  .ps-caption { max-width: 130px; font-size: 6.5px; }
+  .film-ribbon-scene { perspective: 720px; }
+  .film-ribbon-card img { max-width: clamp(84px, 24vw, 118px); max-height: clamp(54px, 8svh, 72px); }
+  .film-ribbon-caption { max-width: 145px; font-size: 6.5px; }
+  .film-archive-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+  .film-archive-heading { text-align: left; }
+  .film-archive-heading .eyebrow,
+  .film-archive-count { display: none; }
+  .film-archive-heading .spatial-title { font-size: 1.25rem; }
+  .film-archive-tools { gap: 0.5rem; }
+  .film-detail {
+    padding: 4rem 1rem 1.25rem;
+    align-items: flex-start;
+  }
+  .film-detail .overlay-close { top: 1rem; }
+  .film-detail-note { font-size: 0.78rem; }
+  .film-detail-meta { gap: 1rem; }
+  .film-detail-nav { margin-top: 0.25rem; }
+  .ps-viewer { padding: 3.4rem 1rem 1.5rem; }
+  .ps-viewer-close { top: 0.9rem; right: 1rem; }
+  .ps-viewer-grid { width: 100%; padding-top: 0.5rem; }
+  .ps-viewer-image img { max-height: 40svh; }
+  .ps-viewer-panel { gap: 0.55rem; }
+  .ps-album-title { font-size: 1.55rem; }
+  .ps-album-intro { font-size: 0.78rem; }
+  .ps-thumb { width: 52px; height: 38px; }
+}
+
+@media (hover: none) {
+  .grain { animation: none; opacity: 0.035; }
+  .grain::after { animation: none; }
+  .scanlines { display: none; }
+  .bloom { animation: none; opacity: 0.55; }
+  .marquee-track { animation-duration: 70s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .grain, .grain::after, .bloom, .marquee-track, .hero-scroll i { animation: none !important; }
+  .ps-card img, .film-ribbon-card img { transition: none; }
+}
+
+/* ============================================================
+   SKIP LINK
+   ============================================================ */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 999;
+  padding: 0.7rem 1rem;
+  background: var(--accent);
+  color: #03101d;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ============================================================
+   PHOTOGRAPHY ARCHIVE
+   ============================================================ */
+.archive {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 78% 6%, rgba(61,159,255,0.055), transparent 46%),
+    var(--bg);
+}
+.archive-header {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(1rem, 2.3vw, 1.6rem) var(--gutter);
+  border-bottom: 1px solid var(--hairline);
+}
+.archive-header > .text-action { justify-self: start; margin: 0; }
+.archive-brand {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  line-height: 1.8;
+}
+.archive-brand-count {
+  display: block;
+  color: var(--muted);
+  font-size: 7.5px;
+}
+.archive-header-tools { justify-self: end; }
+
+.archive-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(220px, 18vw) minmax(0, 1fr);
+}
+.archive-albums {
+  min-height: 0;
+  overflow-y: auto;
+  padding: 1.25rem 0 3rem;
+  border-right: 1px solid var(--hairline);
+  overscroll-behavior: contain;
+}
+.archive-albums > .eyebrow {
+  justify-content: flex-start;
+  padding: 0 1.35rem 0.8rem;
+  color: var(--muted);
+}
+.archive-album-list { display: flex; flex-direction: column; }
+.archive-album {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) 12px;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.58rem 1.1rem 0.58rem 1.25rem;
+  border: 0;
+  border-left: 1px solid transparent;
+  background: none;
+  text-align: left;
+  color: var(--ink-dim);
+  opacity: 0.64;
+  transition: opacity 0.3s, color 0.3s, background 0.3s, border-color 0.3s;
+}
+.archive-album:hover { opacity: 0.95; background: rgba(238,243,250,0.022); }
+.archive-album.is-current {
+  opacity: 1;
+  color: var(--ink);
+  border-left-color: var(--accent);
+  background: linear-gradient(90deg, rgba(61,159,255,0.07), transparent 82%);
+}
+.archive-album.is-nested { padding-left: 2rem; }
+.archive-album-index {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.archive-album-name {
+  min-width: 0;
+  font-family: var(--font-display);
+  font-size: clamp(0.82rem, 0.95vw, 0.95rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.archive-album-name small {
+  display: block;
+  margin-top: 0.22rem;
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.archive-album-arrow { font-size: 10px; color: var(--accent); opacity: 0; transition: opacity 0.3s; }
+.archive-album.is-current .archive-album-arrow { opacity: 0.9; }
+
+.archive-main {
+  min-width: 0;
+  overflow-y: auto;
+  padding: clamp(1.4rem, 2.8vw, 2.6rem) clamp(1.25rem, 4vw, 3.5rem) 4rem;
+  overscroll-behavior: contain;
+}
+.archive-album-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  padding-bottom: clamp(1.2rem, 2.5vw, 2rem);
+  margin-bottom: clamp(1rem, 2vw, 1.6rem);
+  border-bottom: 1px solid var(--hairline);
+}
+.archive-title {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.9rem, 4vw, 4rem);
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+}
+.archive-subtitle {
+  margin-top: 0.8rem;
+  max-width: 58ch;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(0.95rem, 1.3vw, 1.16rem);
+  line-height: 1.45;
+  color: var(--ink-dim);
+}
+.archive-intro {
+  margin-top: 0.75rem;
+  max-width: 78ch;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: clamp(0.78rem, 0.95vw, 0.87rem);
+  line-height: 1.72;
+  color: var(--muted);
+}
+.archive-source {
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(61,159,255,0.24);
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+.archive-grid {
+  column-count: 3;
+  column-gap: clamp(0.6rem, 1.4vw, 1.1rem);
+}
+.archive-tile {
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin: 0 0 clamp(0.75rem, 1.6vw, 1.35rem);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+.archive-tile-media { display: block; overflow: hidden; background: transparent; }
+.archive-tile-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  transition: filter 0.4s var(--ease-expo), opacity 0.4s;
+}
+.archive-tile:hover .archive-tile-media img,
+.archive-tile:focus-visible .archive-tile-media img {
+  opacity: 0.94;
+}
+.archive-tile-caption {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: 0.38rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.6;
+  transition: opacity 0.3s, color 0.3s;
+}
+.archive-tile-caption > span:first-child { color: var(--accent); opacity: 0.8; }
+.archive-tile:hover .archive-tile-caption,
+.archive-tile:focus-visible .archive-tile-caption { opacity: 1; color: var(--ink-dim); }
+.archive-lightbox { z-index: 220; }
+
+@media (min-width: 1600px) {
+  .archive-grid { column-count: 4; }
+}
+@media (max-width: 1080px) {
+  .archive-body { grid-template-columns: 230px minmax(0, 1fr); }
+  .archive-grid { column-count: 2; }
+}
+@media (max-width: 860px) {
+  .archive-header { grid-template-columns: auto 1fr auto; gap: 0.75rem; }
+  .archive-brand { text-align: right; }
+  .archive-brand-count { display: none; }
+  .archive-body { display: flex; flex-direction: column; }
+  .archive-albums {
+    flex: 0 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.6rem 0.75rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .archive-albums > .eyebrow { display: none; }
+  .archive-album-list { flex-direction: row; gap: 0.25rem; width: max-content; }
+  .archive-album {
+    width: auto;
+    min-width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.48rem 0.65rem;
+    border-left: 0;
+    border-bottom: 1px solid transparent;
+    background: rgba(238,243,250,0.02);
+  }
+  .archive-album.is-nested { padding-left: 0.65rem; }
+  .archive-album.is-current {
+    border-left: 0;
+    border-bottom-color: var(--accent);
+    background: rgba(61,159,255,0.07);
+  }
+  .archive-album-name { font-family: var(--font-mono); font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .archive-album-name small,
+  .archive-album-index,
+  .archive-album-arrow { display: none; }
+  .archive-main { flex: 1 1 auto; padding: 1.15rem 1rem 2.5rem; }
+  .archive-album-head { grid-template-columns: 1fr; gap: 0.75rem; }
+  .archive-source { justify-self: start; }
+}
+@media (max-width: 520px) {
+  .archive-grid { column-count: 2; column-gap: 0.5rem; }
+  .archive-title { font-size: 2rem; }
+  .archive-header { padding: 0.85rem 1rem; }
+  .archive-brand { font-size: 7.5px; letter-spacing: 0.16em; }
+}
+
+/* Spatial section scrims keep titles legible above moving imagery. */
+.sphere-section,
+.film-section { overflow: hidden; }
+.sphere-section::before,
+.film-section::before {
+  content: "";
+  position: absolute;
+  z-index: 22;
+  top: 0; left: 0; right: 0;
+  height: clamp(140px, 22vh, 210px);
+  background: linear-gradient(to bottom, var(--bg) 4%, rgba(5,7,9,0.82) 48%, transparent 100%);
+  pointer-events: none;
+}
+.sphere-section::after,
+.film-section::after {
+  content: "";
+  position: absolute;
+  z-index: 22;
+  bottom: 0; left: 0; right: 0;
+  height: clamp(70px, 13vh, 120px);
+  background: linear-gradient(to top, var(--bg) 8%, transparent 100%);
+  pointer-events: none;
+}
+.spatial-header,
+section[id],
+footer[id] { scroll-margin-top: 32px; }
+
+
+/* Archive overlay chrome */
+.film-archive::before {
+  content: "";
+  position: fixed;
+  z-index: 15;
+  top: 0; left: 0; right: 0;
+  height: 130px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, var(--bg) 8%, rgba(5,7,9,0.76) 55%, transparent);
+}
+.film-archive::after {
+  content: "";
+  position: fixed;
+  z-index: 15;
+  bottom: 0; left: 0; right: 0;
+  height: 90px;
+  pointer-events: none;
+  background: linear-gradient(to top, var(--bg) 12%, transparent);
+}
+
+/* ============================================================
+   FILM SPIRAL — original ribbon geometry, minimal film edge
+   ============================================================ */
+.film-section .spatial-header-actions,
+.spatial-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.9rem, 2.5vw, 1.75rem);
+  flex-wrap: wrap;
+  margin-top: 0.2rem;
+}
+.film-spiral-root { position: absolute; inset: 0; z-index: 12; }
+.film-spiral-wrap {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective-origin: 50% 50%;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  cursor: grab;
+  overflow: hidden;
+}
+.film-spiral-wrap:active { cursor: grabbing; }
+.film-spiral-stage {
+  position: relative;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+.film-spiral-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  will-change: transform;
+  -webkit-tap-highlight-color: transparent;
+  transform-origin: center center;
+}
+.film-spiral-card img {
+  display: block;
+  width: auto;
+  height: auto;
+  /* Set per ribbon by FilmSpiral from its orbit scale, so the clearance
+     between neighbouring stills is proportional everywhere. */
+  max-width: var(--ribbon-frame-w, 150px);
+  max-height: var(--ribbon-frame-h, 84px);
+  object-fit: contain;
+  border: 1px solid rgba(126, 196, 255, 0.16);
+  border-radius: 1px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  background: transparent;
+  pointer-events: none;
+  transition: border-color 0.35s, filter 0.35s, box-shadow 0.35s;
+}
+.film-spiral-card.is-active img {
+  border-color: rgba(205, 103, 66, 0.52);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
+}
+.film-spiral-card:focus-visible img {
+  outline: 1px solid rgba(126, 196, 255, 0.9);
+  outline-offset: 5px;
+}
+.film-spiral-caption {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 190px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(229, 131, 89, 0.85);
+  opacity: 0;
+  transition: opacity 0.35s;
+  pointer-events: none;
+}
+.film-spiral-card.is-active .film-spiral-caption { opacity: 1; }
+.film-archive .film-spiral-root { position: absolute; inset: 0; }
+.film-archive .film-spiral-wrap { perspective: 860px; }
+.film-archive .film-spiral-card img { max-width: clamp(104px, 10vw, 148px); max-height: 96px; }
+
+@media (max-width: 720px) {
+  .film-spiral-card img {
+    max-width: clamp(84px, 24vw, 112px);
+    max-height: 64px;
+  }
+  .film-archive .film-spiral-card img {
+    max-width: clamp(92px, 27vw, 124px);
+    max-height: 72px;
+  }
+  .film-spiral-caption { max-width: 132px; font-size: 6px; }
+  .spatial-header-actions { gap: 0.9rem; }
+}
+
+/* The film stills album itself lives in the GitHub archive — surfaced right
+   inside the spiral section rather than buried in a footer. */
+.film-album-hub {
+  position: absolute;
+  z-index: 26;
+  bottom: clamp(2.9rem, 7vh, 4.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid rgba(180,160,120,0.15);
+  background: rgba(5,7,9,0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  white-space: nowrap;
+  transition: border-color 0.35s, background 0.35s;
+}
+.film-album-hub:hover {
+  border-color: rgba(208,188,145,0.42);
+  background: rgba(12,14,17,0.82);
+}
+.film-album-hub-kicker,
+.film-album-hub-meta {
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.film-album-hub-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+.film-album-hub-meta { color: rgba(208,188,145,0.75); }
+@media (max-width: 720px) {
+  .film-album-hub { bottom: 2.6rem; gap: 0.45rem; padding: 0.4rem 0.65rem; }
+  .film-album-hub-kicker { display: none; }
+  .film-album-hub-title { font-size: 0.78rem; }
+  .film-album-hub-meta { font-size: 6px; }
+}
+
+/* The ribbon's scale is computed in FilmSpiral.tsx so the composition is
+   truly centred on every viewport instead of being scaled from CSS. */
+@media (max-width: 720px) {
+  .film-album-hub { bottom: 2.9rem; }
+}
+
+/* Detail type alignment */
+.film-detail .eyebrow { justify-content: flex-start; }
+.film-detail .eyebrow .eyebrow-line { display: none; }
+
+/* On very short viewports the section chrome should never cover the ribbon */
+@media (max-height: 620px) {
+  .film-album-hub { display: none; }
+  .spatial-subtitle { display: none; }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  /* The animated SVG turbulence grain is the single most expensive overlay
+     on a phone GPU; the static cinematic grade remains. */
+  .grain { display: none; }
+  .film-detail,
+  .ps-viewer { backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+
+.film-detail-meta { flex-wrap: wrap; row-gap: 0.75rem; }
+.film-detail-filename {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .film-detail-filename { max-width: 140px; }
+}
+
+/* ============================================================
+   FILM SPIRAL — centered composition refinements
+   ============================================================ */
+.film-spiral-wrap {
+  perspective-origin: 50% 50%;
+  /* No paint containment: it clips the outermost stills to the padding box.
+     Layout/style containment only. */
+  contain: layout style;
+}
+.film-spiral-stage {
+  flex: 0 0 auto;
+  margin: 0;
+  transform-style: preserve-3d;
+}
+.film-spiral-card {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-origin: center center;
+  contain: layout style;
+}
+/* The lower scrim only needs to protect the hint, not crowd the reel. */
+.film-section::before {
+  height: clamp(120px, 17vh, 168px);
+  background: linear-gradient(
+    to bottom,
+    var(--bg) 3%,
+    rgba(5, 7, 9, 0.72) 46%,
+    transparent 100%
+  );
+}
+.film-section::after { height: clamp(58px, 10vh, 92px); }
+.film-section .film-spiral-root { z-index: 14; }
+
+@media (max-width: 720px) {
+  .film-section::before { height: 112px; }
+  .film-section::after { height: 62px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .film-spiral-card { will-change: auto; }
+}
+
+/* ============================================================
+   DUAL FILM RIBBONS — one spiral per short film
+   ============================================================ */
+.film-ribbon-pair {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  z-index: 14;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  align-items: stretch;
+  pointer-events: none;
+}
+.film-ribbon-pair.is-landing {
+  top: clamp(10.4rem, 20vh, 13rem);
+  bottom: clamp(2.8rem, 5.2vh, 3.8rem);
+}
+.film-ribbon-pair.is-archive {
+  top: clamp(6.1rem, 10.5vh, 7.8rem);
+  bottom: clamp(2.7rem, 4.6vh, 3.5rem);
+}
+.film-ribbon-panel {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.film-ribbon-panel-head {
+  position: relative;
+  z-index: 20;
+  flex: 0 0 auto;
+  min-height: 68px;
+  padding: 0 clamp(0.5rem, 1.6vw, 1.4rem) 0.45rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  text-align: center;
+  pointer-events: none;
+}
+.film-ribbon-panel-meta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.film-ribbon-panel-meta > span { color: rgba(180,160,120,0.62); }
+.film-ribbon-panel-meta a {
+  pointer-events: auto;
+  color: var(--ink-dim);
+  border-bottom: 1px solid rgba(238,243,250,0.14);
+  padding-bottom: 1px;
+  transition: color 0.3s, border-color 0.3s;
+}
+.film-ribbon-panel-meta a:hover { color: var(--ink); border-color: var(--accent); }
+.film-ribbon-panel-title {
+  margin: 0.05rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1rem, 1.75vw, 1.55rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.film-ribbon-panel-title em { font-style: italic; color: var(--accent-bright); }
+.film-ribbon-panel-sub {
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(238,243,250,0.27);
+}
+.film-ribbon-canvas {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  pointer-events: auto;
+}
+.film-ribbon-canvas .film-spiral-root {
+  position: absolute;
+  inset: 0;
+}
+.film-ribbon-canvas .film-spiral-wrap {
+  top: 0;
+  /* No paint containment: it would clip the first and last stills to the
+     padding box (the same bug fixed on the landing ribbons). */
+  contain: layout style;
+}
+.film-ribbon-pair-divider {
+  position: absolute;
+  z-index: 16;
+  top: 2.4rem;
+  bottom: 0.35rem;
+  left: 50%;
+  width: 1px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(126, 196, 255, 0.18) 18%,
+    rgba(126, 196, 255, 0.18) 82%,
+    transparent
+  );
+}
+.film-ribbon-pair-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border: 1px solid rgba(126, 196, 255, 0.26);
+  background: var(--bg);
+}
+
+/* Compact ribbon frames inside each half. */
+.film-ribbon-panel .film-spiral-card img {
+  max-width: clamp(70px, 7vw, 116px);
+  max-height: 76px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.26);
+}
+.film-ribbon-pair.is-archive .film-spiral-card img {
+  max-width: clamp(78px, 7.4vw, 126px);
+  max-height: 84px;
+}
+.film-ribbon-panel .film-spiral-caption {
+  max-width: 150px;
+  font-size: 6px;
+  letter-spacing: 0.13em;
+}
+.film-ribbon-panel .film-spiral-wrap { cursor: grab; }
+.film-ribbon-panel .film-spiral-wrap:active { cursor: grabbing; }
+
+/* Two ribbons can never overlap the section title or the hint. */
+.film-section .spatial-header { z-index: 26; }
+
+@media (max-width: 900px) {
+  .film-ribbon-pair.is-landing {
+    top: clamp(9.6rem, 18vh, 11.5rem);
+    bottom: 2.5rem;
+  }
+  .film-ribbon-pair.is-archive {
+    top: clamp(5.7rem, 9.5vh, 7rem);
+    bottom: 2.4rem;
+  }
+  .film-ribbon-panel-head { min-height: 60px; padding-inline: 0.4rem; }
+  .film-ribbon-panel-title { font-size: clamp(0.86rem, 2.2vw, 1.15rem); }
+  .film-ribbon-panel-meta { font-size: 5.8px; letter-spacing: 0.12em; }
+  .film-ribbon-panel-meta a span { display: none; }
+  .film-ribbon-panel .film-spiral-card img,
+  .film-ribbon-pair.is-archive .film-spiral-card img {
+    max-width: clamp(58px, 11vw, 90px);
+    max-height: 62px;
+  }
+  .film-ribbon-panel .film-spiral-caption { display: none; }
+}
+
+@media (max-width: 620px) {
+  .film-ribbon-pair {
+    left: calc(var(--gutter) * 0.5);
+    right: calc(var(--gutter) * 0.5);
+  }
+  .film-ribbon-pair.is-landing {
+    top: 8.1rem;
+    bottom: 2.4rem;
+  }
+  .film-ribbon-pair.is-archive {
+    top: 4.9rem;
+    bottom: 2.2rem;
+  }
+  .film-ribbon-panel-head {
+    min-height: 48px;
+    gap: 0.08rem;
+    padding-bottom: 0.25rem;
+  }
+  .film-ribbon-panel-meta {
+    justify-content: center;
+    font-size: 5.2px;
+    letter-spacing: 0.08em;
+  }
+  .film-ribbon-panel-meta > span { display: none; }
+  .film-ribbon-panel-title {
+    font-size: clamp(0.7rem, 3.2vw, 0.9rem);
+    line-height: 1.02;
+    white-space: normal;
+  }
+  .film-ribbon-panel-sub {
+    font-size: 5.1px;
+    letter-spacing: 0.06em;
+  }
+  .film-ribbon-panel-sub span,
+  .film-ribbon-panel-sub span + * { display: none; }
+  .film-ribbon-panel .film-spiral-card img,
+  .film-ribbon-pair.is-archive .film-spiral-card img {
+    max-width: clamp(42px, 11.5vw, 60px);
+    max-height: 46px;
+  }
+  .film-ribbon-pair-divider { top: 1.1rem; }
+}
+
+/* Equal panel headers guarantee both spirals start at exactly the same level. */
+.film-ribbon-panel-head {
+  height: 76px;
+  min-height: 76px;
+  justify-content: center;
+  overflow: hidden;
+}
+.film-ribbon-canvas { flex: 1 1 0; }
+@media (max-width: 900px) {
+  .film-ribbon-panel-head {
+    height: 64px;
+    min-height: 64px;
+  }
+}
+@media (max-width: 620px) {
+  .film-ribbon-panel-head {
+    height: 54px;
+    min-height: 54px;
+    padding-top: 0;
+    padding-bottom: 0.15rem;
+  }
+  .film-ribbon-panel-title {
+    font-size: clamp(0.66rem, 2.9vw, 0.82rem);
+    max-height: 1.9em;
+    overflow: hidden;
+  }
+  .film-ribbon-panel-sub {
+    max-height: 1.2em;
+    overflow: hidden;
+  }
+}
+
+/* The archive scrim sits above the page but must stay behind both ribbons. */
+.film-archive .film-ribbon-pair { z-index: 20; }
+.film-archive .film-ribbon-panel-head { z-index: 22; }
+
+/* ============================================================
+   IMAGE DELIVERY — decode-first rendering, no partial frames
+   ============================================================ */
+.smart-img {
+  opacity: 0;
+  transition: opacity 0.45s var(--ease-expo, ease);
+}
+.smart-img[data-loaded="true"] { opacity: 1; }
+
+/* Film ribbon frames keep their local fade + hover grade together. */
+.film-spiral-card img {
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-expo, ease), border-color 0.35s,
+    box-shadow 0.35s;
+}
+.film-spiral-card img.is-loaded { opacity: 1; }
+
+/* Photography sphere frames keep their own opacity channel so loading
+   can never be confused with depth. */
+.ps-card img {
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-expo, ease), filter 0.4s var(--ease-expo),
+    transform 0.55s var(--ease-expo);
+}
+.ps-card img.is-loaded { opacity: 1; }
+
+/* The real poster in the landing slate should not add scroll height. */
+#featured-project img.smart-img {
+  background: transparent;
+  object-fit: contain;
+}
+
+/* ============================================================
+   THUMBNAIL / MASTER SEPARATION
+   Preview cards only. Masters remain untouched and are used only
+   by the full-screen viewers. No LQIP or blur-up layer is used.
+   ============================================================ */
+
+/* Neutral frame slot while a preview is in flight — no image blur. */
+.film-spiral-card img.is-pending {
+  width: clamp(84px, 8vw, 120px);
+  height: 68px;
+  border: 1px solid rgba(126, 196, 255, 0.12);
+  background: rgba(238, 243, 250, 0.025);
+  object-fit: contain;
+}
+.ps-card img.is-pending {
+  width: clamp(60px, 8vw, 120px);
+  height: clamp(48px, 9vh, 100px);
+  border: 0;
+  background: rgba(238, 243, 250, 0.025);
+  object-fit: contain;
+}
+.film-ribbon-panel .film-spiral-card img.is-pending {
+  width: clamp(64px, 6.4vw, 104px);
+  height: 58px;
+}
+.film-spiral-card img.is-loaded,
+.ps-card img.is-loaded {
+  opacity: 1;
+  filter: none;
+  background: transparent;
+  border: 0;
+}
+.film-spiral-card img.is-loaded,
+.ps-card img.is-loaded {
+  width: auto;
+  height: auto;
+}
+@media (max-width: 720px) {
+  .film-ribbon-panel .film-spiral-card img.is-pending { width: 54px; height: 44px; }
+}
+
+/* Phase 4 — a restrained loading state while the master downloads. */
+.ps-viewer-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: clamp(180px, 34svh, 420px);
+  max-height: 70svh;
+  overflow: hidden;
+}
+.ps-viewer-progress {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 999px;
+  background: rgba(5, 7, 9, 0.62);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  pointer-events: none;
+}
+.ps-spinner {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid rgba(126, 196, 255, 0.28);
+  border-top-color: var(--accent-bright);
+}
+.ps-viewer-original {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 70svh;
+  object-fit: contain;
+  border: 0;
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ps-spinner { animation: none; }
+}
+
+/* ============================================================
+   PHONE VIEW — complete portfolio layout
+   ============================================================ */
+
+/* Thumb-reachable chapter navigation. Desktop keeps its own header. */
+.mobile-dock { display: none; }
+
+@media (max-width: 720px) {
+  html { -webkit-text-size-adjust: 100%; }
+  body { padding-bottom: 0; overscroll-behavior-y: none; }
+
+  /* ── Docked navigation ─────────────────────────────────── */
+  .mobile-dock {
+    display: block;
+    position: fixed;
+    z-index: 95;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.35rem clamp(0.6rem, 4vw, 1rem)
+      calc(0.35rem + env(safe-area-inset-bottom));
+    background: linear-gradient(
+      to top,
+      rgba(5, 7, 9, 0.97) 28%,
+      rgba(5, 7, 9, 0.72) 72%,
+      transparent
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(238, 243, 250, 0.07);
+    pointer-events: auto;
+  }
+  .mobile-dock-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.15rem;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  .mobile-dock-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.22rem;
+    min-height: 48px;
+    padding: 0.35rem 0.2rem 0.25rem;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 7.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(238, 243, 250, 0.46);
+    transition: color 0.25s, background 0.25s;
+  }
+  .mobile-dock-link svg { opacity: 0.72; }
+  .mobile-dock-link.is-active {
+    color: var(--accent-bright);
+    background: rgba(61, 159, 255, 0.07);
+  }
+  .mobile-dock-link.is-active svg { opacity: 1; }
+
+  /* ── Header ────────────────────────────────────────────── */
+  .site-header {
+    padding: 0.85rem clamp(1rem, 4.5vw, 1.4rem) !important;
+  }
+  .site-header .nav-reel { display: none; }
+  .site-header > a span {
+    font-size: 1.02rem !important;
+    line-height: 0.94;
+  }
+  .nav-menu > button { width: 38px; height: 38px; }
+  #site-menu {
+    right: -0.25rem;
+    min-width: min(270px, calc(100vw - 2rem)) !important;
+    max-height: calc(100svh - 6rem);
+    overflow-y: auto;
+    border-radius: 6px !important;
+  }
+
+  /* ── Hero ──────────────────────────────────────────────── */
+  #work {
+    height: 100svh !important;
+    min-height: 540px;
+    align-items: stretch !important;
+    --portrait-height: min(80svh, 122vw);
+  }
+
+  /* The portrait opens the page directly beneath the header — no empty
+     band between the upper section and the photograph. */
+  .hero-portrait-stage {
+    height: 100% !important;
+    align-items: flex-start !important;
+    padding: 3.45rem 0 0 !important;
+  }
+  .hero-portrait-stage > div {
+    align-items: flex-start !important;
+    height: var(--portrait-height, min(80svh, 122vw)) !important;
+    max-height: none !important;
+  }
+  .hero-portrait-stage img {
+    object-position: top center;
+  }
+  .hero-now { display: none; }
+  .hero-side { display: none; }
+
+  /* The small caption moves below the portrait so it never covers the face. */
+  .mobile-hero-caption {
+    top: auto !important;
+    bottom: calc(4.55rem + env(safe-area-inset-bottom)) !important;
+    left: var(--gutter) !important;
+    max-width: min(82vw, 300px) !important;
+  }
+  .mobile-hero-caption p {
+    font-size: 0.82rem !important;
+    line-height: 1.3 !important;
+  }
+  /* The dock already offers navigation; drop the duplicate scroll cue. */
+  .hero-scroll-cue { display: none; }
+
+  /* ── Shared spatial chrome ─────────────────────────────── */
+  .sphere-section,
+  .film-section { height: auto !important; min-height: 0 !important; }
+  .sphere-section { height: 100svh !important; min-height: 600px !important; }
+  .spatial-header { position: relative !important; top: auto !important; padding: 5.1rem var(--gutter) 0.65rem; }
+  .sphere-section .spatial-header { position: absolute !important; top: 4rem !important; padding: 0 var(--gutter); }
+  .spatial-title { font-size: 1.5rem; }
+  .spatial-subtitle { display: block; font-size: 6.5px; letter-spacing: 0.12em; }
+
+  /* ── Photography sphere ────────────────────────────────── */
+  .sphere-section { overflow: hidden; }
+  .sphere-section::before { height: 132px; }
+  .sphere-wrap { perspective: 780px; }
+  .ps-card img { max-width: clamp(54px, 15vw, 76px); max-height: clamp(46px, 9.5svh, 78px); }
+  .ps-card img.is-pending { width: 56px; height: 44px; }
+  .ps-caption { max-width: 120px; font-size: 6px; }
+  .sphere-section .spatial-header .text-action { font-size: 7.5px; }
+
+  /* ── Filmography: stacked, each ribbon gets real space ─── */
+  .film-section {
+    padding: 0 0 calc(5.4rem + env(safe-area-inset-bottom));
+    overflow: visible !important;
+  }
+  .film-section::before,
+  .film-section::after { display: none !important; }
+  .film-section .spatial-header { align-items: flex-start; text-align: left; }
+  .film-section .spatial-header .eyebrow { justify-content: flex-start; }
+  .film-section .spatial-header-actions { justify-content: flex-start; gap: 0.9rem; }
+  .film-section .spatial-header-actions .text-action { font-size: 7px; }
+  .film-ribbon-pair.is-landing {
+    position: relative;
+    inset: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    margin: 0.85rem 0 0;
+    padding: 0 var(--gutter);
+  }
+  .film-ribbon-pair.is-landing .film-ribbon-panel {
+    height: clamp(280px, 41svh, 380px);
+    min-height: 280px;
+  }
+  .film-ribbon-pair-divider { display: none; }
+  .film-ribbon-panel-head {
+    height: 66px;
+    min-height: 66px;
+    padding: 0 0.15rem 0.3rem;
+  }
+  .film-ribbon-panel-meta { font-size: 6px; letter-spacing: 0.1em; }
+  .film-ribbon-panel-title { font-size: 1.05rem; white-space: normal; }
+  .film-ribbon-panel-sub { font-size: 6px; letter-spacing: 0.08em; }
+  .film-spiral-wrap { top: 0; }
+  .film-spiral-card img { max-width: clamp(66px, 20vw, 96px); max-height: 58px; }
+  .film-ribbon-panel .film-spiral-card img { max-width: clamp(60px, 18vw, 90px); max-height: 54px; }
+  .film-ribbon-panel .film-spiral-card img.is-pending { width: 56px; height: 44px; }
+  .film-album-hub { display: none; }
+
+  /* ── Film archive: scrollable, both ribbons stacked ────── */
+  .film-archive {
+    display: block;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+  /* In the scrollable archive the split pair must participate in normal flow so
+     the Birth Permit ribbon can follow it down the page. */
+  .film-archive--scroll .film-archive-pair-zone {
+    height: auto;
+    min-height: 0;
+    padding-bottom: 1rem;
+  }
+  .film-archive--scroll .film-ribbon-pair.is-archive {
+    position: relative;
+    inset: auto;
+    height: clamp(420px, 56svh, 620px);
+    padding: 0 var(--gutter);
+  }
+  .film-archive::before { height: 86px; }
+  .film-archive-header {
+    position: sticky;
+    top: 0;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 0.8rem clamp(0.9rem, 4vw, 1.3rem);
+    background: rgba(5, 7, 9, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .film-archive-heading .eyebrow { display: none; }
+  .film-archive-heading .spatial-title { font-size: 1.05rem; }
+  .film-archive-tools .text-action { font-size: 0 !important; gap: 0; }
+  .film-archive-tools .text-action::after { content: "Album ↗"; font-size: 7px; letter-spacing: 0.12em; }
+  .film-ribbon-pair.is-archive {
+    position: relative;
+    inset: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    margin: 0;
+    padding: 1.1rem clamp(0.9rem, 4vw, 1.3rem) 0;
+  }
+  .film-ribbon-pair.is-archive .film-ribbon-panel {
+    height: clamp(290px, 42svh, 380px);
+    min-height: 290px;
+  }
+  .film-detail { padding: 4rem 1rem calc(1.4rem + env(safe-area-inset-bottom)); }
+
+  /* ── Photography archive ──────────────────────────────── */
+  .archive { padding-bottom: env(safe-area-inset-bottom); }
+  .archive-header { padding: 0.85rem clamp(0.9rem, 4vw, 1.2rem); }
+  .archive-header .text-action { font-size: 8px; letter-spacing: 0.14em; }
+  .archive-grid { column-count: 2; }
+  .archive-album-head .eyebrow { flex-wrap: wrap; gap: 0.3rem; font-size: 6.5px; }
+  .archive-title { font-size: clamp(1.7rem, 8vw, 2.4rem); }
+  .archive-subtitle { font-size: 0.9rem; }
+  .archive-intro { font-size: 0.78rem; }
+  .archive-main { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom)); }
+  .ps-viewer { padding-bottom: calc(1.2rem + env(safe-area-inset-bottom)); }
+  .ps-viewer-close { top: 0.7rem; right: 0.8rem; }
+  .ps-viewer-image img,
+  .ps-viewer-original { max-height: 44svh; }
+  .ps-viewer-panel { max-height: none; }
+  .ps-filmstrip { padding-bottom: 0.8rem; }
+  .ps-thumb { width: 54px; height: 42px; }
+
+  /* ── Featured project ─────────────────────────────────── */
+  #featured-project { padding: 3.6rem var(--gutter) 3.2rem !important; }
+  #featured-project > div:first-child { margin-bottom: 2rem !important; }
+  .featured-grid { grid-template-columns: 1fr !important; gap: 2.2rem !important; }
+  #featured-project figure { width: 100%; max-width: 380px; margin: 0 auto; }
+  #featured-project h2 { font-size: clamp(2.4rem, 12vw, 3.4rem) !important; }
+  #featured-project p { max-width: 100%; }
+
+  /* ── Archive links ────────────────────────────────────── */
+  .archive-links {
+    flex-direction: column;
+    gap: 1.1rem !important;
+    padding: 2.6rem var(--gutter) !important;
+  }
+  .archive-links a { font-size: clamp(2.4rem, 13vw, 3.6rem) !important; }
+
+  /* ── About ────────────────────────────────────────────── */
+  #about { padding: 3.2rem var(--gutter) !important; }
+  #about h2 { font-size: clamp(2.2rem, 11vw, 3.4rem) !important; }
+  #about p { font-size: 0.85rem !important; }
+
+  /* ── Footer ───────────────────────────────────────────── */
+  #contact { padding: 3.4rem var(--gutter) calc(5.6rem + env(safe-area-inset-bottom)) !important; }
+  #contact h2 { font-size: clamp(3.4rem, 19vw, 5.2rem) !important; }
+  #contact a { overflow-wrap: anywhere; }
+
+  /* ── Marquee ──────────────────────────────────────────── */
+  .marquee-track span { font-size: clamp(1.15rem, 5vw, 1.7rem) !important; }
+}
+
+@media (max-width: 390px) {
+  .film-ribbon-pair.is-landing .film-ribbon-panel,
+  .film-ribbon-pair.is-archive .film-ribbon-panel {
+    height: 290px;
+    min-height: 290px;
+  }
+  .film-ribbon-panel-title { font-size: 0.98rem; }
+  .ps-viewer-image img,
+  .ps-viewer-original { max-height: 38svh; }
+}
+
+/* The photography archive paints the baked preview, then upgrades the tile
+   to the untouched original once it is decoded. */
+.archive-tile-media img[data-upgraded="false"] {
+  transition: opacity 0.3s ease;
+}
+.archive-tile-media img[data-upgraded="true"] {
+  image-rendering: auto;
+}
+
+/* ============================================================
+   DEVICE LAYOUTS
+   The phone layout lives in the "PHONE VIEW" block above.
+   The tablet layout below is intentionally its own composition:
+   a floating horizontal dock, a nameplate hero, side-by-side film
+   ribbons and a wider editorial archive grid.
+   ============================================================ */
+
+.tablet-hero-mark { display: none; }
+
+/* ── Tablet portrait + landscape iPads (coarse pointer) ────── */
+@media (min-width: 721px) and (max-width: 1180px),
+  (pointer: coarse) and (min-width: 721px) and (max-width: 1400px) {
+  /* The tablet dock is a floating pill, not the phone bar. */
+  .mobile-dock {
+    display: block;
+    position: fixed;
+    z-index: 95;
+    left: 50%;
+    right: auto;
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(100vw - 2rem);
+    padding: 0.4rem;
+    border: 1px solid rgba(238, 243, 250, 0.1);
+    border-radius: 999px;
+    background: rgba(8, 11, 16, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
+  }
+  .mobile-dock-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    max-width: none;
+    margin: 0;
+  }
+  .mobile-dock-link {
+    flex-direction: row;
+    gap: 0.45rem;
+    min-height: 40px;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    font-size: 8px;
+    letter-spacing: 0.16em;
+  }
+  .mobile-dock-link.is-active {
+    background: rgba(61, 159, 255, 0.12);
+    color: var(--accent-bright);
+  }
+
+  /* Header: lighter, centred chapter navigation */
+  .site-header { padding: 1rem clamp(1.4rem, 3vw, 2.2rem) !important; }
+  .site-header .nav-reel { padding-inline: 1rem; }
+  body { padding-bottom: calc(4.6rem + env(safe-area-inset-bottom)); }
+
+  /* Hero: portrait with its own tablet nameplate at the top. */
+  #work { height: 100svh !important; min-height: 620px; }
+  .hero-portrait-stage { --portrait-height: min(66svh, 74vw); padding-bottom: 1.5rem; }
+  .hero-now { display: none; }
+  .hero-side { display: none; }
+  .tablet-hero-mark {
+    display: block;
+    position: absolute;
+    top: clamp(5.4rem, 11vh, 7rem);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 31;
+    text-align: center;
+    pointer-events: none;
+  }
+  .tablet-hero-kicker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .tablet-hero-kicker span {
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .tablet-hero-name {
+    margin: 0.55rem 0 0.4rem;
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(2.6rem, 6.4vw, 4.4rem);
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+    color: var(--ink);
+  }
+  .tablet-hero-name em { font-style: italic; color: var(--accent-bright); }
+  .tablet-hero-sub {
+    font-family: var(--font-mono);
+    font-size: 7.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(238, 243, 250, 0.34);
+  }
+  .hero-scroll-cue { bottom: calc(5.6rem + env(safe-area-inset-bottom)) !important; }
+
+  /* Shared spatial chrome */
+  .sphere-section { height: 100svh !important; min-height: 660px; }
+  .sphere-section .spatial-header { top: clamp(4.4rem, 9vh, 5.6rem); }
+  .sphere-wrap { perspective: 920px; }
+  .ps-card img { max-width: clamp(84px, 12vw, 118px); max-height: clamp(70px, 12svh, 110px); }
+
+  /* Filmography: the two ribbons stay side by side, with more room each. */
+  .film-section { height: auto !important; min-height: 0; padding-bottom: calc(5.4rem + env(safe-area-inset-bottom)); }
+  .film-section::before, .film-section::after { display: none !important; }
+  .film-section .spatial-header { position: relative; top: auto; padding: 5.2rem var(--gutter) 0.6rem; }
+  .film-ribbon-pair.is-landing {
+    position: relative;
+    inset: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    margin: 0.6rem 0 0;
+    padding: 0 var(--gutter);
+    gap: clamp(0.8rem, 2.4vw, 1.6rem);
+  }
+  .film-ribbon-pair.is-landing .film-ribbon-panel {
+    height: clamp(330px, 46svh, 440px);
+    min-height: 330px;
+  }
+  .film-ribbon-panel-head { height: 70px; min-height: 70px; }
+  .film-ribbon-panel-title { font-size: 1.22rem; }
+  .film-spiral-card img,
+  .film-ribbon-panel .film-spiral-card img { max-width: clamp(76px, 9vw, 108px); max-height: 68px; }
+  .film-album-hub { display: none; }
+
+  /* Film archive keeps both ribbons visible side by side — except the scrollable
+     archive build, which must be able to reach its third ribbon. */
+  .film-archive:not(.film-archive--scroll) { overflow: hidden !important; }
+  .film-archive--scroll { overflow-y: auto !important; }
+  .film-archive-header { padding: 1rem clamp(1.4rem, 3vw, 2.2rem); }
+  .film-ribbon-pair.is-archive {
+    inset: clamp(6rem, 10vh, 7.2rem) var(--gutter) calc(5.2rem + env(safe-area-inset-bottom));
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0;
+  }
+  .film-ribbon-pair.is-archive .film-ribbon-panel {
+    height: auto;
+    min-height: 0;
+  }
+
+  /* Archive: narrower album rail, three-column contact sheet. */
+  .archive-body { grid-template-columns: 210px minmax(0, 1fr); }
+  .archive-grid { column-count: 3; }
+  .archive-main { padding: clamp(1.3rem, 2.4vw, 2rem) clamp(1.1rem, 2.6vw, 2rem) 3rem; }
+  .archive-album-name { font-size: 0.86rem; }
+
+  /* Featured project stays a two-column editorial spread. */
+  #featured-project { padding: clamp(3.4rem, 7vw, 5.6rem) var(--gutter) !important; }
+  .featured-grid { gap: clamp(1.6rem, 4vw, 3.4rem) !important; }
+
+  /* About and footer */
+  #contact { padding-bottom: calc(7rem + env(safe-area-inset-bottom)) !important; }
+  .ps-viewer-image img, .ps-viewer-original { max-height: 58svh; }
+}
+
+/* Photography archive — original masters, viewport-gated. */
+.archive-album-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+.archive-progress {
+  position: relative;
+  padding-bottom: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.archive-progress-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform-origin: left center;
+  background: var(--accent);
+  transition: transform 0.5s var(--ease-expo, ease);
+}
+.archive-tile-media {
+  min-height: 90px;
+  background: rgba(238, 243, 250, 0.025);
+}
+.archive-tile-media img {
+  min-height: 90px;
+  background: rgba(238, 243, 250, 0.02);
+}
+.archive-tile-media img[data-loaded="true"] {
+  background: transparent;
+}
+@media (max-width: 860px) {
+  .archive-album-tools { align-items: flex-start; }
+  .archive-progress { font-size: 6.5px; }
+}
+
+/* ============================================================
+   PHOTOGRAPHY ARCHIVE — loading states across all viewports
+   ============================================================ */
+@keyframes archiveSpin {
+  to { transform: rotate(360deg); }
+}
+.ps-spinner {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid rgba(126, 196, 255, 0.28);
+  border-top-color: var(--accent-bright);
+  animation: archiveSpin 0.9s linear infinite;
+}
+/* Frames reserve their geometry while the original decodes. */
+.archive-tile-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.archive-tile-media img[data-upgraded="false"] {
+  filter: none;
+  opacity: 0.96;
+}
+.archive-tile-media img[data-upgraded="true"] {
+  opacity: 1;
+}
+
+@media (max-width: 860px) {
+  .archive-tile-media { min-height: 64px; }
+  .archive-tile-media img { min-height: 0; }
+  .archive-progress { font-size: 6.5px; letter-spacing: 0.12em; }
+}
+@media (max-width: 520px) {
+  .archive-grid { column-count: 2; column-gap: 0.45rem; }
+  .archive-tile { margin-bottom: 0.7rem; }
+  .archive-tile-caption { font-size: 6px; letter-spacing: 0.08em; }
+  .archive-album-head { padding-bottom: 1rem; }
+  .archive-progress { padding-bottom: 0.3rem; }
+}
+@media (min-width: 721px) and (max-width: 1180px),
+  (pointer: coarse) and (min-width: 721px) and (max-width: 1400px) {
+  .archive-tile-media { min-height: 80px; }
+  .archive-progress { font-size: 6.5px; }
+}
+
+/* Archive quality control — instant display copies by default, originals on demand. */
+.archive-quality {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.42rem 0.7rem;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 999px;
+  background: rgba(238, 243, 250, 0.03);
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+.archive-quality:hover { color: var(--ink); border-color: rgba(126, 196, 255, 0.5); }
+.archive-quality.is-on {
+  border-color: rgba(126, 196, 255, 0.55);
+  background: rgba(61, 159, 255, 0.1);
+  color: var(--accent-bright);
+}
+.archive-quality-note {
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+}
+.archive-quality-note.is-hd { color: rgba(126, 196, 255, 0.7); }
+.archive-tile-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ps-viewer-original-link {
+  position: absolute;
+  right: 0.35rem;
+  bottom: 0.35rem;
+  z-index: 4;
+  padding: 0.3rem 0.5rem;
+  background: rgba(5, 7, 9, 0.7);
+  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.3s, border-color 0.3s;
+}
+.ps-viewer-original-link:hover { color: var(--ink); border-color: var(--accent); }
+@media (max-width: 860px) {
+  .archive-quality-note { display: none; }
+  .archive-quality { font-size: 6.5px; padding: 0.36rem 0.6rem; }
+}
+@media (max-width: 720px) {
+  .archive-album-tools { align-items: flex-start; width: 100%; }
+  .archive-quality { font-size: 6.5px; letter-spacing: 0.1em; }
+  .ps-viewer-original-link { font-size: 6px; right: 0.2rem; bottom: 0.2rem; }
+}
+
+/* ============================================================
+   ORIGINAL-ONLY MEDIA
+   There are no derivative image files. These rules reserve a clean,
+   neutral frame while an original photograph arrives.
+   ============================================================ */
+img.is-original-loading,
+img[data-loaded="false"] {
+  background:
+    linear-gradient(115deg, rgba(238, 243, 250, 0.035), rgba(238, 243, 250, 0.012));
+  border: 1px solid rgba(126, 196, 255, 0.12);
+  min-width: 60px;
+  min-height: 56px;
+  object-fit: cover;
+}
+img[data-loaded="true"] {
+  background: transparent;
+  border: 0;
+}
+.archive-tile-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.archive-tile-media img[data-loaded="false"] {
+  aspect-ratio: 4 / 5;
+}
+.film-spiral-card img.is-original-loading,
+.ps-card img.is-original-loading {
+  opacity: 0.9;
+}
+.film-detail-original {
+  display: block;
+  max-width: 100%;
+  max-height: 57vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid rgba(126, 196, 255, 0.16);
+}
+@media (max-width: 720px) {
+  .film-detail-original { max-height: 46vh; }
+}
+
+/* ============================================================
+   PHOTOGRAPHY ARCHIVE — original files only
+   No compressed preview is rendered in this grid. A neutral skeleton
+   holds the frame until the untouched original decodes.
+   ============================================================ */
+.album-original {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(238, 243, 250, 0.022);
+}
+.album-original-skeleton {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background:
+    linear-gradient(115deg, rgba(238, 243, 250, 0.04), rgba(238, 243, 250, 0.012));
+  animation: albumPulse 2.4s ease-in-out infinite;
+}
+@keyframes albumPulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.album-original img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+  animation: albumFade 0.35s ease both;
+}
+@keyframes albumFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.album-original.is-loaded { background: transparent; }
+@media (prefers-reduced-motion: reduce) {
+  .album-original-skeleton,
+  .album-original img { animation: none; }
+}
+
+/* ============================================================
+   FILMOGRAPHY — three stacked, centred film sections
+   Generous vertical rhythm; each film owns its ribbon, logline and links.
+   ============================================================ */
+.film-sections {
+  position: relative;
+  z-index: 14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.25rem, 3vh, 2.25rem);
+  width: 100%;
+  margin: clamp(0.5rem, 1.5vh, 1rem) auto 0;
+  padding: 0 var(--gutter);
+}
+.film-section-row {
+  position: relative;
+  width: min(1400px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.7rem, 1.6vh, 1.2rem);
+  padding-top: clamp(1.4rem, 3.5vh, 2.6rem);
+  border-top: 1px solid var(--hairline);
+}
+.film-section-row:first-child { border-top: 0; padding-top: 0; }
+.film-section-head { text-align: center; }
+.film-section-title {
+  margin: 0.4rem 0 0.3rem;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.85rem, 4vw, 3.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+.film-section-title em { font-style: italic; color: var(--accent-bright); }
+.film-section-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.film-section-ribbon {
+  position: relative;
+  width: min(1360px, 100%);
+  /* Tall enough for the orbit *and* the frames hanging above and below it. */
+  height: clamp(480px, 66svh, 800px);
+  margin: 0.35rem 0 0.4rem;
+  overflow: visible;
+}
+.film-section-ribbon .film-spiral-root { position: absolute; inset: 0; }
+.film-section-ribbon .film-spiral-wrap { top: 0; }
+.film-section-ribbon .film-spiral-card img {
+  max-width: clamp(128px, 13vw, 196px);
+  max-height: 124px;
+}
+.film-section-ribbon .film-spiral-caption {
+  font-size: 7px;
+  max-width: 220px;
+}
+.film-section-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.4rem, 4vw, 3.6rem);
+  width: min(1120px, 100%);
+  padding-top: clamp(0.4rem, 1vh, 0.75rem);
+}
+.film-section-logline { min-width: 0; }
+.film-section-logline .eyebrow { justify-content: flex-start; margin-bottom: 0.45rem; }
+.film-section-logline p:last-child {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: clamp(0.82rem, 1.05vw, 0.92rem);
+  line-height: 1.75;
+  color: var(--ink-dim);
+  /* Reserve three lines so all three info rows share one baseline. */
+  min-height: calc(3 * 1.75em);
+}
+.film-section-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.film-watch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.05rem;
+  border-radius: 2px;
+  background: var(--accent);
+  color: #03101d;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background 0.3s var(--ease-expo), transform 0.3s var(--ease-expo);
+}
+.film-watch:hover { background: var(--accent-bright); transform: translateY(-1px); }
+.film-watch-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #03101d;
+}
+.film-watch-note {
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.film-album-link {
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(61, 159, 255, 0.28);
+  padding-bottom: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+.film-album-link:hover { color: var(--accent-bright); border-color: var(--accent-bright); }
+
+/* The old spatial hint is unnecessary now that each film has its own links. */
+.film-section::before { height: 150px; }
+
+@media (max-width: 900px) {
+  .film-section-info { grid-template-columns: 1fr; gap: 1rem; }
+  .film-section-ribbon { height: clamp(440px, 58svh, 620px); }
+  .film-section-ribbon .film-spiral-card img { max-width: clamp(108px, 15vw, 150px); max-height: 104px; }
+  .film-section-actions { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.8rem; }
+  .film-watch-note { flex-basis: 100%; }
+}
+@media (max-width: 720px) {
+  .film-sections { gap: 2.8rem; padding: 0 var(--gutter); }
+  .film-section-ribbon { height: clamp(380px, 52svh, 500px); }
+  .film-section-ribbon .film-spiral-card img { max-width: clamp(96px, 27vw, 132px); max-height: 84px; }
+  .film-section-title { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+  .film-section-actions { flex-direction: column; align-items: stretch; }
+  .film-watch { justify-content: center; }
+  .film-album-link { text-align: center; align-self: center; }
+  .film-section-info { padding-bottom: 0.5rem; }
+}
+
+/* Landing filmography header sits in normal flow above the stacked films. */
+.film-section > .spatial-header {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin: 0 auto clamp(0.75rem, 2vh, 1.5rem);
+  padding: clamp(3rem, 6vh, 4.25rem) var(--gutter) 0;
+}
+.film-section > .spatial-header .spatial-title { font-size: clamp(2rem, 4.2vw, 3.4rem); }
+.film-section > .spatial-header .eyebrow { justify-content: center; }
+.film-section::before { display: none; }
+.film-section::after { display: none; }
+/* The archive overlay keeps its own split-ribbon layout. */
+.film-archive .film-ribbon-pair.is-archive { position: absolute; }
+
+/* Film-still viewer: resolve oversized / mislabelled originals safely. */
+.film-detail-frame { position: relative; }
+.film-detail-placeholder {
+  width: min(100%, 640px);
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(115deg, rgba(238,243,250,0.045), rgba(238,243,250,0.012));
+  border: 1px solid rgba(180,160,120,0.15);
+}
+.film-detail-status {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 999px;
+  background: rgba(5,7,9,0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  white-space: nowrap;
+  max-width: 92%;
+}
+.film-detail-status a { color: var(--accent-bright); border-bottom: 1px solid rgba(126,196,255,0.4); }
+.film-detail-spinner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(126,196,255,0.28);
+  border-top-color: var(--accent-bright);
+  animation: archiveSpin 0.9s linear infinite;
+}
+
+
+/* ============================================================
+   RIBBON FRAME CONTRACT
+   FilmSpiral writes --ribbon-frame-w / --ribbon-frame-h from the orbit scale
+   on every measure. These two declarations deliberately supersede every
+   historical fixed clamp so all three ribbons — and the archive overlays —
+   share one spacing rule at every viewport.
+   ============================================================ */
+.film-spiral-card img {
+  max-width: var(--ribbon-frame-w, 150px) !important;
+  max-height: var(--ribbon-frame-h, 84px) !important;
+}
+
+/* Visual hierarchy: the frame under the pointer or keyboard focus leads, the
+   rest of the ribbon recedes without changing depth order. */
+.film-spiral-wrap.is-hovering .film-spiral-card:not(.is-active) img {
+  opacity: 0.6;
+}
+.film-spiral-wrap.is-dragging { cursor: grabbing; }
+.film-spiral-wrap.is-dragging .film-spiral-card { pointer-events: none; }
+.film-spiral-card.is-active img {
+  border-color: rgba(205, 103, 66, 0.6);
+  /* No filter: the photograph is displayed exactly as delivered. */
+}
+.film-spiral-card:focus-visible {
+  outline: none;
+}
+.film-spiral-card:focus-visible img {
+  outline: 1px solid rgba(126, 196, 255, 0.95);
+  outline-offset: 5px;
+}
+.film-spiral-card:focus-visible .film-spiral-caption { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .film-spiral-card img,
+  .film-spiral-wrap.is-hovering .film-spiral-card:not(.is-active) img {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   GLOBAL AUDIO CONTROL — mute + volume, revealed on hover/focus
+   ============================================================ */
+.audio-volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: clamp(56px, 6vw, 84px);
+  height: 14px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+.audio-volume-slider::-webkit-slider-runnable-track {
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    to right,
+    var(--accent) 0%,
+    var(--accent) var(--volume-fill, 100%),
+    rgba(238, 243, 250, 0.16) var(--volume-fill, 100%),
+    rgba(238, 243, 250, 0.16) 100%
+  );
+}
+.audio-volume-slider::-moz-range-track {
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(238, 243, 250, 0.16);
+}
+.audio-volume-slider::-moz-range-progress {
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.audio-volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 9px;
+  height: 9px;
+  margin-top: -3.5px;
+  border-radius: 50%;
+  background: var(--accent-bright);
+  box-shadow: 0 0 6px var(--accent-glow);
+  border: none;
+}
+.audio-volume-slider::-moz-range-thumb {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-bright);
+  border: none;
+}
+.audio-volume-slider:focus-visible {
+  outline: 1px solid var(--accent-bright);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   ETHEREALISM — REFINED INTERFACE LAYER
+   Fine-line instrumentation, controlled negative space, and the
+   darkroom develop reveal. Additive only: nothing existing is replaced.
+   ============================================================ */
+
+/* ── Chapter rail ─────────────────────────────────────────── */
+.chapter-rail {
+  position: fixed;
+  z-index: 46;
+  left: clamp(0.9rem, 1.7vw, 1.7rem);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  pointer-events: none;
+}
+.chapter-rail-track {
+  position: absolute;
+  left: 3px;
+  top: 0;
+  bottom: 1.35rem;
+  width: 1px;
+  background: rgba(238, 243, 250, 0.09);
+  overflow: hidden;
+}
+.chapter-rail-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: top center;
+  background: linear-gradient(
+    to bottom,
+    rgba(126, 196, 255, 0.75),
+    rgba(61, 159, 255, 0.22)
+  );
+}
+.chapter-rail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1rem;
+}
+.chapter-rail-link {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 14px;
+  color: rgba(238, 243, 250, 0.3);
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: color 0.4s var(--ease-expo);
+}
+.chapter-rail-link:hover,
+.chapter-rail-link:focus-visible {
+  color: var(--ink-dim);
+}
+.chapter-rail-link.is-active {
+  color: var(--accent-bright);
+}
+.chapter-rail-index {
+  width: 1.5em;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.75;
+}
+.chapter-rail-label {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  transition: max-width 0.5s var(--ease-expo), opacity 0.35s;
+}
+.chapter-rail-link:hover .chapter-rail-label,
+.chapter-rail-link.is-active .chapter-rail-label,
+.chapter-rail-link:focus-visible .chapter-rail-label {
+  max-width: 9rem;
+  opacity: 1;
+}
+.chapter-rail-mark {
+  position: absolute;
+  left: -1rem;
+  width: 7px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+  transition: width 0.4s var(--ease-expo), opacity 0.4s;
+}
+.chapter-rail-link.is-active .chapter-rail-mark {
+  width: 13px;
+  opacity: 1;
+  box-shadow: 0 0 8px rgba(61, 159, 255, 0.55);
+}
+.chapter-rail-progress {
+  padding-left: 1rem;
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.18em;
+  color: rgba(238, 243, 250, 0.22);
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 1180px), (pointer: coarse) {
+  .chapter-rail { display: none; }
+}
+
+/* ── Darkroom develop reveal ──────────────────────────────── */
+/*
+ * Type emerges from darkness the way an image comes up in the tray: a soft
+ * clip wipe, a slight defocus, and one hairline of light crossing the line.
+ * Implemented with clip-path/opacity so nested coloured spans keep their own
+ * colour and no WebGL or canvas is required.
+ */
+.develop {
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  filter: blur(5px);
+  clip-path: inset(0 100% 0 0);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1.15s cubic-bezier(0.16, 1, 0.3, 1),
+    clip-path 1.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: clip-path, opacity;
+}
+.develop.is-developed {
+  opacity: 1;
+  filter: blur(0);
+  clip-path: inset(0 0 0 0);
+}
+.develop::after {
+  content: "";
+  position: absolute;
+  top: -0.25em;
+  bottom: -0.25em;
+  left: 0;
+  width: 40%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(126, 196, 255, 0.1) 45%,
+    rgba(238, 243, 250, 0.18) 52%,
+    transparent
+  );
+  opacity: 0;
+  transform: translateX(-120%);
+}
+.develop.is-developed::after {
+  animation: developSweep 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.12s 1 both;
+}
+@keyframes developSweep {
+  0% { opacity: 0; transform: translateX(-120%); }
+  22% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(260%); }
+}
+.develop--block { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .develop {
+    opacity: 1;
+    filter: none;
+    clip-path: none;
+    transition: none;
+  }
+  .develop::after { display: none; }
+}
+
+/* ============================================================
+   RIBBON DISCOVERY LAYER — hold reveals the still's note
+   ============================================================ */
+.film-spiral-note {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 1.35rem);
+  z-index: 3;
+  width: max(150px, min(240px, 46vw));
+  transform: translateX(-50%) translateY(4px);
+  padding: 0.44rem 0.5rem 0.4rem;
+  border-left: 1px solid rgba(126, 196, 255, 0.45);
+  background: rgba(5, 7, 10, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.6rem;
+  line-height: 1.5;
+  color: var(--ink-dim);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-expo), transform 0.4s var(--ease-expo);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.film-spiral-card.is-held .film-spiral-note {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+.film-spiral-card.is-held img {
+  border-color: rgba(126, 196, 255, 0.62);
+  /* No filter — lighting acts on the frame and its environment only. */
+}
+.film-spiral-wrap.is-holding .film-spiral-card:not(.is-held) img {
+  opacity: 0.42;
+}
+.film-spiral-card.is-held .film-spiral-caption { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .film-spiral-note { transition: none; }
+}
+
+/* Loader: darkroom frame marks — fine lines only, no new decoration. */
+.loader-track::before,
+.loader-track::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 1px;
+  height: 7px;
+  background: rgba(238, 243, 250, 0.28);
+}
+.loader-track::before { left: 0; }
+.loader-track::after { right: 0; }
+
+/* Phone / tablet reading progress — one hairline along the dock. */
+.mobile-dock-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform-origin: left center;
+  background: linear-gradient(
+    to right,
+    rgba(126, 196, 255, 0.9),
+    rgba(61, 159, 255, 0.18)
+  );
+  transition: transform 0.25s linear;
+}
+
+
+/* ============================================================
+   RIBBON SAFE AREA
+   The fit now reserves room for the frames above and below the orbit
+   (FilmSpiral.fitScale). These declarations make the intent explicit and keep
+   shadows/captions inside the canvas rather than clipped at its edge.
+   ============================================================ */
+.film-section-ribbon,
+.film-section-ribbon .film-spiral-root,
+.film-section-ribbon .film-spiral-wrap {
+  overflow: visible;
+}
+.film-section-ribbon .film-spiral-wrap {
+  padding: 6px 0;
+}
+.film-ribbon-panel .film-spiral-wrap,
+.film-ribbon-pair.is-archive .film-spiral-wrap {
+  overflow: visible;
+}
+.film-spiral-card .film-spiral-caption {
+  /* Captions sit under the frame; reserve for them inside the safe area. */
+  pointer-events: none;
+}
+
+/* ============================================================
+   DEPTH-LED LIGHTING
+   Both spatial engines quantise depth into five bands each frame and write
+   `data-depth` only when the band changes. These rules turn that into a light
+   that seems to move across the ribbon and the sphere: nearer frames catch a
+   warm rim and cast a deeper shadow, distant frames fall back into the haze.
+   No filters are applied to the photographs themselves — only borders,
+   shadows and opacities, so original colour and detail are untouched.
+   ============================================================ */
+.film-spiral-card img,
+.ps-card img {
+  transition:
+    opacity 0.4s var(--ease-expo, ease),
+    border-color 0.5s var(--ease-expo, ease),
+    box-shadow 0.6s var(--ease-expo, ease);
+}
+
+.film-spiral-card[data-depth="0"] img { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); border-color: rgba(126, 196, 255, 0.10); }
+.film-spiral-card[data-depth="1"] img { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.46); border-color: rgba(126, 196, 255, 0.14); }
+.film-spiral-card[data-depth="2"] img { box-shadow: 0 7px 22px rgba(0, 0, 0, 0.42); border-color: rgba(205, 103, 66, 0.20); }
+.film-spiral-card[data-depth="3"] img { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); border-color: rgba(229, 131, 89, 0.24); }
+.film-spiral-card[data-depth="4"] img {
+  box-shadow:
+    0 14px 38px rgba(0, 0, 0, 0.46),
+    0 0 0 1px rgba(126, 196, 255, 0.08),
+    0 0 22px rgba(61, 159, 255, 0.08);
+  border-color: rgba(214, 190, 144, 0.34);
+}
+
+.ps-card[data-depth="0"] img { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.55); }
+.ps-card[data-depth="1"] img { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); }
+.ps-card[data-depth="2"] img { box-shadow: 0 7px 24px rgba(0, 0, 0, 0.46); }
+.ps-card[data-depth="3"] img { box-shadow: 0 10px 32px rgba(0, 0, 0, 0.42); }
+.ps-card[data-depth="4"] img {
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.46),
+    0 0 24px rgba(61, 159, 255, 0.1);
+}
+
+/* Held frame reads as lit from within the composition. */
+.film-spiral-card.is-held[data-depth] img {
+  box-shadow:
+    0 16px 44px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(126, 196, 255, 0.28),
+    0 0 30px rgba(61, 159, 255, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film-spiral-card img,
+  .ps-card img { transition: none; }
+}
+
+/* ============================================================
+   FINE-LINE INTERACTION SYSTEM
+   One shared hover language for every actionable line in the interface:
+   a hairline that draws from the left, a small luminance lift, and a
+   restrained 1px shift. No fills, no glows on text, no colour changes to the
+   photographs. Applied to existing controls only.
+   ============================================================ */
+.film-watch,
+.film-album-link,
+.archive-quality,
+.chapter-rail-link,
+.text-action,
+.chapter-rail-progress {
+  transition:
+    color 0.35s var(--ease-expo, ease),
+    border-color 0.35s var(--ease-expo, ease),
+    background-color 0.35s var(--ease-expo, ease),
+    transform 0.35s var(--ease-expo, ease);
+}
+
+/* Hairline sweep under inline text actions. */
+.film-album-link,
+.text-action {
+  position: relative;
+  display: inline-block;
+}
+.film-album-link::after,
+.text-action::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.55s var(--ease-expo, ease);
+  opacity: 0.55;
+}
+.film-album-link:hover::after,
+.film-album-link:focus-visible::after,
+.text-action:hover::after,
+.text-action:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Primary buttons: a single-pixel inset light rather than a large glow. */
+.film-watch {
+  position: relative;
+  overflow: hidden;
+}
+.film-watch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  opacity: 0;
+  transition: opacity 0.35s var(--ease-expo, ease);
+  pointer-events: none;
+}
+.film-watch:hover::before,
+.film-watch:focus-visible::before { opacity: 1; }
+
+/* Chapter rail + clue pill: the mark lengthens instead of the text moving. */
+.chapter-rail-link:hover .chapter-rail-mark { opacity: 0.7; }
+
+/* Visible focus for every new control, consistent with the gallery rings. */
+.chapter-rail-link:focus-visible,
+.film-watch:focus-visible,
+.film-album-link:focus-visible,
+.archive-quality:focus-visible {
+  outline: 1px solid var(--accent-bright);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film-watch,
+  .film-album-link,
+  .archive-quality,
+  .chapter-rail-link,
+  .text-action { transition: none; }
+  .film-watch::before,
+  .film-album-link::after,
+  .text-action::after { transition: none; }
+}
+
+/* ============================================================
+   PHOTOGRAPHIC HOVER LIGHT
+   A restrained diagonal sheen crosses a frame when it is hovered or focused —
+   the visual echo of tilting a print under a lamp. Drawn as an overlay, never
+   applied as a filter to the image, so the photograph itself is untouched.
+   ============================================================ */
+.film-spiral-card,
+.ps-card {
+  position: relative;
+}
+.film-spiral-card::after,
+.ps-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    118deg,
+    transparent 32%,
+    rgba(238, 243, 250, 0.055) 46%,
+    rgba(126, 196, 255, 0.07) 52%,
+    transparent 66%
+  );
+  background-size: 240% 100%;
+  background-position: 130% 0;
+  transition: opacity 0.5s var(--ease-expo, ease),
+    background-position 0.9s var(--ease-expo, ease);
+  mix-blend-mode: screen;
+}
+.film-spiral-card.is-active::after,
+.film-spiral-card:focus-visible::after,
+.ps-card.is-active::after,
+.ps-card:focus-visible::after {
+  opacity: 1;
+  background-position: -30% 0;
+}
+/* Holding a frame suspends the sheen, keeping the note legible. */
+.film-spiral-card.is-held::after { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .film-spiral-card::after,
+  .ps-card::after { display: none; }
+}
+
+/* ============================================================
+   FILM STILLS SHOWCASE
+   The in-site album view opened from either filmography version.
+   Tiles render the untouched originals through AlbumOriginal.
+   ============================================================ */
+.stills-showcase {
+  position: fixed;
+  inset: 0;
+  z-index: 260;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 70% 4%, rgba(61, 159, 255, 0.05), transparent 48%),
+    var(--bg);
+}
+.stills-showcase-header {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(0.9rem, 2vw, 1.4rem) var(--gutter);
+  border-bottom: 1px solid var(--hairline);
+}
+.stills-showcase-heading { text-align: center; }
+.stills-showcase-heading .eyebrow { justify-content: center; margin-bottom: 0.2rem; }
+.stills-showcase-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.15rem, 2.2vw, 1.7rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+}
+.stills-showcase-meta {
+  margin-top: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.stills-showcase-header > .text-action:last-child { justify-self: end; }
+.stills-showcase-grid {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  /* FULL-VIEW ALBUM.
+     A single centred column. Every still is presented whole — width capped by
+     the album column, height by the viewport, `object-fit: contain`. No crop,
+     no upscale, no letterboxing, no fixed tile box. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2.2rem, 5vh, 4rem);
+  padding: clamp(1.5rem, 4vw, 3rem) var(--gutter) clamp(3rem, 8vh, 5rem);
+  scroll-padding-top: clamp(1.5rem, 4vh, 3rem);
+}
+
+.stills-showcase-tile {
+  position: relative;
+  display: block;
+  /* Wide enough for the tallest stills at 16:9 landscape, narrow enough for a
+     focused editorial column on a large monitor. */
+  width: min(100%, 1240px);
+  padding: 0;
+  border: 1px solid rgba(126, 196, 255, 0.16);
+  background: rgba(238, 243, 250, 0.02);
+  cursor: pointer;
+  overflow: visible;
+  scroll-margin: clamp(1.5rem, 5vh, 3rem);
+  transition: border-color 0.45s var(--ease-expo, ease),
+    box-shadow 0.45s var(--ease-expo, ease),
+    transform 0.45s var(--ease-expo, ease);
+}
+.stills-showcase-tile:hover,
+.stills-showcase-tile:focus-visible {
+  border-color: rgba(126, 196, 255, 0.30);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.48);
+  transform: translateY(-2px);
+}
+.stills-showcase-tile:focus-visible {
+  outline: 1px solid var(--accent-bright);
+  outline-offset: 5px;
+}
+.stills-showcase-tile.is-focused {
+  border-color: rgba(126, 196, 255, 0.5);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.52);
+}
+.stills-showcase-tile.is-open {
+  border-color: rgba(126, 196, 255, 0.6);
+}
+
+.stills-showcase-media {
+  display: block;
+  /* Reserved shape, measured from the delivered original — so the album has no
+     layout shift and each still keeps its own proportions exactly. */
+  background: rgba(238, 243, 250, 0.015);
+}
+.stills-showcase-media img,
+.stills-showcase-media .album-original img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 88svh;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  transition: opacity 0.35s ease;
+}
+/* The still is never scaled up beyond its natural size on a large screen. */
+.stills-showcase-media img.is-loaded {
+  image-rendering: auto;
+}
+
+.stills-showcase-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.45rem 0.6rem 0.4rem;
+  background: rgba(5, 7, 10, 0.82);
+  border-top: 1px solid rgba(126, 196, 255, 0.16);
+}
+.stills-showcase-index {
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.16em;
+  color: var(--accent-bright);
+  font-variant-numeric: tabular-nums;
+}
+.stills-showcase-index i { color: var(--muted); font-style: normal; }
+.stills-showcase-name {
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(238, 243, 250, 0.34);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.stills-showcase-tile:hover .stills-showcase-name,
+.stills-showcase-tile:focus-visible .stills-showcase-name { color: var(--ink-dim); }
+
+.stills-showcase-tile:hover .stills-showcase-index,
+.stills-showcase-tile:focus-visible 
+
+/* ============================================================
+   FILMOGRAPHY ARCHIVE — split pair, then a scroll-down third ribbon
+   ============================================================ */
+.film-archive--scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.film-archive--scroll .film-archive-header {
+  position: sticky;
+  top: 0;
+  background: rgba(5, 7, 9, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 40;
+}
+.film-archive-pair-zone {
+  position: relative;
+  height: clamp(520px, 78svh, 900px);
+  margin-top: 0.5rem;
+}
+.film-archive-pair-zone .film-ribbon-pair.is-archive {
+  position: absolute;
+  inset: 0 var(--gutter) 0;
+}
+.film-archive-birth {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: clamp(2.5rem, 6vh, 4rem) var(--gutter) clamp(4rem, 9vh, 6rem);
+  border-top: 1px solid var(--hairline);
+}
+.film-archive-birth-head { text-align: center; }
+.film-archive-birth-title {
+  margin: 0.35rem 0 0.25rem;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+.film-archive-birth-title em { font-style: italic; color: var(--accent-bright); }
+.film-archive-birth-meta {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.film-archive-birth-ribbon {
+  position: relative;
+  width: min(1360px, 100%);
+  height: clamp(440px, 58svh, 680px);
+}
+.film-archive-birth-ribbon .film-spiral-root { position: absolute; inset: 0; }
+.film-archive-birth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 1.4rem;
+  margin-top: 0.4rem;
+}
+button.film-album-link {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid rgba(61, 159, 255, 0.28);
+  padding: 0 0 2px;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  cursor: pointer;
+}
+.film-album-link--external { color: var(--muted); border-color: var(--hairline); }
+
+@media (max-width: 900px) {
+  .film-archive-pair-zone { height: clamp(520px, 70svh, 760px); }
+  .film-archive-birth-ribbon { height: clamp(420px, 52svh, 560px); }
+}
+@media (max-width: 720px) {
+  .stills-showcase-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+    padding: 0.75rem 0.75rem 4.5rem;
+  }
+  .stills-showcase-header {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.6rem;
+    padding: 0.7rem 0.9rem;
+  }
+  .stills-showcase-title { font-size: 1rem; }
+  .film-archive-pair-zone { height: auto; padding-bottom: 1rem; }
+  .film-archive-pair-zone .film-ribbon-pair.is-archive {
+    position: relative;
+    inset: auto;
+    padding: 0.75rem var(--gutter) 0;
+  }
+  .film-archive-birth { padding: 2rem var(--gutter) 5.5rem; }
+  .film-archive-birth-ribbon { height: 340px; }
+}
+
+/* Scrollable archive: the fixed scrims would dim the third ribbon and the
+   overlay must own its own scrolling, so they are disabled here. */
+.film-archive--scroll::before,
+.film-archive--scroll::after { display: none; }
+.film-archive--scroll { background: var(--bg); }
+.film-archive--scroll .film-archive-birth-ribbon .film-spiral-wrap {
+  overflow: visible;
+}
+
+
+/* Ribbon-panel album trigger shares the fine-line interaction language. */
+.film-ribbon-panel-meta button {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid rgba(238, 243, 250, 0.14);
+  padding: 0 0 1px;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+}
+.film-ribbon-panel-meta button:hover,
+.film-ribbon-panel-meta button:focus-visible {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+.film-ribbon-panel-meta button:focus-visible {
+  outline: 1px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+
+
+/* ============================================================
+   SCROLLABLE FILM ARCHIVE
+   Applies at every width: the archive owns its scrolling so the third ribbon
+   is reachable, and nothing inside it may clip the page.
+   ============================================================ */
+.film-archive--scroll {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  display: block;
+  height: 100%;
+  max-height: 100vh;
+  max-height: 100svh;
+}
+.film-archive--scroll .film-archive-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+.film-archive-pair-zone { position: relative; }
+.film-archive--scroll .film-archive-birth {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+/* Belt and braces: the third ribbon is always laid out after the pair. */
+.film-archive--scroll .film-archive-pair-zone,
+.film-archive--scroll .film-archive-birth { flex: 0 0 auto; }
+
+/* A still selected from a ribbon is scrolled into view and marked briefly,
+   so the album opens focused on the picture that was clicked. */
+.stills-showcase-tile.is-focused img {
+  outline: 1px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+.stills-showcase-tile.is-focused {
+  animation: stillsFocus 2.6s var(--ease-expo, ease) 1 both;
+}
+@keyframes stillsFocus {
+  0% { opacity: 0.4; }
+  18% { opacity: 1; }
+  100% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stills-showcase-tile.is-focused { animation: none; }
+}
+
+/* ============================================================
+   FILM STILL VIEWER — swipe through the album
+   ============================================================ */
+.film-detail-frame {
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.film-detail-frame:active { cursor: grabbing; }
+.film-detail-original {
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+.film-detail-swipe-hint {
+  color: rgba(238, 243, 250, 0.28);
+  font-size: 6.5px;
+  letter-spacing: 0.14em;
+}
+@media (pointer: fine) {
+  .film-detail-swipe-hint { display: none; }
+}
+
+/* ── Album caption + open cue ───────────────────────────── */
+.stills-showcase-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.45rem 0.6rem 0.4rem;
+  background: rgba(5, 7, 10, 0.82);
+  border-top: 1px solid rgba(126, 196, 255, 0.16);
+}
+.stills-showcase-index {
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.16em;
+  color: var(--accent-bright);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.stills-showcase-index i { color: var(--muted); font-style: normal; }
+.stills-showcase-name {
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(238, 243, 250, 0.34);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.stills-showcase-tile:hover .stills-showcase-name,
+.stills-showcase-tile:focus-visible .stills-showcase-name { color: var(--ink-dim); }
+.stills-showcase-open {
+  position: absolute;
+  inset: auto 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.7rem 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(238, 243, 250, 0.72);
+  background: linear-gradient(to top, rgba(5, 7, 10, 0.92), transparent);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-expo, ease);
+  pointer-events: none;
+}
+.stills-showcase-tile:hover .stills-showcase-open,
+.stills-showcase-tile:focus-visible .stills-showcase-open,
+.stills-showcase-tile.is-focused .stills-showcase-open { opacity: 1; }
+
+/* Landing portrait: the hero photograph is the full height of the arrival
+   screen. Width follows the master's own 1312 × 1199 proportions. */
+#work { --portrait-height: min(100svh, 100vw); }
+.hero-portrait-stage img {
+  max-height: 100svh;
+  object-fit: contain;
+  object-position: bottom center;
+}
+@media (max-width: 1100px) {
+  #work { --portrait-height: min(84svh, 130vw); }
+}
+
+/* ============================================================
+   TYPOGRAPHY RESTORATION + LAYOUT CORRECTIONS
+   Original font roles, sizes and blue-italic emphasis restored.
+   Only structural fixes and non-typographic accents are added.
+   ============================================================ */
+
+/* Restore the blue italic split in display headings (the authored accent). */
+.spatial-title em,
+.film-section-title em { color: var(--accent-bright); }
+
+.film-section-row .film-watch { background: var(--blue-core); }
+.film-section-row .film-watch:hover,
+.film-section-row .film-watch:focus-visible { background: var(--blue-bright); }
+
+/* ── Photography: typography and sphere occupy separate bands ──
+   The header is placed in flow, so the sphere can never run behind
+   the chapter title at any viewport or text length. */
+#photography.sphere-section {
+  display: flex;
+  flex-direction: column;
+}
+#photography .spatial-header {
+  position: relative !important;
+  top: auto !important;
+  left: auto;
+  right: auto;
+  flex: 0 0 auto;
+  z-index: 30;
+  padding: clamp(3.6rem, 8vh, 5.6rem) var(--gutter) 0.8rem !important;
+}
+#photography .sphere-wrap {
+  position: relative;
+  inset: auto;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+}
+#photography .sphere-wrap .ps-caption { z-index: 2; }
+
+/* ── Filmography: ribbons must never be clipped by the section ──
+   The landing section grows with its three films, so the fixed
+   top/bottom gradient masks and overflow clipping are removed and
+   each row reserves its own scroll landing area. */
+#filmography.film-section {
+  overflow: visible;
+}
+#filmography.film-section::before,
+#filmography.film-section::after {
+  display: none;
+}
+#filmography .film-section-row {
+  overflow: visible;
+  scroll-margin-top: clamp(4.5rem, 9vh, 7rem);
+}
+#filmography .film-section-ribbon,
+#filmography .film-section-ribbon .film-spiral-root,
+#filmography .film-section-ribbon .film-spiral-wrap {
+  overflow: visible;
+}
+#filmography .film-section-ribbon {
+  height: clamp(480px, 62svh, 720px);
+  margin-top: 0.35rem;
+  margin-bottom: 0.6rem;
+}
+#filmography .film-section-row + .film-section-row {
+  margin-top: clamp(0.75rem, 2vh, 1.5rem);
+}
+@media (max-width: 900px) {
+  #filmography .film-section-ribbon { height: clamp(470px, 62svh, 660px); }
+}
+@media (max-width: 720px) {
+  #filmography.film-section { padding-bottom: calc(6.5rem + env(safe-area-inset-bottom)); }
+  #filmography .film-section-ribbon { height: clamp(430px, 56svh, 560px); }
+}
+
+/* Keyboard focus stays visible without altering typography. */
+:where(a, button, [role="button"], [tabindex]):focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+
+/* Header collision guard: the centre tagline cannot coexist with
+   the links below 1440. This is a layout guard, not a type change. */
+@media (max-width: 1439px) {
+  header.site-header > .absolute.left-1\/2 { display: none !important; }
+}
+
+/* Reduced-motion contract (explicit owner requirement). */
+@media (prefers-reduced-motion: reduce) {
+  .hero-portrait-stage > div,
+  .hero-portrait-stage img {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  .grain, .grain::after, .bloom, .scanlines, .scanlines::after {
+    animation: none !important;
+  }
+  .film-spiral-card:hover img,
+  .film-spiral-card:focus-visible img,
+  .ps-card:hover img,
+  .ps-card.is-active img,
+  .archive-tile:hover .archive-tile-media img,
+  .stills-showcase-tile:hover .stills-showcase-media img {
+    transform: none !important;
+    scale: none !important;
+  }
+  .develop { opacity: 1 !important; filter: none !important; clip-path: none !important; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Balanced display line breaks and comfortable paragraph wrapping. */
+.spatial-title,
+.film-section-title,
+#featured-project h2,
+#about h2,
+#contact h2 { text-wrap: balance; }
+.spatial-subtitle,
+.film-section-meta,
+.film-section-logline p,
+#about p,
+#contact p { text-wrap: pretty; }
+
+/* ============================================================
+   STILLS ALBUM — dedicated contact-sheet view
+   Multiple whole stills per screen; no crop, no re-encode.
+   ============================================================ */
+.stills-showcase { background: var(--bg); }
+.stills-showcase-header {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  padding: clamp(0.8rem, 1.8vw, 1.2rem) var(--gutter);
+  border-bottom: 1px solid var(--hairline);
+  background: rgba(5, 7, 9, 0.92);
+}
+.stills-showcase-heading { min-width: 0; }
+.stills-showcase-heading .eyebrow {
+  font-size: 8px;
+  letter-spacing: 0.24em;
+  justify-content: center;
+  margin-bottom: 0.15rem;
+}
+.stills-showcase-title { font-size: clamp(1.2rem, 2.4vw, 1.9rem); }
+.stills-showcase-meta { font-size: 7.5px; letter-spacing: 0.16em; }
+.stills-showcase-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem 1rem;
+  flex-wrap: wrap;
+}
+.stills-showcase-tools .text-action,
+.stills-showcase-watch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 36px;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(61, 159, 255, 0.28);
+}
+.stills-showcase-watch {
+  padding: 0 0.65rem;
+  border: 1px solid rgba(61, 159, 255, 0.35);
+  border-radius: 2px;
+  color: var(--ink);
+  background: rgba(61, 159, 255, 0.08);
+}
+.stills-showcase-watch:hover,
+.stills-showcase-watch:focus-visible { background: rgba(61, 159, 255, 0.16); }
+.stills-showcase-watch .film-watch-dot {
+  width: 4px; height: 4px; border-radius: 50%; background: var(--accent-bright);
+}
+
+.stills-showcase-bar {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.55rem var(--gutter);
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid rgba(238, 243, 250, 0.04);
+}
+.stills-showcase-bar-label { color: var(--accent-bright); }
+.stills-showcase-bar-rule { flex: 1 1 auto; height: 1px; background: var(--hairline); }
+.stills-showcase-bar-count { color: var(--ink-faint); }
+
+/* The grid is the album: 2 columns, 3 on wide screens, 1 on phones. */
+.stills-showcase .stills-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  align-content: start;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  padding: clamp(1rem, 2.4vw, 1.75rem) var(--gutter) clamp(2.5rem, 6vh, 4rem);
+  scroll-padding-top: 1rem;
+}
+.stills-showcase .stills-showcase-tile {
+  width: 100%;
+  padding: 0;
+  border: 1px solid rgba(238, 243, 250, 0.09);
+  background: rgba(238, 243, 250, 0.025);
+  scroll-margin: 1.25rem;
+  transition: border-color 0.35s ease, background 0.35s ease, transform 0.35s ease;
+}
+.stills-showcase .stills-showcase-tile:hover,
+.stills-showcase .stills-showcase-tile:focus-visible {
+  border-color: rgba(126, 196, 255, 0.55);
+  background: rgba(238, 243, 250, 0.04);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+.stills-showcase .stills-showcase-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: clamp(190px, 40svh, 460px);
+  overflow: hidden;
+  background: #020507;
+}
+.stills-showcase .stills-showcase-media img,
+.stills-showcase .stills-showcase-media .album-original img {
+  width: 100%;
+  height: auto;
+  max-height: clamp(190px, 40svh, 460px);
+  object-fit: contain;
+  object-position: center;
+}
+.stills-showcase .stills-showcase-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.5rem 0.65rem 0.55rem;
+  background: rgba(5, 7, 10, 0.9);
+  border-top: 1px solid rgba(238, 243, 250, 0.07);
+}
+.stills-showcase .stills-showcase-index { font-size: 8px; color: var(--accent-bright); }
+.stills-showcase .stills-showcase-name { font-size: 7.5px; color: var(--ink-faint); }
+.stills-showcase .stills-showcase-open {
+  inset: auto 0 0;
+  padding: 0.5rem 0.6rem 0.55rem;
+  font-size: 7.5px;
+  letter-spacing: 0.18em;
+  background: linear-gradient(to top, rgba(3, 7, 12, 0.92), transparent);
+}
+.stills-showcase .stills-showcase-tile:hover .stills-showcase-open,
+.stills-showcase .stills-showcase-tile:focus-visible .stills-showcase-open { opacity: 1; }
+.stills-showcase .stills-showcase-tile.is-focused {
+  border-color: var(--accent-bright);
+  box-shadow: 0 0 0 1px rgba(126, 196, 255, 0.35);
+}
+@media (min-width: 1600px) {
+  .stills-showcase .stills-showcase-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1rem, 1.6vw, 1.75rem);
+  }
+}
+@media (max-width: 720px) {
+  .stills-showcase-header {
+    grid-template-columns: auto minmax(0, 1fr);
+    row-gap: 0.6rem;
+    padding: 0.7rem 1rem;
+  }
+  .stills-showcase-tools {
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .stills-showcase-heading { text-align: left; }
+  .stills-showcase-heading .eyebrow { justify-content: flex-start; }
+  .stills-showcase-title { font-size: 1.05rem; }
+  .stills-showcase-bar { padding: 0.5rem 1rem; font-size: 7px; }
+  .stills-showcase .stills-showcase-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.9rem;
+    padding: 0.85rem 1rem calc(2.5rem + env(safe-area-inset-bottom));
+  }
+  .stills-showcase .stills-showcase-media,
+  .stills-showcase .stills-showcase-media img {
+    max-height: 44svh;
+  }
+}
+
+/* Viewer: explicit album destination, separate from masters. */
+.film-detail-album {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font: inherit;
+  color: var(--accent-bright);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(126, 196, 255, 0.4);
+  padding: 0 0 1px;
+  cursor: pointer;
+}
+.film-detail-album:hover,
+.film-detail-album:focus-visible { color: #fff; border-color: #fff; }
+
+/* ============================================================
+   FILMOGRAPHY ARCHIVE — album, watch and masters as separate actions
+   ============================================================ */
+.film-ribbon-panel-meta { align-items: flex-start; gap: 0.5rem; }
+.film-ribbon-panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.9rem;
+  pointer-events: auto;
+}
+.film-ribbon-panel-actions button,
+.film-ribbon-panel-actions a {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 30px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(126, 196, 255, 0.28);
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  cursor: pointer;
+}
+.film-ribbon-panel-actions a:last-child { color: var(--muted); border-color: var(--hairline); }
+.film-ribbon-panel-actions .film-watch-dot {
+  width: 4px; height: 4px; border-radius: 50%; background: var(--accent-bright);
+}
+
+/* ============================================================
+   LOWER DOCK REMOVED — quiet top scroll progress replaces it
+   ============================================================ */
+.mobile-dock { display: none !important; }
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  z-index: 300;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: linear-gradient(to right, var(--accent), var(--accent-bright));
+  opacity: 0.65;
+  pointer-events: none;
+}
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    animation: scroll-progress-grow linear both;
+    animation-timeline: scroll(root);
+  }
+  @keyframes scroll-progress-grow {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+}
+@media (max-width: 1180px) {
+  body { padding-bottom: 0 !important; }
+  #filmography.film-section { padding-bottom: clamp(3rem, 7vh, 5rem) !important; }
+  #contact { padding-bottom: clamp(2.5rem, 6vh, 4rem) !important; }
+  .hero-scroll-cue { display: none; }
+}
+
+/* ── Stills album header refinement ────────────────────────── */
+.stills-showcase-header {
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "back tools" "title title";
+  row-gap: 0.55rem;
+  align-items: center;
+  padding: clamp(0.7rem, 1.6vw, 1rem) var(--gutter);
+}
+.stills-showcase-header > .text-action:first-child { grid-area: back; justify-self: start; }
+.stills-showcase-heading { grid-area: title; text-align: left; padding-top: 0.35rem; }
+.stills-showcase-heading .eyebrow { justify-content: flex-start; font-size: 8px; }
+.stills-showcase-title { font-size: clamp(1.35rem, 2.6vw, 2.1rem); }
+.stills-showcase-tools { grid-area: tools; justify-self: end; gap: 0.5rem 0.9rem; flex-wrap: nowrap; }
+.stills-showcase-watch,
+.stills-showcase-tools .text-action {
+  min-height: 32px;
+  padding: 0.25rem 0.7rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  letter-spacing: 0.12em;
+  border-bottom: 0;
+  border: 1px solid rgba(126, 196, 255, 0.28);
+  border-radius: 2px;
+}
+.stills-showcase-watch {
+  border-color: rgba(126, 196, 255, 0.5);
+  background: rgba(61, 159, 255, 0.1);
+  color: var(--ink);
+}
+.stills-showcase-tools .text-action { color: var(--ink-faint); }
+.stills-showcase-tools .text-action:hover,
+.stills-showcase-tools .text-action:focus-visible { color: var(--accent-bright); border-color: rgba(126,196,255,0.5); }
+.stills-showcase-bar { padding-block: 0.45rem; }
+
+@media (max-width: 720px) {
+  .stills-showcase-header {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "back" "title" "tools";
+    row-gap: 0.5rem;
+  }
+  .stills-showcase-tools { justify-self: start; justify-content: flex-start; flex-wrap: wrap; width: 100%; }
+  .stills-showcase-heading { padding-top: 0; }
+  .stills-showcase-title { font-size: 1.15rem; }
+  .stills-showcase-watch, .stills-showcase-tools .text-action { font-size: 8px; min-height: 34px; }
+  .stills-showcase-bar { display: none; }
+}
+
+/* ============================================================
+   PHASE 04 — CINEMATIC LIGHTING
+   Light is composition, not glow.
+   Directional chapter light · negative fill · authored geometry.
+   No centre bloom, no pointer light, no animation loop.
+   ============================================================ */
+
+:root {
+  --light-key: #cfe4fb;
+  --light-fill: rgba(86, 132, 190, 0.10);
+  --light-rim: rgba(159, 208, 255, 0.24);
+  --light-reflection: rgba(206, 176, 138, 0.10);
+  --light-shadow: rgba(0, 0, 0, 0.55);
+  --light-temperature: 6200;
+  --light-falloff: 62%;
+}
+
+.chapter-geometry {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.chapter-geometry svg { width: 100%; height: 100%; display: block; }
+.chapter-geometry + * { position: relative; z-index: 1; }
+#work > :not(.chapter-geometry) { position: relative; z-index: 1; }
+#featured-project > :not(.chapter-geometry),
+#about > :not(.chapter-geometry),
+#contact > :not(.chapter-geometry) { position: relative; z-index: 1; }
+.film-section-row > :not(.chapter-geometry),
+.sphere-section > :not(.chapter-geometry) { position: relative; z-index: 1; }
+
+/* ── HERO — window light from camera-left, rim separation right ──
+   Source: tall window at 18% / 28%. Negative fill: lower-right.
+   The portrait keeps its own photographic lighting; nothing overlays it. */
+#work {
+  background-image:
+    linear-gradient(112deg,
+      rgba(176, 210, 246, 0.115) 0%,
+      rgba(120, 162, 212, 0.065) 22%,
+      rgba(54, 88, 136, 0.022) 44%,
+      transparent 62%),
+    linear-gradient(258deg,
+      rgba(0, 0, 0, 0.42) 0%,
+      rgba(2, 6, 12, 0.20) 26%,
+      transparent 52%),
+    radial-gradient(120% 54% at 42% 100%,
+      rgba(186, 152, 116, 0.052) 0%,
+      transparent 72%);
+  background-color: #050709;
+}
+#work::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(5, 7, 9, 0.72) 0%, transparent 22%);
+}
+
+/* ── PHOTOGRAPHY — the instrument sits in a directional field ──
+   Light enters low-left and rakes across; the right side is unlit. */
+#photography {
+  background-image:
+    linear-gradient(108deg,
+      rgba(86, 156, 232, 0.085) 0%,
+      rgba(52, 104, 168, 0.038) 26%,
+      rgba(18, 40, 72, 0.012) 50%,
+      transparent 68%),
+    linear-gradient(288deg,
+      rgba(0, 0, 0, 0.40) 0%,
+      transparent 46%);
+  background-color: #05080d;
+}
+
+/* ── FILMOGRAPHY — one continuous blue field ──
+   No per-film tint, no coloured wash, no blend mode. The three chapters share
+   the page ground exactly, so the join is seamless. Identity is carried by the
+   single warm signal below, not by hue. */
+#delusion-of-negation,
+#zakias-clock,
+#the-birth-permit {
+  background-color: #050709;
+  background-image: none;
+}
+
+/* ── FEATURED — exhibition wall, one lamp, one cast shadow ── */
+#featured-project {
+  background-color: #050709;
+  background-image: none;
+}
+
+/* ── PROFILE / CONTACT — quiet directional practicals ── */
+#about {
+  background-image:
+    linear-gradient(118deg,
+      rgba(150, 190, 230, 0.062) 0%,
+      rgba(60, 100, 148, 0.02) 32%,
+      transparent 58%),
+    linear-gradient(298deg,
+      rgba(0, 0, 0, 0.34) 0%,
+      transparent 48%);
+}
+#contact {
+  background-image:
+    linear-gradient(244deg,
+      rgba(160, 200, 240, 0.07) 0%,
+      rgba(56, 96, 142, 0.022) 34%,
+      transparent 60%),
+    linear-gradient(64deg,
+      rgba(0, 0, 0, 0.36) 0%,
+      transparent 46%);
+}
+
+/* ── ARCHIVE — exhibition high-key: legibility first ── */
+.archive {
+  background:
+    linear-gradient(to bottom,
+      rgba(18, 28, 42, 0.55) 0%,
+      rgba(6, 10, 16, 0.30) 8%,
+      transparent 22%),
+    #05070a;
+}
+.archive-header { background: rgba(6, 10, 16, 0.86); }
+.archive-albums { background: rgba(8, 13, 21, 0.62); }
+.archive-album.is-current { background: rgba(22, 36, 54, 0.72); }
+
+/* ── Portrait: no halo. A directional field only. ── */
+.hero-portrait-stage { position: relative; }
+.hero-portrait-stage::before {
+  content: "";
+  position: absolute;
+  inset: 6% 8% 0 6%;
+  pointer-events: none;
+  background:
+    linear-gradient(108deg,
+      rgba(190, 220, 250, 0.10) 0%,
+      rgba(90, 130, 180, 0.028) 30%,
+      transparent 54%);
+  mix-blend-mode: screen;
+}
+
+/* ── Geometry strokes: authored, restrained, never over imagery ── */
+.chapter-geometry svg { opacity: 1; }
+#work .chapter-geometry { opacity: 0.9; }
+#photography .chapter-geometry { opacity: 0.8; }
+.film-section-row .chapter-geometry { opacity: 0.62; }
+#featured-project .chapter-geometry { opacity: 0.7; }
+#about .chapter-geometry,
+#contact .chapter-geometry { opacity: 0.5; }
+
+/* Coarse pointers: reduce geometry weight, keep the light composition. */
+@media (pointer: coarse) {
+  #work .chapter-geometry,
+  #photography .chapter-geometry { opacity: 0.55; }
+  .film-section-row .chapter-geometry { opacity: 0.42; }
+}
+/* Short landscape phones: the portrait and copy need the whole frame. */
+@media (max-width: 1000px) and (max-height: 520px) {
+  #work .chapter-geometry { display: none; }
+  #work { background-image:
+    linear-gradient(102deg, rgba(176,210,246,0.10) 0%, rgba(60,96,140,0.02) 42%, transparent 68%),
+    linear-gradient(258deg, rgba(0,0,0,0.32) 0%, transparent 48%); }
+  .hero-portrait-stage::before { display: none; }
+}
+
+@media (max-width: 720px) {
+  #work {
+    background-image:
+      linear-gradient(102deg, rgba(176, 210, 246, 0.11) 0%, rgba(60, 96, 140, 0.02) 40%, transparent 66%),
+      linear-gradient(258deg, rgba(0, 0, 0, 0.34) 0%, transparent 46%);
+  }
+  #about, #contact { background-image: none; }
+}
+
+/* ── Reduced motion: this system has no animation to stop. ── */
+@media (prefers-reduced-motion: reduce) {
+  .grain, .grain::after { animation: none !important; }
+  .bloom { display: none !important; }
+}
+
+/* ── Kill switch ── */
+html[data-lighting="off"] #work,
+html[data-lighting="off"] #photography,
+html[data-lighting="off"] #delusion-of-negation,
+html[data-lighting="off"] #zakias-clock,
+html[data-lighting="off"] #the-birth-permit,
+html[data-lighting="off"] #featured-project,
+html[data-lighting="off"] #about,
+html[data-lighting="off"] #contact { background-image: none; }
+html[data-lighting="off"] .chapter-geometry,
+html[data-lighting="off"] .hero-portrait-stage::before { display: none; }
+
+/* ============================================================
+   SEAMLESS SURFACES
+   One continuous experience: the portfolio and its archives are
+   two states of the same surface. Chapters share a single base so
+   their joins cannot show a seam; archives crossfade in place.
+   ============================================================ */
+
+html { background-color: #050709; }
+body, #root { background-color: #050709; }
+
+/* Every chapter paints onto the same base and resolves its light to it, so a
+   scroll from one chapter to the next is continuous, not a hard cut. */
+#work, #photography, #delusion-of-negation, #zakias-clock,
+#the-birth-permit, #featured-project, #about, #contact {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Film chapters are one continuous field. No separators, no rules, no
+   per-row blocks: the joins are carried by the shared background only. */
+.film-section-row,
+.film-section-row + .film-section-row {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+#filmography .film-sections { background: transparent; }
+
+/* View-transition crossfade — matched surfaces, no white flash, no slide. */
+@view-transition { navigation: auto; }
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 320ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  mix-blend-mode: normal;
+  background-color: #050709;
+}
+::view-transition-old(root) { animation-name: surface-out; }
+::view-transition-new(root) { animation-name: surface-in; }
+@keyframes surface-out {
+  to { opacity: 0; filter: blur(2px); }
+}
+@keyframes surface-in {
+  from { opacity: 0; filter: blur(2px); }
+}
+html[data-surface-transition="off"] ::view-transition-old(root),
+html[data-surface-transition="off"] ::view-transition-new(root) { animation: none; }
+
+/* Overlays open on the same ink as the page, so the transition is a
+   dissolve in place rather than a new screen appearing over it. */
+.archive, .film-archive, .stills-showcase, .ps-viewer, .film-detail {
+  background-color: #050709;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
+
+
+/* One family only. The attribute is retained as a no-op hook so any stored
+   preference from the previous phase cannot reintroduce a second accent. */
+html[data-signal="oxide"] { --signal-tier: var(--c-burnt); }
+
+
+/* ============================================================
+   TASK 3 — THE THREE SIGNAL TIERS
+   Exactly four warm marks per film chapter, and nothing else.
+   No gradient, no field, no blend mode receives the signal.
+   ============================================================ */
+#delusion-of-negation { --signal-tier: var(--c-ice); }
+#zakias-clock         { --signal-tier: var(--c-copper); }
+#the-birth-permit     { --signal-tier: var(--c-burnt); }
+#featured-project     { --signal-tier: var(--c-ice); }
+
+/* 1 — index numeral */
+.film-chapter-index {
+  color: var(--signal-tier, var(--signal-full));
+  font-variant-numeric: tabular-nums;
+}
+/* 2 — 32px chapter rule */
+.film-section-row .eyebrow-line {
+  width: 32px;
+  background: var(--signal-tier, var(--signal-full));
+  box-shadow: none;
+}
+/* 3 — active-frame outline, offset so the stroke sits outside the image box */
+.film-section-row .film-spiral-card.is-active img,
+.film-section-row .film-spiral-card:focus-visible img {
+  border-color: var(--film-frame-border, rgba(238, 243, 250, 0.10));
+  outline: 1px solid var(--signal-tier, var(--signal-full));
+  outline-offset: 4px;
+}
+/* 4 — one metadata label only (the logline label) */
+.film-section-logline > .eyebrow {
+  color: var(--signal-tier, var(--signal-full));
+}
+
+/* Everything else in a film chapter stays cool. */
+.film-section-meta::before {
+  background: var(--counter-ice);
+  opacity: 0.9;
+}
+.film-section-title em { color: var(--accent-bright); }
+.film-section-logline .eyebrow + p { color: var(--ink-dim); }
+.film-watch { background: var(--blue-core); color: #03101d; }
+
+/* Featured: the featured film, not a fourth identity.
+   Two marks only — its chapter rule and its section label. */
+#featured-project .eyebrow-line {
+  width: 32px;
+  background: var(--signal-tier, var(--signal-full));
+}
+#featured-project .featured-signal-label {
+  color: var(--signal-tier, var(--signal-full));
+}
+
+/* Warm signal must never be used decoratively elsewhere. */
+.film-spiral-caption,
+.film-watch-note,
+.film-album-link,
+.film-detail-meta,
+.stills-showcase-watch { color: inherit; }
+.film-spiral-caption { color: var(--counter-ice); opacity: 0.62; }
+
+/* Featured signal rule — 32px mark, same width as the film chapter rules. */
+.featured-signal-rule {
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  flex: 0 0 auto;
+  background: var(--signal-tier, var(--signal-full));
+}
+
+
+/* ============================================================
+   BLUE HOUR — CHROMATIC COUNTERLIGHT
+   Environment 70–80% · neutral 15–25% · accent 2–4%.
+   The accent is image-derived per film and never becomes a field.
+   ============================================================ */
+
+/* ── Environmental planes: navy → mineral → abyss, one blue world ── */
+:root {
+  --env-deep: color-mix(in oklab, var(--c-abyss) 82%, var(--c-mineral) 18%);
+  --env-mid:  color-mix(in oklab, var(--c-navy) 76%, var(--c-mineral) 24%);
+  --env-edge: color-mix(in oklab, var(--c-navy) 88%, var(--c-sapphire) 12%);
+}
+
+/* Hero: mineral-blue plane at the light edge, pearl typography untouched. */
+#work {
+  background-color: transparent;
+  background-image:
+    linear-gradient(112deg,
+      color-mix(in oklab, var(--c-mineral) 26%, transparent) 0%,
+      color-mix(in oklab, var(--c-navy) 18%, transparent) 26%,
+      transparent 58%),
+    linear-gradient(258deg, rgba(3, 6, 12, 0.34) 0%, transparent 52%);
+}
+
+/* Photography: mineral rim + ice counterlight behind the sphere. */
+#photography {
+  background-color: transparent;
+  background-image:
+    radial-gradient(58% 46% at 50% 68%,
+      color-mix(in oklab, var(--c-mineral) 32%, transparent) 0%, transparent 76%),
+    linear-gradient(108deg,
+      color-mix(in oklab, var(--c-ice) 9%, transparent) 0%, transparent 46%),
+    linear-gradient(288deg, rgba(3, 6, 12, 0.30) 0%, transparent 48%);
+}
+
+/* Featured: sapphire exhibition wall; the poster keeps its own colour. */
+#featured-project {
+  background-color: transparent;
+  background-image:
+    radial-gradient(44% 70% at 20% 26%,
+      color-mix(in oklab, var(--c-navy) 40%, transparent) 0%, transparent 78%),
+    linear-gradient(292deg, rgba(3, 6, 12, 0.36) 0%, transparent 60%);
+}
+
+/* Profile and contact return to the quiet sapphire/silver register. */
+#about {
+  background-color: transparent;
+  background-image:
+    linear-gradient(118deg,
+      color-mix(in oklab, var(--c-navy) 30%, transparent) 0%, transparent 56%);
+}
+#contact {
+  background-color: transparent;
+  background-image:
+    linear-gradient(244deg,
+      color-mix(in oklab, var(--c-mineral) 24%, transparent) 0%, transparent 58%),
+    linear-gradient(64deg, rgba(3, 6, 12, 0.30) 0%, transparent 46%);
+}
+
+/* ── Filmography: ONE continuous environment ──
+   There is no per-row background, no row-shaped light field and no animated
+   overlay per chapter. The entire filmography — header, three ribbons, the
+   space between them — is a single seamless vertical blue progression. The
+   film identity arrives through the four accent marks, not through blocks. */
+#filmography {
+  background-color: transparent;
+  background-image: linear-gradient(180deg,
+    rgba(5, 9, 18, 0.55) 0%,
+    rgba(8, 22, 41, 0.72) 16%,
+    rgba(13, 35, 64, 0.80) 38%,
+    rgba(18, 56, 88, 0.82) 58%,
+    rgba(13, 35, 64, 0.78) 78%,
+    rgba(8, 22, 41, 0.66) 92%,
+    rgba(5, 9, 18, 0.55) 100%);
+}
+#delusion-of-negation,
+#zakias-clock,
+#the-birth-permit {
+  background: transparent !important;
+  background-image: none !important;
+  overflow: visible;
+}
+#delusion-of-negation::before,
+#zakias-clock::before,
+#the-birth-permit::before { content: none !important; display: none !important; }
+#delusion-of-negation::after,
+#zakias-clock::after,
+#the-birth-permit::after { content: none !important; display: none !important; }
+#delusion-of-negation { --chroma-x: 84%; --chroma-angle: 96deg; }
+#zakias-clock         { --chroma-x: 16%; --chroma-angle: 264deg; }
+#the-birth-permit     { --chroma-x: 50%; --chroma-angle: 180deg; }
+
+/* Chapter content stays above its atmosphere. */
+.film-section-row > * { position: relative; z-index: 1; }
+/* Defensive: should any geometry wrapper ever land inside a row again, it must
+   overlay the row rather than reserve flow height. */
+.film-section-row > .chapter-geometry {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  z-index: 0;
+}
+
+/* ── Accent grammar: 2–4% of the field, four marks per chapter ──
+   index numeral · 32px rule · active-frame outline · one metadata label. */
+.film-chapter-index { color: var(--signal-tier); }
+.film-section-row .eyebrow-line { background: var(--signal-tier); }
+.film-section-logline > .eyebrow { color: var(--signal-tier); }
+.film-section-row .film-spiral-card.is-active img,
+.film-section-row .film-spiral-card:focus-visible img {
+  outline: 1px solid var(--signal-tier);
+  outline-offset: 4px;
+}
+.film-section-title em { color: var(--c-ice); }
+.film-section-meta::before { background: var(--signal-tier); opacity: 0.85; }
+.film-watch-dot { background: var(--c-ice); }
+.film-watch { background: var(--c-sapphire); color: #03101d; }
+.film-watch:hover, .film-watch:focus-visible { background: var(--c-ice); }
+.film-album-link { color: var(--c-silver); border-color: color-mix(in oklab, var(--c-ice) 30%, transparent); }
+.film-album-link:hover, .film-album-link:focus-visible { color: var(--c-ice); }
+.film-spiral-caption { color: var(--signal-tier); opacity: 0.66; }
+
+
+/* Featured + archive carry the same system. */
+.featured-signal-rule { background: var(--signal-tier); }
+.featured-signal-label { color: var(--signal-tier); }
+.archive { background: linear-gradient(to bottom,
+  color-mix(in oklab, var(--c-navy) 60%, var(--c-abyss)) 0%, var(--c-abyss) 26%) !important; }
+.archive-album.is-current { background: color-mix(in oklab, var(--c-mineral) 46%, var(--c-navy)); }
+.archive-album.is-current::before { background: var(--c-ice); }
+.archive-header { background: color-mix(in oklab, var(--c-abyss) 86%, var(--c-navy)); }
+.stills-showcase-watch { border-color: color-mix(in oklab, var(--c-ice) 42%, transparent); }
+.stills-showcase { background: var(--c-abyss); }
+
+/* Reduced motion: keep the chapter's colour, drop the reveal. */
+@media (prefers-reduced-motion: reduce) {
+  #delusion-of-negation::before,
+  #zakias-clock::before,
+  #the-birth-permit::before { animation: none !important; opacity: 0.5; }
+}
+
+/* Small screens: the counterlight widens and softens so it reads as
+   atmosphere rather than a corner glow. */
+@media (max-width: 720px) {
+  #delusion-of-negation::before,
+  #zakias-clock::before,
+  #the-birth-permit::before {
+    inset: -4% -18%;
+    background:
+      radial-gradient(72% 40% at 50% 100%,
+        color-mix(in oklab, var(--signal-tier) 16%, transparent) 0%, transparent 82%),
+      linear-gradient(to top,
+        color-mix(in oklab, var(--c-navy) 40%, transparent) 0%, transparent 58%);
+  }
+  #delusion-of-negation, #zakias-clock, #the-birth-permit { --chroma-x: 50%; }
+}
+
+/* ============================================================
+   PHASE 05.1 — CINEMATIC FRAME LIGHTING
+   Blue is the environment. Orange is the counterlight.
+   Silver is the typography. The photographs are the subject.
+
+   Every effect here lives on the frame's *edge* and its surrounding
+   environment. No filter, blend mode or tint is applied to the image
+   itself, so the original still is displayed unmodified.
+   ============================================================ */
+
+/* The frame gains a light-holding surface without touching the photograph. */
+.film-spiral-card {
+  position: relative;
+  --frame-key: rgba(126, 196, 255, 0);      /* cool key   */
+  --frame-counter: rgba(205, 103, 66, 0);   /* warm rim   */
+  --frame-lift: 0px;
+}
+.film-spiral-card::before {
+  content: "";
+  position: absolute;
+  inset: -14px -16px;
+  z-index: -1;
+  border-radius: 2px;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    /* KEY — cool illumination entering from the upper left */
+    radial-gradient(72% 78% at 18% 12%,
+      var(--frame-key) 0%, transparent 72%),
+    /* COUNTERLIGHT — warm rim from the lower right, restrained */
+    radial-gradient(58% 64% at 88% 92%,
+      var(--frame-counter) 0%, transparent 76%),
+    /* NEGATIVE FILL — keeps the lower-left genuinely dark */
+    linear-gradient(200deg, transparent 46%, rgba(0, 0, 0, 0.42) 100%);
+  transition:
+    opacity 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateZ(0);
+}
+
+/* NEUTRAL — a cool, quiet edge. No colour, no lift. */
+.film-spiral-card img {
+  border-color: rgba(126, 196, 255, 0.14);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.34);
+  transition:
+    border-color 380ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 380ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* HOVER / KEYBOARD FOCUS — motivated key + counterlight. */
+.film-spiral-card:hover,
+.film-spiral-card:focus-visible {
+  --frame-key: rgba(126, 196, 255, 0.30);
+  --frame-counter: rgba(205, 103, 66, 0.20);
+  --frame-lift: -2px;
+}
+.film-spiral-card:hover::before,
+.film-spiral-card:focus-visible::before {
+  opacity: 1;
+  transform: translate3d(0, calc(var(--frame-lift) - 1px), 0);
+}
+.film-spiral-card:hover img,
+.film-spiral-card:focus-visible img {
+  /* Facing edges only: cool at top-left, warm hairline at bottom-right. */
+  border-top-color: rgba(174, 220, 255, 0.52);
+  border-left-color: rgba(174, 220, 255, 0.40);
+  border-right-color: rgba(205, 103, 66, 0.44);
+  border-bottom-color: rgba(205, 103, 66, 0.34);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.48),
+    0 0 0 1px rgba(126, 196, 255, 0.10),
+    0 0 22px rgba(126, 196, 255, 0.10);
+}
+.film-spiral-card:focus-visible img {
+  outline: 1px solid var(--frame-focus, var(--c-ice));
+  outline-offset: 5px;
+}
+
+/* ACTIVE / SELECTED — the principal subject, still no filter on the image. */
+.film-spiral-card.is-active {
+  --frame-key: rgba(126, 196, 255, 0.38);
+  --frame-counter: rgba(205, 103, 66, 0.26);
+}
+.film-spiral-card.is-active::before { opacity: 1; }
+.film-spiral-card.is-active img {
+  border-top-color: rgba(196, 230, 255, 0.66);
+  border-left-color: rgba(174, 220, 255, 0.52);
+  border-right-color: rgba(229, 131, 89, 0.58);
+  border-bottom-color: rgba(205, 103, 66, 0.44);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.52),
+    0 0 0 1px rgba(126, 196, 255, 0.16),
+    0 0 28px rgba(126, 196, 255, 0.14);
+}
+
+/* Graceful recovery is the transition on ::before and img above: every
+   property returns to its neutral value over 380–420ms. No flicker. */
+
+/* Per-chapter focus colour so keyboard state is not blue inside an orange
+   chapter — while remaining distinguishable without colour. */
+#zakias-clock .film-spiral-card,
+#the-birth-permit .film-spiral-card { --frame-focus: var(--c-ice); }
+
+/* ── Monochromatic blue progression across the filmography ──
+   Six perceptually distinct steps, entered gradually. The environment moves
+   from Abyss into Mineral/Cobalt around the second film and recovers to
+   Midnight afterwards: a real tonal progression, not one flat field. */
+#photography {
+  background-color: transparent;
+  background-image:
+    radial-gradient(60% 46% at 50% 70%,
+      color-mix(in oklab, var(--blue-04, #123858) 34%, transparent) 0%, transparent 78%),
+    linear-gradient(108deg,
+      color-mix(in oklab, var(--blue-05, #174b70) 18%, transparent) 0%, transparent 52%),
+    linear-gradient(180deg, rgba(5, 9, 18, 0.45) 0%, transparent 34%, rgba(5, 9, 18, 0.45) 92%);
+}
+
+/* The three chapters carry NO background of their own: the single filmography
+   gradient is the whole environment, so no row can ever form a block. */
+
+/* Recovery after the filmography: back to midnight, then abyss. */
+#featured-project {
+  background-color: transparent;
+  background-image:
+    radial-gradient(44% 70% at 20% 26%,
+      color-mix(in oklab, var(--blue-03, #0d2340) 46%, transparent) 0%, transparent 80%),
+    linear-gradient(180deg, rgba(8, 22, 41, 0.62) 0%, rgba(5, 9, 18, 0.55) 100%);
+}
+#about {
+  background-color: transparent;
+  background-image: linear-gradient(180deg,
+    rgba(8, 22, 41, 0.52) 0%, rgba(5, 9, 18, 0.42) 46%);
+}
+
+:root {
+  --blue-01: #050912;
+  --blue-02: #081629;
+  --blue-03: #0d2340;
+  --blue-04: #123858;
+  --blue-05: #174b70;
+  --blue-06: #286b9b;
+  --blue-07: #7ec4ff;
+}
+
+/* The chapter counterlight now carries the orange identity, at very low
+   intensity — the environment must stay blue. */
+#delusion-of-negation::before { opacity: 0.30; }
+#zakias-clock::before { opacity: 0.42; }
+#the-birth-permit::before { opacity: 0.50; }
+#delusion-of-negation::before,
+#zakias-clock::before,
+#the-birth-permit::before { transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Reduced motion: no lift, no animated recovery. Lighting states still read. */
+@media (prefers-reduced-motion: reduce) {
+  .film-spiral-card::before,
+  .film-spiral-card img { transition: none !important; }
+  .film-spiral-card:hover::before,
+  .film-spiral-card:focus-visible::before { transform: none; }
+}
+
+/* Retired caption styles: kept out of the cascade entirely. */
+.film-spiral-caption,
+.film-spiral-note { display: none !important; }
+
+
+/* ── FINAL AUTHORITY: cinematic frame lighting ─────────────────
+   Declared last so it cannot be flattened by earlier depth or
+   chapter rules. Longhand edges only. Filters are explicitly
+   prohibited on every photograph surface. */
+.film-spiral-card img,
+.film-spiral-card:hover img,
+.film-spiral-card:focus-visible img,
+.film-spiral-card.is-active img,
+.film-spiral-card.is-held img,
+.film-section-row .film-spiral-card img,
+.film-section-row .film-spiral-card:hover img,
+.film-section-row .film-spiral-card.is-active img,
+.film-section-row .film-spiral-card:focus-visible img,
+.film-ribbon-panel .film-spiral-card img,
+.film-archive .film-spiral-card img {
+  filter: none !important;
+}
+
+/* Neutral edge: cool and quiet. */
+.film-spiral-card img {
+  border-top-color: rgba(126, 196, 255, 0.16);
+  border-left-color: rgba(126, 196, 255, 0.14);
+  border-right-color: rgba(126, 196, 255, 0.10);
+  border-bottom-color: rgba(126, 196, 255, 0.10);
+}
+
+/* Hover / keyboard focus: key from upper-left, counterlight lower-right. */
+.film-spiral-card:hover img,
+.film-spiral-card:focus-visible img {
+  border-top-color: rgba(174, 220, 255, 0.62) !important;
+  border-left-color: rgba(174, 220, 255, 0.48) !important;
+  border-right-color: rgba(229, 131, 89, 0.52) !important;
+  border-bottom-color: rgba(205, 103, 66, 0.44) !important;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.48),
+    0 0 0 1px rgba(126, 196, 255, 0.10),
+    0 0 22px rgba(126, 196, 255, 0.10) !important;
+}
+
+/* Active: the principal subject, same grammar, more presence. */
+.film-spiral-card.is-active img {
+  border-top-color: rgba(196, 230, 255, 0.72) !important;
+  border-left-color: rgba(174, 220, 255, 0.58) !important;
+  border-right-color: rgba(242, 177, 143, 0.62) !important;
+  border-bottom-color: rgba(205, 103, 66, 0.50) !important;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.52),
+    0 0 0 1px rgba(126, 196, 255, 0.16),
+    0 0 28px rgba(126, 196, 255, 0.14) !important;
+}
+
+/* Focus ring remains unambiguous and non-colour-only (offset + width). */
+.film-spiral-card:focus-visible img {
+  outline: 1px solid var(--c-ice) !important;
+  outline-offset: 5px !important;
+}
+
+/* ============================================================
+   PHASE 06 — THE OPTICAL APERTURE
+   One background system. One scroll signal. No canvas, no RAF.
+   ============================================================ */
+
+.optical-field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #050912;
+  contain: strict;
+}
+
+/* Base: deep blue field with deliberate, non-uniform darkness. */
+.oa-base {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(116% 88% at 76% 12%,
+      #0d2340 0%, #09172c 38%, #050912 72%, #050912 100%),
+    linear-gradient(200deg, #050912 0%, #071120 52%, #04070e 100%);
+}
+
+/* Diagonal light planes — light crossing an architectural surface. */
+.oa-plane {
+  position: absolute;
+  inset: -20% -10%;
+  will-change: transform;
+}
+.oa-plane--key {
+  background: linear-gradient(114deg,
+    rgba(23, 61, 91, 0.30) 0%,
+    rgba(23, 75, 112, 0.12) 26%,
+    rgba(13, 35, 64, 0.05) 48%,
+    transparent 66%);
+  transform: translate3d(0, 0, 0) rotate(-0.4deg);
+}
+.oa-plane--fill {
+  background: linear-gradient(296deg,
+    rgba(40, 107, 155, 0.14) 0%,
+    rgba(13, 35, 64, 0.10) 34%,
+    transparent 62%);
+  transform: translate3d(0, 0, 0) rotate(0.3deg);
+}
+
+/* The aperture. Oversized, off-axis, extending beyond the frame. */
+.oa-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.oa-aperture,
+.oa-halo,
+.oa-secondary,
+.oa-intersection {
+  transform-box: fill-box;
+  transform-origin: 50% 45%;
+}
+
+/* ── Scroll choreography ──────────────────────────────────────
+   One shared scroll signal drives position, rotation, scale and
+   highlight intensity. Geometry moves more slowly than the page.
+   Under reduced motion, or without support, the composition is
+   complete and static. */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .oa-aperture {
+      animation: oa-drift linear both;
+      animation-timeline: scroll(root);
+    }
+    .oa-secondary {
+      animation: oa-secondary-drift linear both;
+      animation-timeline: scroll(root);
+    }
+    .oa-plane--key {
+      animation: oa-plane-shift linear both;
+      animation-timeline: scroll(root);
+    }
+    .oa-halo {
+      animation: oa-halo-breathe linear both;
+      animation-timeline: scroll(root);
+    }
+    .oa-intersection {
+      animation: oa-intersection-fade linear both;
+      animation-timeline: scroll(root);
+    }
+  }
+}
+
+@keyframes oa-drift {
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+  38%  { transform: translate3d(-1.4%, 1.2%, 0) rotate(1.6deg) scale(1.035); }
+  72%  { transform: translate3d(-2.6%, -0.8%, 0) rotate(3.1deg) scale(1.06); }
+  100% { transform: translate3d(-1.2%, -2.2%, 0) rotate(4.2deg) scale(1.03); }
+}
+@keyframes oa-secondary-drift {
+  0%   { transform: translate3d(0, 0, 0); opacity: 0.55; }
+  52%  { transform: translate3d(1.8%, -1.4%, 0); opacity: 0.85; }
+  100% { transform: translate3d(0.6%, -2.6%, 0); opacity: 0.6; }
+}
+@keyframes oa-plane-shift {
+  0%   { transform: translate3d(0, 0, 0) rotate(-0.4deg); }
+  55%  { transform: translate3d(-2%, 1.6%, 0) rotate(1.1deg); }
+  100% { transform: translate3d(1%, -1.2%, 0) rotate(-0.2deg); }
+}
+@keyframes oa-halo-breathe {
+  0%   { opacity: 0.45; }
+  34%  { opacity: 0.7; }
+  66%  { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+/* The warm intersection belongs to the filmography chapter: it becomes
+   perceptible through the films, then recedes for the closing sections. */
+@keyframes oa-intersection-fade {
+  0%   { opacity: 0.18; }
+  30%  { opacity: 0.35; }
+  52%  { opacity: 1; }
+  78%  { opacity: 0.6; }
+  100% { opacity: 0.22; }
+}
+
+/* ── Fine nocturnal emulsion ─────────────────────────────────
+   One static, monochromatic texture. No animation, no flicker,
+   no full-screen canvas redraw. It sits inside the background,
+   beneath every photograph, still, portrait and control. */
+.oa-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.042;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.86 0 0 0 0 0.92 0 0 0 0 1 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  background-size: 240px 240px;
+}
+
+/* ── Hierarchy: the background retreats where the work lives ──
+   Aperture strokes and the halo dim behind the sphere and the
+   ribbons so no luminous line ever crosses a photograph. */
+#photography ~ * .oa-aperture { opacity: 1; }
+
+/* Photography: geometry retreats into the negative space. */
+@media (min-width: 721px) {
+  .oa-aperture { opacity: 0.95; }
+}
+
+/* ── Tablet: fewer simultaneous elements, aperture moved clear of copy ── */
+@media (max-width: 1180px) {
+  .oa-secondary { display: none; }
+  .oa-plane--fill { opacity: 0.7; }
+  .oa-grain { opacity: 0.036; background-size: 200px 200px; }
+}
+
+/* ── Phone: one partial aperture or one plane — never a cropped desktop ── */
+@media (max-width: 720px) {
+  .oa-svg { transform: translate3d(0, 0, 0) scale(1.06); transform-origin: 72% 18%; }
+  .oa-secondary,
+  .oa-intersection { display: none; }
+  .oa-plane--fill { display: none; }
+  .oa-plane--key {
+    background: linear-gradient(168deg,
+      rgba(23, 61, 91, 0.24) 0%,
+      rgba(13, 35, 64, 0.06) 40%,
+      transparent 68%);
+  }
+  .oa-grain { opacity: 0.03; background-size: 180px 180px; }
+}
+
+/* Short landscape phones: keep the field, drop the structure. */
+@media (max-width: 1000px) and (max-height: 520px) {
+  .oa-svg { display: none; }
+  .oa-base {
+    background:
+      linear-gradient(160deg, #0d2340 0%, #09172c 42%, #050912 100%);
+  }
+}
+
+/* ── Reduced motion: a complete, composed static state ──
+   Geometry, colour and grain remain; only movement stops. */
+@media (prefers-reduced-motion: reduce) {
+  .oa-aperture,
+  .oa-secondary,
+  .oa-plane,
+  .oa-halo,
+  .oa-intersection {
+    animation: none !important;
+    transform: none !important;
+  }
+  .oa-halo { opacity: 0.8; }
+  .oa-intersection { opacity: 0.55; }
+}
+
+/* The old global overlays are retired: nothing above the content any more. */
+.grain, .grain::after, .scanlines, .scanlines::after { display: none !important; }
+.vignette { display: none !important; }

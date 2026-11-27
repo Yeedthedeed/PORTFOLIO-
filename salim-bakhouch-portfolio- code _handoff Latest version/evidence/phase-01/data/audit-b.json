@@ -1,0 +1,182 @@
+{
+  "filmArchive": {
+    "archiveLinkButtons": [],
+    "filmArchive": 1,
+    "filmArchiveRole": "dialog",
+    "archiveRibbons": 3,
+    "archiveFrames": 122,
+    "scroll": {
+      "sh": 1612,
+      "ch": 900,
+      "canScroll": true
+    },
+    "focus": "Back to the portfolio",
+    "birthVisible": true,
+    "birthShowcase": 1,
+    "birthTiles": 43,
+    "archiveClosedAfterEscape": 0,
+    "errors": []
+  },
+  "featured": {
+    "posterVisible": true,
+    "posterSrc": "https://cdn.jsdelivr.net/gh/Yeedthedeed/PORTFOLIO-@main/Films%20Posters/DELUSION%20OF%20NEGATION%20-%20Short%20Film%20Poster.jpg",
+    "links": [
+      {
+        "text": "",
+        "href": "#"
+      },
+      {
+        "text": "FULL RESOLUTION ↗",
+        "href": "https://raw.githubusercontent.com/Yeedthedeed/PORTFOLIO-/main/Films%20Posters/DELUSION%20OF%20NEGATION%20-%20Short%20Film%20Poster.jpg"
+      },
+      {
+        "text": "WATCH THE FILM\n↗",
+        "href": "#"
+      }
+    ]
+  },
+  "mobileReduced": {
+    "reducedMotion": true,
+    "developVisible": true,
+    "loaderGone": 0,
+    "heroPortrait": [
+      1,
+      1312
+    ],
+    "dockControls": 4,
+    "scrollAfterDock": 866,
+    "sphereCards": 36,
+    "sphereViewerAfterTap": 0,
+    "errors": []
+  },
+  "touchTargets": {
+    "visibleCount": 144,
+    "under44": 136,
+    "sample": [
+      {
+        "tag": "A",
+        "label": "SKIP TO CONTENT",
+        "w": 146,
+        "h": 38
+      },
+      {
+        "tag": "A",
+        "label": "SALIM\nBAKHOUCH",
+        "w": 88,
+        "h": 31
+      },
+      {
+        "tag": "A",
+        "label": "WORK",
+        "w": 40,
+        "h": 18
+      },
+      {
+        "tag": "A",
+        "label": "ABOUT",
+        "w": 50,
+        "h": 18
+      },
+      {
+        "tag": "A",
+        "label": "CONTACT",
+        "w": 71,
+        "h": 18
+      },
+      {
+        "tag": "BUTTON",
+        "label": "Open navigation",
+        "w": 38,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "label": "BROWSE ALL ALBUMS ↗",
+        "w": 126,
+        "h": 24
+      },
+      {
+        "tag": "A",
+        "label": "FULL STILLS ALBUM ON GITHUB ↗",
+        "w": 161,
+        "h": 23
+      },
+      {
+        "tag": "BUTTON",
+        "label": "OPEN ARCHIVE VIEW ↗",
+        "w": 106,
+        "h": 23
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 2 of 29 — Delusion of Negatio",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 3 of 29 — Delusion of Negatio",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 4 of 29 — Delusion of Negatio",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 5 of 29 — Delusion of Negatio",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 6 of 29 — Delusion of Negatio",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 7 of 29 — Delusion of Negatio",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 8 of 29 — Delusion of Negatio",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 9 of 29 — Delusion of Negatio",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 10 of 29 — Delusion of Negati",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 11 of 29 — Delusion of Negati",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "DIV",
+        "label": "Open still 12 of 29 — Delusion of Negati",
+        "w": 0,
+        "h": 0
+      }
+    ]
+  },
+  "focusStyles": {
+    "hasFocusVisible": true,
+    "hasOutlineNone": true
+  }
+}

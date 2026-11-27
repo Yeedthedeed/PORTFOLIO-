@@ -1,0 +1,120 @@
+{
+  "desktopCore": {
+    "audioInitial": "true",
+    "audioAfterClick": "false",
+    "audioPersisted": "0",
+    "menuOpen": true,
+    "menuItems": 5,
+    "focusInMenu": false,
+    "menuAfterEscape": 1,
+    "faceZone": 1,
+    "viewfinderPressed": "true",
+    "sphereCardCount": 36,
+    "sphereTabIndices": [
+      "0",
+      "0",
+      "0"
+    ],
+    "sphereViewerOpen": 1,
+    "sphereViewerRole": "dialog",
+    "sphereViewerTitle": "The Measure of Space",
+    "sphereFocusInDialog": true,
+    "sphereViewerClosed": 0,
+    "sphereFocusRestored": true,
+    "sphereDragOk": true,
+    "log": {
+      "errors": [
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\".",
+        "Error: <rect> attribute height: Expected length, \"undefined\"."
+      ],
+      "failed": []
+    }
+  },
+  "photoArchive": {
+    "archiveOpen": 1,
+    "albumCount": 16,
+    "albumNames": [
+      "The Measure of Space\nARCHITECTURE · 5",
+      "Silver / Shadow\nMONOCHROME · 2",
+      "Mermaid — A Fable in Silver\nMONOCHROME · PORTRAIT SERIES · 2",
+      "Cosmito — The Surface of Light\nCOMMERCIAL PHOTOGRAPHY · 14",
+      "Elring — The Human Detail\nPROJECT PHOTOGRAPHY · 5",
+      "Melek — A Study in Motion\nPORTRAIT · MOVEMENT · 2",
+      "IYED — Notes on Presence\nPORTRAIT PHOTOGRAPHY · 6",
+      "Lilith — In Her Own Light\nPORTRAIT PHOTOGRAPHY · 4",
+      "Nighthawks — The City Thins\nNIGHT PHOTOGRAPHY · 4",
+      "Outside the Sequence\nINDEPENDENT WORKS · 4",
+      "Skate Up — The Ground in Motion\nSKATE PHOTOGRAPHY · 5",
+      "Mael — A Different Gravity\nSKATE PHOTOGRAPHY · 6",
+      "Willy — Moonwalk / The Great Descent\nSKATE PHOTOGRAPHY · 6",
+      "Yan — Between Air and Ground\nSKATE PHOTOGRAPHY · 4",
+      "Theatre of Shadows\nTHEATRICAL PHOTOGRAPHY · 3",
+      "Between Us — Youthful Exuberance\nCONCEPTUAL PORTRAITURE · 9"
+    ],
+    "titleVisible": true,
+    "titleText": "The Measure of Space",
+    "photoCountHeader": "81 PHOTOGRAPHS · 16 ALBUMS",
+    "gridTiles": 5,
+    "focusOnOpen": "Back to the portfolio",
+    "nestedAlbumTitle": "Mermaid — A Fable in Silver",
+    "nestedTiles": 2,
+    "lightboxOpen": 1,
+    "lightboxFocus": "Close photograph",
+    "lightboxAlt": "Mermaid — The First Enchantment — Mermaid — A Fable in Silver",
+    "lightboxCounterAfterArrow": "02 / 02",
+    "lightboxClosed": 0,
+    "archiveClosed": 0,
+    "log": {
+      "errors": [],
+      "failed": []
+    }
+  },
+  "film": {
+    "ribbonCount": 3,
+    "frameCount": 122,
+    "ribbonSizes": [
+      [
+        1328,
+        594
+      ],
+      [
+        1328,
+        594
+      ],
+      [
+        1328,
+        594
+      ]
+    ],
+    "detailOpen": 1,
+    "showcaseOpen": 1,
+    "detailTitle": "Delusion of Negation",
+    "detailRole": "dialog",
+    "detailCounter": "10 / 29",
+    "afterEscapeDetail": 0,
+    "afterEscapeShowcase": 1,
+    "showcaseTiles": 29,
+    "showcaseClosed": 0,
+    "archiveOpen": 0,
+    "log": {
+      "errors": [],
+      "failed": []
+    }
+  }
+}

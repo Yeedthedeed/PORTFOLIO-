@@ -1,0 +1,272 @@
+{
+  "filmSlates": [
+    {
+      "heading": "Delusion of Negation",
+      "eyebrow": "01 · DIRECTOR & SCREENWRITER",
+      "meta": "29 STILLS\n·\nSHORT FILM\n·\n2026",
+      "accentVars": {
+        "accent": "oklch(70.5% .086 32.1)",
+        "cool": "oklch(79% .065 229.2)"
+      },
+      "dot": "oklch(0.705 0.086 32.1)",
+      "frames": 29,
+      "caption": "01 · DELUSION OF NEGATION"
+    },
+    {
+      "heading": "Zakia’s Clock",
+      "eyebrow": "02 · DIRECTOR OF PHOTOGRAPHY & COLORIST",
+      "meta": "50 STILLS\n·\nSHORT FILM\n·\n2026",
+      "accentVars": {
+        "accent": "oklch(74% .082 75.9)",
+        "cool": "#9db7a0"
+      },
+      "dot": "oklch(0.74 0.082 75.9)",
+      "frames": 50,
+      "caption": "01 · ZAKIA'S CLOCK"
+    },
+    {
+      "heading": "The Birth Permit",
+      "eyebrow": "03 · FIRST ASSISTANT DIRECTOR",
+      "meta": "43 STILLS\n·\nSHORT FILM\n·\n2026",
+      "accentVars": {
+        "accent": "oklch(78.6% .096 68.7)",
+        "cool": "#bfd0a2"
+      },
+      "dot": "oklch(0.786 0.096 68.7)",
+      "frames": 43,
+      "caption": "01 · THE BIRTH PERMIT"
+    }
+  ],
+  "nav1920x1080": {
+    "items": [
+      "SALIM BAKHOUCH",
+      "SALIM",
+      "BAKHOUCH",
+      "DOP — BERLIN / LISBON",
+      "WORK",
+      "ABOUT",
+      "CONTACT",
+      "Mute audio",
+      "REEL",
+      "Open navigation"
+    ],
+    "overlaps": [
+      [
+        "SALIM BAKHOUCH",
+        "SALIM"
+      ],
+      [
+        "SALIM BAKHOUCH",
+        "BAKHOUCH"
+      ]
+    ]
+  },
+  "nav1440x900": {
+    "items": [
+      "SALIM BAKHOUCH",
+      "SALIM",
+      "BAKHOUCH",
+      "DOP — BERLIN / LISBON",
+      "WORK",
+      "ABOUT",
+      "CONTACT",
+      "Mute audio",
+      "REEL",
+      "Open navigation"
+    ],
+    "overlaps": [
+      [
+        "SALIM BAKHOUCH",
+        "SALIM"
+      ],
+      [
+        "SALIM BAKHOUCH",
+        "BAKHOUCH"
+      ]
+    ]
+  },
+  "nav1024x768": {
+    "items": [
+      "SALIM BAKHOUCH",
+      "SALIM",
+      "BAKHOUCH",
+      "DOP — BERLIN / LISBON",
+      "WORK",
+      "ABOUT",
+      "CONTACT",
+      "Mute audio",
+      "REEL",
+      "Open navigation"
+    ],
+    "overlaps": [
+      [
+        "SALIM BAKHOUCH",
+        "SALIM"
+      ],
+      [
+        "SALIM BAKHOUCH",
+        "BAKHOUCH"
+      ],
+      [
+        "DOP — BERLIN / LISBON",
+        "WORK"
+      ]
+    ]
+  },
+  "nav768x1024": {
+    "items": [
+      "SALIM BAKHOUCH",
+      "SALIM",
+      "BAKHOUCH",
+      "DOP — BERLIN / LISBON",
+      "WORK",
+      "ABOUT",
+      "CONTACT",
+      "Mute audio",
+      "REEL",
+      "Open navigation"
+    ],
+    "overlaps": [
+      [
+        "SALIM BAKHOUCH",
+        "SALIM"
+      ],
+      [
+        "SALIM BAKHOUCH",
+        "BAKHOUCH"
+      ],
+      [
+        "DOP — BERLIN / LISBON",
+        "WORK"
+      ],
+      [
+        "DOP — BERLIN / LISBON",
+        "ABOUT"
+      ],
+      [
+        "DOP — BERLIN / LISBON",
+        "CONTACT"
+      ]
+    ]
+  },
+  "nav390x844": {
+    "items": [
+      "SALIM BAKHOUCH",
+      "SALIM",
+      "BAKHOUCH",
+      "WORK",
+      "ABOUT",
+      "CONTACT",
+      "Open navigation"
+    ],
+    "overlaps": [
+      [
+        "SALIM BAKHOUCH",
+        "SALIM"
+      ],
+      [
+        "SALIM BAKHOUCH",
+        "BAKHOUCH"
+      ]
+    ]
+  },
+  "nav360x800": {
+    "items": [
+      "SALIM BAKHOUCH",
+      "SALIM",
+      "BAKHOUCH",
+      "WORK",
+      "ABOUT",
+      "CONTACT",
+      "Open navigation"
+    ],
+    "overlaps": [
+      [
+        "SALIM BAKHOUCH",
+        "SALIM"
+      ],
+      [
+        "SALIM BAKHOUCH",
+        "BAKHOUCH"
+      ]
+    ]
+  },
+  "nav844x390": {
+    "items": [
+      "SALIM BAKHOUCH",
+      "SALIM",
+      "BAKHOUCH",
+      "DOP — BERLIN / LISBON",
+      "WORK",
+      "ABOUT",
+      "CONTACT",
+      "Mute audio",
+      "REEL",
+      "Open navigation"
+    ],
+    "overlaps": [
+      [
+        "SALIM BAKHOUCH",
+        "SALIM"
+      ],
+      [
+        "SALIM BAKHOUCH",
+        "BAKHOUCH"
+      ],
+      [
+        "DOP — BERLIN / LISBON",
+        "WORK"
+      ],
+      [
+        "DOP — BERLIN / LISBON",
+        "ABOUT"
+      ]
+    ]
+  },
+  "archive": {
+    "open": 1,
+    "title": "The Measure of Space",
+    "albums": 16,
+    "tiles": 5
+  },
+  "lightbox": {
+    "open": 1,
+    "caption": "01 / 05\nARCH-001"
+  },
+  "archiveAfterEsc": {
+    "archive": 0,
+    "bodyOverflow": ""
+  },
+  "filmViewer": {
+    "detail": 1,
+    "showcase": 1
+  },
+  "filmAfterEsc": {
+    "showcase": 0,
+    "bodyOverflow": "hidden"
+  },
+  "errors": [],
+  "mobile": {
+    "dock": {
+      "t": 776,
+      "b": 844,
+      "l": 0,
+      "r": 390
+    },
+    "caption": {
+      "t": 737,
+      "b": 771,
+      "l": 20,
+      "r": 305
+    },
+    "portrait": {
+      "t": 51,
+      "b": 561,
+      "l": -1,
+      "r": 391
+    },
+    "dockCaption": false,
+    "overflow": 0,
+    "heroHeight": 844
+  }
+}

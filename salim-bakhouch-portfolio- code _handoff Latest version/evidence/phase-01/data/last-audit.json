@@ -1,0 +1,219 @@
+{
+  "dock768": {
+    "dock": {
+      "top": 947,
+      "bottom": 1008
+    },
+    "intersecting": [
+      {
+        "tag": "DIV",
+        "cls": "hidden md:block",
+        "txt": "AVAILABLE — 2026 Selected work",
+        "top": 893,
+        "bottom": 963
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 font-mono text-[10px] upperca",
+        "txt": "FEATURES · FASHION · DOCUMENTA",
+        "top": 931,
+        "bottom": 963
+      },
+      {
+        "tag": "DIV",
+        "cls": "hero-portrait-stage",
+        "txt": "REC 24.000fps A007_C014_0212 A",
+        "top": 0,
+        "bottom": 1024
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "txt": "REC 24.000fps A007_C014_0212 A",
+        "top": 427,
+        "bottom": 998
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "txt": "",
+        "top": 370,
+        "bottom": 1056
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "txt": "",
+        "top": 370,
+        "bottom": 1056
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "txt": "",
+        "top": 427,
+        "bottom": 998
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "txt": "",
+        "top": 427,
+        "bottom": 998
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "txt": "",
+        "top": 427,
+        "bottom": 998
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "txt": "",
+        "top": 976,
+        "bottom": 1010
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "txt": "REC 24.000fps A007_C014_0212 A",
+        "top": 427,
+        "bottom": 998
+      },
+      {
+        "tag": "IMG",
+        "cls": "",
+        "txt": "",
+        "top": 427,
+        "bottom": 998
+      }
+    ]
+  },
+  "archive768": {
+    "cols": "none",
+    "tileW": 236,
+    "headerH": 74,
+    "dockPresent": true,
+    "overflow": 0
+  },
+  "stills768": {
+    "gridDisplay": "flex",
+    "cols": "none",
+    "tileW": 707,
+    "overflow": 0,
+    "header": 82.09375
+  },
+  "dock390": {
+    "dock": {
+      "top": 784,
+      "bottom": 844
+    },
+    "intersecting": [
+      {
+        "tag": "DIV",
+        "cls": "hero-portrait-stage",
+        "txt": "REC 24.000fps A007_C014_0212 A",
+        "top": 0,
+        "bottom": 844
+      }
+    ]
+  },
+  "archive390": {
+    "cols": "none",
+    "tileW": 175,
+    "headerH": 65,
+    "dockPresent": true,
+    "overflow": 0
+  },
+  "stills390": {
+    "gridDisplay": "flex",
+    "cols": "repeat(2, minmax(0px, 1fr))",
+    "tileW": 366,
+    "overflow": 0,
+    "header": 71.34375
+  },
+  "dock360": {
+    "dock": {
+      "top": 740,
+      "bottom": 800
+    },
+    "intersecting": [
+      {
+        "tag": "DIV",
+        "cls": "hero-portrait-stage",
+        "txt": "REC 24.000fps A007_C014_0212 A",
+        "top": 0,
+        "bottom": 800
+      }
+    ]
+  },
+  "archive360": {
+    "cols": "none",
+    "tileW": 160,
+    "headerH": 65,
+    "dockPresent": true,
+    "overflow": 0
+  },
+  "stills360": {
+    "gridDisplay": "flex",
+    "cols": "repeat(2, minmax(0px, 1fr))",
+    "tileW": 336,
+    "overflow": 0,
+    "header": 71.34375
+  },
+  "sphereTap": {
+    "viewer": 1,
+    "box": {
+      "x": 170.1963653564453,
+      "y": 439.97979736328125,
+      "width": 49.607269287109375,
+      "height": 76.6922607421875
+    }
+  },
+  "swipeCounter": "02 / 02",
+  "mobileRibbonTap": {
+    "showcase": 0,
+    "detail": 0
+  },
+  "menuTabs": [
+    {
+      "inMenu": true,
+      "label": "Work"
+    },
+    {
+      "inMenu": true,
+      "label": "Photography"
+    },
+    {
+      "inMenu": true,
+      "label": "Filmography"
+    },
+    {
+      "inMenu": true,
+      "label": "About"
+    },
+    {
+      "inMenu": true,
+      "label": "Contact"
+    },
+    {
+      "inMenu": true,
+      "label": "PHONE VIEW"
+    },
+    {
+      "inMenu": true,
+      "label": "TABLET VIEW"
+    },
+    {
+      "inMenu": true,
+      "label": "Mute audio"
+    }
+  ],
+  "focusAfterArchiveClose": {
+    "tag": "BUTTON",
+    "label": "Back to the portfolio",
+    "stillOnBody": false
+  }
+}

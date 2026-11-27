@@ -1,0 +1,249 @@
+{
+  "1920x1080": {
+    "layout": "desktop",
+    "sphereOverlap": null,
+    "gap": null,
+    "sphereCards": 0,
+    "ribbons": [
+      {
+        "above": true,
+        "below": true,
+        "n": 28
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 48
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 42
+      }
+    ],
+    "overflow": 0,
+    "navOverlaps": [],
+    "type": {
+      "eyebrow": "8.5px",
+      "title": "41.6px",
+      "filmMeta": "7.5px",
+      "em": "rgb(126, 196, 255)",
+      "muted": "#495869"
+    },
+    "doc": 9274,
+    "errors": []
+  },
+  "1440x900": {
+    "layout": "desktop",
+    "sphereOverlap": null,
+    "gap": null,
+    "sphereCards": 0,
+    "ribbons": [
+      {
+        "above": true,
+        "below": true,
+        "n": 28
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 48
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 41
+      }
+    ],
+    "overflow": 0,
+    "navOverlaps": [],
+    "type": {
+      "eyebrow": "8.5px",
+      "title": "41.6px",
+      "filmMeta": "7.5px",
+      "em": "rgb(126, 196, 255)",
+      "muted": "#495869"
+    },
+    "doc": 8297,
+    "errors": []
+  },
+  "1024x768": {
+    "layout": "tablet",
+    "sphereOverlap": null,
+    "gap": null,
+    "sphereCards": 0,
+    "ribbons": [
+      {
+        "above": true,
+        "below": true,
+        "n": 27
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 49
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 41
+      }
+    ],
+    "overflow": 0,
+    "navOverlaps": [],
+    "type": {
+      "eyebrow": "8.5px",
+      "title": "30.72px",
+      "filmMeta": "7.5px",
+      "em": "rgb(126, 196, 255)",
+      "muted": "#495869"
+    },
+    "doc": 7139,
+    "errors": []
+  },
+  "768x1024": {
+    "layout": "tablet",
+    "sphereOverlap": null,
+    "gap": null,
+    "sphereCards": 0,
+    "ribbons": [
+      {
+        "above": true,
+        "below": true,
+        "n": 28
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 48
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 41
+      }
+    ],
+    "overflow": 0,
+    "navOverlaps": [],
+    "type": {
+      "eyebrow": "8.5px",
+      "title": "27.2px",
+      "filmMeta": "7.5px",
+      "em": "rgb(126, 196, 255)",
+      "muted": "#495869"
+    },
+    "doc": 8224,
+    "errors": []
+  },
+  "390x844": {
+    "layout": "phone",
+    "sphereOverlap": null,
+    "gap": null,
+    "sphereCards": 0,
+    "ribbons": [
+      {
+        "above": true,
+        "below": true,
+        "n": 28
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 49
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 41
+      }
+    ],
+    "overflow": 0,
+    "navOverlaps": [],
+    "type": {
+      "eyebrow": "8.5px",
+      "title": "24px",
+      "filmMeta": "7.5px",
+      "em": "rgb(126, 196, 255)",
+      "muted": "#495869"
+    },
+    "doc": 7838,
+    "errors": []
+  },
+  "360x800": {
+    "layout": "phone",
+    "sphereOverlap": null,
+    "gap": null,
+    "sphereCards": 0,
+    "ribbons": [
+      {
+        "above": true,
+        "below": true,
+        "n": 28
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 48
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 41
+      }
+    ],
+    "overflow": 0,
+    "navOverlaps": [],
+    "type": {
+      "eyebrow": "8.5px",
+      "title": "24px",
+      "filmMeta": "7.5px",
+      "em": "rgb(126, 196, 255)",
+      "muted": "#495869"
+    },
+    "doc": 7753,
+    "errors": []
+  },
+  "844x390": {
+    "layout": "phone",
+    "sphereOverlap": null,
+    "gap": null,
+    "sphereCards": 0,
+    "ribbons": [
+      {
+        "above": true,
+        "below": true,
+        "n": 28
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 47
+      },
+      {
+        "above": true,
+        "below": true,
+        "n": 41
+      }
+    ],
+    "overflow": 0,
+    "navOverlaps": [],
+    "type": {
+      "eyebrow": "8.5px",
+      "title": "27.2px",
+      "filmMeta": "7.5px",
+      "em": "rgb(126, 196, 255)",
+      "muted": "#495869"
+    },
+    "doc": 6744,
+    "errors": []
+  },
+  "archive": {
+    "open": 1,
+    "albums": 16
+  },
+  "film": {
+    "detail": 1,
+    "showcase": 1
+  },
+  "audio": "true"
+}

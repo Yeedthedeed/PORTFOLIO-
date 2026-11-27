@@ -1,0 +1,63 @@
+{
+  "navMs": 790,
+  "metrics": {
+    "domContentLoaded": 194,
+    "loadEvent": 196,
+    "transferSizeKB": 1419,
+    "resourceCount": 4,
+    "failedish": 0,
+    "paints": [
+      {
+        "name": "first-paint",
+        "t": 200
+      },
+      {
+        "name": "first-contentful-paint",
+        "t": 456
+      }
+    ],
+    "docHeight": 8140,
+    "embeddedDataURIs": 131,
+    "canvases": 1,
+    "svgs": 24,
+    "animatedEls": 15,
+    "fixedLayers": 5
+  },
+  "raf": {
+    "rafPerSec": 10
+  },
+  "rafFilm": 15,
+  "layers": [
+    {
+      "cls": "pointer-events-none fixed inset-0 z-0 ov",
+      "z": "0",
+      "op": "1",
+      "bg": "none"
+    },
+    {
+      "cls": "bloom",
+      "z": "83",
+      "op": "0.601708",
+      "bg": "radial-gradient(80% 60% at 50% 46%, rgba(61, 159, "
+    },
+    {
+      "cls": "scanlines",
+      "z": "84",
+      "op": "0.5",
+      "bg": "repeating-linear-gradient(rgba(255, 255, 255, 0.01"
+    },
+    {
+      "cls": "vignette",
+      "z": "85",
+      "op": "1",
+      "bg": "radial-gradient(at 50% 52%, rgba(0, 0, 0, 0) 28%, "
+    },
+    {
+      "cls": "grain",
+      "z": "90",
+      "op": "0.07",
+      "bg": "url(\"data:image/svg+xml;utf8,<svg xmlns='http://ww"
+    }
+  ],
+  "errors": []
+}

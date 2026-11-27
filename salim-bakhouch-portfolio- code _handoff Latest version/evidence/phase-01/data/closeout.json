@@ -1,0 +1,127 @@
+{
+  "mobileVisibleFrames": [
+    {
+      "i": 0,
+      "idx": "0",
+      "x": 172,
+      "y": 96,
+      "w": 112,
+      "h": 48,
+      "vis": true
+    },
+    {
+      "i": 1,
+      "idx": "1",
+      "x": 190,
+      "y": 111,
+      "w": 97,
+      "h": 42,
+      "vis": true
+    },
+    {
+      "i": 2,
+      "idx": "2",
+      "x": 190,
+      "y": 125,
+      "w": 83,
+      "h": 35,
+      "vis": true
+    },
+    {
+      "i": 3,
+      "idx": "3",
+      "x": 170,
+      "y": 137,
+      "w": 74,
+      "h": 32,
+      "vis": true
+    },
+    {
+      "i": 4,
+      "idx": "4",
+      "x": 136,
+      "y": 145,
+      "w": 75,
+      "h": 32,
+      "vis": true
+    },
+    {
+      "i": 5,
+      "idx": "5",
+      "x": 101,
+      "y": 149,
+      "w": 85,
+      "h": 36,
+      "vis": true
+    }
+  ],
+  "mobileRibbonTap": {
+    "frame": {
+      "i": 3,
+      "idx": "3",
+      "x": 170,
+      "y": 137,
+      "w": 74,
+      "h": 32,
+      "vis": true
+    },
+    "showcase": 1,
+    "detail": 1
+  },
+  "mobileFilmArchive": {
+    "open": 0,
+    "ribbons": 0,
+    "frames": 0,
+    "overflow": 0,
+    "scrollable": null
+  },
+  "beforeClose": {
+    "dialogs": 1,
+    "active": "Back to the portfolio"
+  },
+  "afterClose": {
+    "dialogs": 0,
+    "active": "SKIP TO CONTENT\nSALIM\nBAKHOUCH",
+    "onBody": true,
+    "browseFocus": false
+  },
+  "sphereTabStops": 36,
+  "colors": [
+    {
+      "cls": "font-mono text-[10px] uppe",
+      "fs": "10px",
+      "color": "rgb(73, 88, 105)",
+      "bg": "rgb(5, 7, 9)"
+    },
+    {
+      "cls": "link-underline hidden font",
+      "fs": "11px",
+      "color": "rgb(184, 196, 212)",
+      "bg": "rgb(5, 7, 9)"
+    },
+    {
+      "cls": "link-underline hidden font",
+      "fs": "11px",
+      "color": "rgb(184, 196, 212)",
+      "bg": "rgb(5, 7, 9)"
+    },
+    {
+      "cls": "link-underline hidden font",
+      "fs": "11px",
+      "color": "rgb(184, 196, 212)",
+      "bg": "rgb(5, 7, 9)"
+    },
+    {
+      "cls": "nav-reel flex items-center",
+      "fs": "10px",
+      "color": "rgb(2, 9, 15)",
+      "bg": "rgb(5, 7, 9)"
+    },
+    {
+      "cls": "font-mono text-[9px] upper",
+      "fs": "9px",
+      "color": "rgb(73, 88, 105)",
+      "bg": "rgb(5, 7, 9)"
+    }
+  ]
+}

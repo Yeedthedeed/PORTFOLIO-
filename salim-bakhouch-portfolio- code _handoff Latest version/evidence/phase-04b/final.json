@@ -1,0 +1,58 @@
+{
+  "1920x1080": {
+    "rigs": 8,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "navLayer": "40",
+    "errors": []
+  },
+  "1440x900": {
+    "rigs": 8,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "navLayer": "40",
+    "errors": []
+  },
+  "1024x768": {
+    "rigs": 8,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "navLayer": "40",
+    "errors": []
+  },
+  "768x1024": {
+    "rigs": 8,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "navLayer": "40",
+    "errors": []
+  },
+  "390x844": {
+    "rigs": 8,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "navLayer": "40",
+    "errors": []
+  },
+  "360x800": {
+    "rigs": 8,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "navLayer": "40",
+    "errors": []
+  },
+  "844x390": {
+    "rigs": 8,
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "navLayer": "40",
+    "errors": []
+  }
+}

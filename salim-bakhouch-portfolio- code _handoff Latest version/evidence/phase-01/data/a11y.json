@@ -1,0 +1,85 @@
+{
+  "headings": [
+    {
+      "tag": "H1",
+      "txt": "Crafting light for stories that refuse to ",
+      "hidden": false
+    },
+    {
+      "tag": "H2",
+      "txt": "Photography",
+      "hidden": false
+    },
+    {
+      "tag": "H2",
+      "txt": "Filmography",
+      "hidden": false
+    },
+    {
+      "tag": "H3",
+      "txt": "Delusion of Negation",
+      "hidden": false
+    },
+    {
+      "tag": "H3",
+      "txt": "Zakia’s Clock",
+      "hidden": false
+    },
+    {
+      "tag": "H3",
+      "txt": "The Birth Permit",
+      "hidden": false
+    },
+    {
+      "tag": "H2",
+      "txt": "DELUSION of Negation",
+      "hidden": false
+    },
+    {
+      "tag": "H2",
+      "txt": "Light is a language. I write with it.",
+      "hidden": false
+    },
+    {
+      "tag": "H2",
+      "txt": "Let's shoot.",
+      "hidden": false
+    }
+  ],
+  "landmarks": {
+    "main": 1,
+    "header": 1,
+    "nav": 2,
+    "footer": 1
+  },
+  "focusableAriaHidden": [],
+  "imagesNoAlt": 0,
+  "imagesTotal": 160,
+  "emptyAlt": 0,
+  "unnamedButtons": 0,
+  "tinyText": {
+    "7": 7,
+    "8": 4,
+    "9": 19,
+    "10": 21,
+    "11": 3,
+    "8.5": 26,
+    "7.5": 24,
+    "6.5": 4
+  },
+  "ribbonFocus": [],
+  "reducedMotion": {
+    "animations": 1,
+    "loader": 0,
+    "developOpacity": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "grainAnim": "none",
+    "bloomAnim": "none",
+    "sphereRunning": 36
+  }
+}

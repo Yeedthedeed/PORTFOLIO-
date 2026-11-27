@@ -1,0 +1,156 @@
+[
+  {
+    "viewport": "1920x1080",
+    "overflow": 0,
+    "field": true,
+    "fieldZ": "0",
+    "fieldPointer": "none",
+    "grainOpacity": "0.042",
+    "grainAnimated": "none",
+    "globalOverlays": {
+      "grain": 0
+    },
+    "svgNodes": 36,
+    "canvases": 0,
+    "contentZ": "10",
+    "timelineSupported": true,
+    "apertureAnim": "oa-drift",
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "captions": 0,
+    "errors": []
+  },
+  {
+    "viewport": "1440x900",
+    "overflow": 0,
+    "field": true,
+    "fieldZ": "0",
+    "fieldPointer": "none",
+    "grainOpacity": "0.042",
+    "grainAnimated": "none",
+    "globalOverlays": {
+      "grain": 0
+    },
+    "svgNodes": 36,
+    "canvases": 0,
+    "contentZ": "10",
+    "timelineSupported": true,
+    "apertureAnim": "oa-drift",
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "captions": 0,
+    "errors": []
+  },
+  {
+    "viewport": "1024x768",
+    "overflow": 0,
+    "field": true,
+    "fieldZ": "0",
+    "fieldPointer": "none",
+    "grainOpacity": "0.036",
+    "grainAnimated": "none",
+    "globalOverlays": {
+      "grain": 0
+    },
+    "svgNodes": 36,
+    "canvases": 0,
+    "contentZ": "10",
+    "timelineSupported": true,
+    "apertureAnim": "oa-drift",
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "captions": 0,
+    "errors": []
+  },
+  {
+    "viewport": "768x1024",
+    "overflow": 0,
+    "field": true,
+    "fieldZ": "0",
+    "fieldPointer": "none",
+    "grainOpacity": "0.036",
+    "grainAnimated": "none",
+    "globalOverlays": {
+      "grain": 0
+    },
+    "svgNodes": 36,
+    "canvases": 0,
+    "contentZ": "10",
+    "timelineSupported": true,
+    "apertureAnim": "oa-drift",
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "captions": 0,
+    "errors": []
+  },
+  {
+    "viewport": "390x844",
+    "overflow": 0,
+    "field": true,
+    "fieldZ": "0",
+    "fieldPointer": "none",
+    "grainOpacity": "0.03",
+    "grainAnimated": "none",
+    "globalOverlays": {
+      "grain": 0
+    },
+    "svgNodes": 36,
+    "canvases": 0,
+    "contentZ": "10",
+    "timelineSupported": true,
+    "apertureAnim": "oa-drift",
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "captions": 0,
+    "errors": []
+  },
+  {
+    "viewport": "360x800",
+    "overflow": 0,
+    "field": true,
+    "fieldZ": "0",
+    "fieldPointer": "none",
+    "grainOpacity": "0.03",
+    "grainAnimated": "none",
+    "globalOverlays": {
+      "grain": 0
+    },
+    "svgNodes": 36,
+    "canvases": 0,
+    "contentZ": "10",
+    "timelineSupported": true,
+    "apertureAnim": "oa-drift",
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "captions": 0,
+    "errors": []
+  },
+  {
+    "viewport": "844x390",
+    "overflow": 0,
+    "field": true,
+    "fieldZ": "0",
+    "fieldPointer": "none",
+    "grainOpacity": "0.036",
+    "grainAnimated": "none",
+    "globalOverlays": {
+      "grain": 0
+    },
+    "svgNodes": 36,
+    "canvases": 0,
+    "contentZ": "10",
+    "timelineSupported": true,
+    "apertureAnim": "oa-drift",
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "captions": 0,
+    "errors": []
+  }
+]

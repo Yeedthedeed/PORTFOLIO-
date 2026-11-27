@@ -1,0 +1,414 @@
+[
+  {
+    "name": "hero kicker",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "NOW FILMING",
+    "inView": true,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "hero h1",
+    "color": "oklch(0.868 0.023 252.2)",
+    "fgRgb": {
+      "r": 201,
+      "g": 213,
+      "b": 227,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "18.4px",
+    "fontWeight": "350",
+    "text": "Crafting light for stories that refuse t",
+    "inView": true,
+    "contrast": 13.56,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "metacard label",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "NOW FILMING",
+    "inView": true,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "nav tagline",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "DOP — BERLIN / LISBON",
+    "inView": false,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "chip eyebrow",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "STILL IMAGE",
+    "inView": false,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "chip subtitle",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "36 PHOTOGRAPHS · NATURAL ASPECT RATIOS ·",
+    "inView": false,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "film eyebrow",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "01 · DIRECTOR & SCREENWRITER",
+    "inView": false,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "film meta",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "29 STILLS\n·\nSHORT FILM\n·\n2026",
+    "inView": false,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "film logline",
+    "color": "oklch(0.868 0.023 252.2)",
+    "fgRgb": {
+      "r": 201,
+      "g": 213,
+      "b": 227,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "17px",
+    "fontWeight": "300",
+    "text": "A reclusive artist suffering from Cotard",
+    "inView": false,
+    "contrast": 13.56,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "film caption",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "01 · DELUSION OF NEGATION",
+    "inView": false,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "featured kicker",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "002 — FEATURED PROJECT",
+    "inView": false,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "about body",
+    "color": "oklch(0.868 0.023 252.2)",
+    "fgRgb": {
+      "r": 201,
+      "g": 213,
+      "b": 227,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "16px",
+    "fontWeight": "300",
+    "text": "Salim Bakhouch is a cinematographer and ",
+    "inView": false,
+    "contrast": 13.56,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "about lead",
+    "missing": true
+  },
+  {
+    "name": "about stat label",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "PROFILE",
+    "inView": false,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "contact meta",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "CONTACT",
+    "inView": false,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "legal",
+    "color": "oklch(0.745 0.036 253.8)",
+    "fgRgb": {
+      "r": 157,
+      "g": 174,
+      "b": 195,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "© MMXXVI — SALIM BAKHOUCH",
+    "inView": false,
+    "contrast": 8.91,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "chapter rail",
+    "color": "oklab(0.643 -0.0117818 -0.0392707)",
+    "fgRgb": {
+      "r": 124,
+      "g": 143,
+      "b": 166,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "12px",
+    "fontWeight": "300",
+    "text": "01\nARRIVAL",
+    "inView": true,
+    "contrast": 6.09,
+    "passAA": true,
+    "passLarge": true
+  },
+  {
+    "name": "archive link",
+    "color": "oklch(0.962 0.011 256.7)",
+    "fgRgb": {
+      "r": 238,
+      "g": 243,
+      "b": 250,
+      "a": 255
+    },
+    "bgCss": "oklch(0.127 0.007 243.8)",
+    "bgRgb": {
+      "r": 5,
+      "g": 7,
+      "b": 9,
+      "a": 255
+    },
+    "fontSize": "79.2px",
+    "fontWeight": "350",
+    "text": "Filmography",
+    "inView": false,
+    "contrast": 18.1,
+    "passAA": true,
+    "passLarge": true
+  }
+]

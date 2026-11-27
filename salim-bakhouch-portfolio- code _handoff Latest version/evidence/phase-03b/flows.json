@@ -1,0 +1,182 @@
+{
+  "dock": 0,
+  "progress": 1,
+  "landingActions": [
+    {
+      "film": "Delusion of Negation",
+      "actions": [
+        {
+          "label": "WATCH THE FILM →",
+          "href": "#featured-project",
+          "target": null
+        },
+        {
+          "label": "VIEW FULL ALBUM →",
+          "href": null,
+          "target": null
+        },
+        {
+          "label": "GITHUB MASTERS ↗",
+          "href": "https://github.com/Yeedthedeed/PORTFOLIO-/tree/main/Film%20Stills/DELUSION%20OF%20NEGATION%20short%20film%20Stills",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "film": "Zakia’s Clock",
+      "actions": [
+        {
+          "label": "WATCH THE FILM ↗",
+          "href": "https://drive.google.com/file/d/1c9mrOUBP92CuX9-AKg4dZaXPSq5IqSqC/view?usp=drive_link",
+          "target": "_blank"
+        },
+        {
+          "label": "VIEW FULL ALBUM →",
+          "href": null,
+          "target": null
+        },
+        {
+          "label": "GITHUB MASTERS ↗",
+          "href": "https://github.com/Yeedthedeed/PORTFOLIO-/tree/main/Film%20Stills/_Zakia_s%20Clock_%20short%20Film%20Stills",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "film": "The Birth Permit",
+      "actions": [
+        {
+          "label": "WATCH THE FILM ↗",
+          "href": "https://vimeo.com/1185788174?fl=pl&fe=sh",
+          "target": "_blank"
+        },
+        {
+          "label": "VIEW FULL ALBUM →",
+          "href": null,
+          "target": null
+        },
+        {
+          "label": "GITHUB MASTERS ↗",
+          "href": "https://github.com/Yeedthedeed/PORTFOLIO-/tree/main/Film%20Stills/The%20Birth%20permit%20__%20Short%20Film%20__%20Stills",
+          "target": "_blank"
+        }
+      ]
+    }
+  ],
+  "selection": {
+    "detail": 1,
+    "albumBehind": 0
+  },
+  "viewerAlbumButton": 1,
+  "albumAfterViewer": {
+    "album": 1,
+    "detail": 0,
+    "tiles": 29,
+    "title": "Delusion of Negation",
+    "watched": 1,
+    "github": 2
+  },
+  "grid": {
+    "cols": "650px 650px",
+    "display": "grid",
+    "tiles": 29,
+    "visibleImgs": 8,
+    "firstTile": {
+      "w": 650,
+      "h": 308
+    },
+    "imgH": 276,
+    "imgW": 648,
+    "scrollH": 6026,
+    "clientH": 768,
+    "vh": 900
+  },
+  "tileViewer": {
+    "detail": 1,
+    "album": 1
+  },
+  "afterTileEsc": {
+    "detail": 0,
+    "album": 1
+  },
+  "albumClosed": 0,
+  "archive": {
+    "open": 1,
+    "panels": [
+      {
+        "film": "Delusion of Negation",
+        "actions": [
+          {
+            "label": "VIEW ALBUM →",
+            "href": null,
+            "target": null
+          },
+          {
+            "label": "WATCH THE FILM →",
+            "href": null,
+            "target": null
+          },
+          {
+            "label": "GITHUB ↗",
+            "href": "https://github.com/Yeedthedeed/PORTFOLIO-/tree/main/Film%20Stills/DELUSION%20OF%20NEGATION%20short%20film%20Stills",
+            "target": "_blank"
+          }
+        ]
+      },
+      {
+        "film": "Zakia's Clock",
+        "actions": [
+          {
+            "label": "VIEW ALBUM →",
+            "href": null,
+            "target": null
+          },
+          {
+            "label": "WATCH THE FILM ↗",
+            "href": "https://drive.google.com/file/d/1c9mrOUBP92CuX9-AKg4dZaXPSq5IqSqC/view?usp=drive_link",
+            "target": "_blank"
+          },
+          {
+            "label": "GITHUB ↗",
+            "href": "https://github.com/Yeedthedeed/PORTFOLIO-/tree/main/Film%20Stills/_Zakia_s%20Clock_%20short%20Film%20Stills",
+            "target": "_blank"
+          }
+        ]
+      }
+    ],
+    "birthActions": [
+      {
+        "label": "VIEW FULL ALBUM →",
+        "href": null
+      },
+      {
+        "label": "WATCH THE FILM ↗",
+        "href": "https://vimeo.com/1185788174?fl=pl&fe=sh"
+      },
+      {
+        "label": "GITHUB ↗",
+        "href": "https://github.com/Yeedthedeed/PORTFOLIO-/tree/main/Film%20Stills/The%20Birth%20permit%20__%20Short%20Film%20__%20Stills"
+      }
+    ]
+  },
+  "archiveAlbum": {
+    "open": 1,
+    "tiles": 50
+  },
+  "errors": [],
+  "mobile": {
+    "dock": 0,
+    "progress": 1,
+    "doc": 7791,
+    "overflow": 0,
+    "bottomPad": "0px"
+  },
+  "mobileAlbum": {
+    "open": 1,
+    "cols": "358px",
+    "tile": {
+      "w": 358,
+      "h": 184
+    }
+  }
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "mode": "on",
+    "viewport": "1920x1080",
+    "chapter": "hero",
+    "maxJump": 0.29
+  },
+  {
+    "mode": "on",
+    "viewport": "1920x1080",
+    "chapter": "photography",
+    "maxJump": 0.28
+  },
+  {
+    "mode": "on",
+    "viewport": "1920x1080",
+    "chapter": "featured",
+    "maxJump": 0.28
+  },
+  {
+    "mode": "on",
+    "viewport": "1920x1080",
+    "chapter": "contact",
+    "maxJump": 0.28
+  },
+  {
+    "mode": "on",
+    "viewport": "1440x900",
+    "chapter": "hero",
+    "maxJump": 0.3
+  },
+  {
+    "mode": "on",
+    "viewport": "1440x900",
+    "chapter": "photography",
+    "maxJump": 0.3
+  },
+  {
+    "mode": "on",
+    "viewport": "1440x900",
+    "chapter": "featured",
+    "maxJump": 0.41
+  },
+  {
+    "mode": "on",
+    "viewport": "1440x900",
+    "chapter": "contact",
+    "maxJump": 0.42
+  },
+  {
+    "mode": "on",
+    "viewport": "390x844",
+    "chapter": "hero",
+    "maxJump": 0.19
+  },
+  {
+    "mode": "on",
+    "viewport": "390x844",
+    "chapter": "photography",
+    "maxJump": 0.24
+  },
+  {
+    "mode": "on",
+    "viewport": "390x844",
+    "chapter": "featured",
+    "maxJump": 0.22
+  },
+  {
+    "mode": "on",
+    "viewport": "390x844",
+    "chapter": "contact",
+    "maxJump": 0.23
+  },
+  {
+    "mode": "off",
+    "viewport": "1920x1080",
+    "chapter": "hero",
+    "maxJump": 0.26
+  },
+  {
+    "mode": "off",
+    "viewport": "1920x1080",
+    "chapter": "photography",
+    "maxJump": 0.29
+  },
+  {
+    "mode": "off",
+    "viewport": "1920x1080",
+    "chapter": "featured",
+    "maxJump": 0.29
+  },
+  {
+    "mode": "off",
+    "viewport": "1920x1080",
+    "chapter": "contact",
+    "maxJump": 0.29
+  },
+  {
+    "mode": "off",
+    "viewport": "1440x900",
+    "chapter": "hero",
+    "maxJump": 0.27
+  },
+  {
+    "mode": "off",
+    "viewport": "1440x900",
+    "chapter": "photography",
+    "maxJump": 0.3
+  },
+  {
+    "mode": "off",
+    "viewport": "1440x900",
+    "chapter": "featured",
+    "maxJump": 0.4
+  },
+  {
+    "mode": "off",
+    "viewport": "1440x900",
+    "chapter": "contact",
+    "maxJump": 0.41
+  },
+  {
+    "mode": "off",
+    "viewport": "390x844",
+    "chapter": "hero",
+    "maxJump": 0.21
+  },
+  {
+    "mode": "off",
+    "viewport": "390x844",
+    "chapter": "photography",
+    "maxJump": 0.24
+  },
+  {
+    "mode": "off",
+    "viewport": "390x844",
+    "chapter": "featured",
+    "maxJump": 0.24
+  },
+  {
+    "mode": "off",
+    "viewport": "390x844",
+    "chapter": "contact",
+    "maxJump": 0.24
+  }
+]

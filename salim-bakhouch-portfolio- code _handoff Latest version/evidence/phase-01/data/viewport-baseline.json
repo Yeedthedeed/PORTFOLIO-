@@ -1,0 +1,462 @@
+[
+  {
+    "viewport": "1920x1080",
+    "loadMs": 35784,
+    "title": "Salim Bakhouch Portfolio Website",
+    "layout": "desktop",
+    "pointer": "fine",
+    "scrollHeight": 9092,
+    "scrollWidth": 1920,
+    "clientWidth": 1920,
+    "hero": {
+      "top": 0,
+      "left": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "photography": {
+      "top": 1194,
+      "left": 0,
+      "w": 1920,
+      "h": 1080
+    },
+    "filmography": {
+      "top": 2274,
+      "left": 0,
+      "w": 1920,
+      "h": 3592
+    },
+    "featured": {
+      "top": 5866,
+      "left": 0,
+      "w": 1920,
+      "h": 1023
+    },
+    "about": {
+      "top": 7209,
+      "left": 0,
+      "w": 1920,
+      "h": 900
+    },
+    "contact": {
+      "top": 8109,
+      "left": 0,
+      "w": 1920,
+      "h": 983
+    },
+    "smallTextNodeCounts": {
+      "7": 7,
+      "8": 4,
+      "9": 19,
+      "10": 21,
+      "8.5": 26,
+      "7.5": 24,
+      "6.5": 4
+    },
+    "portrait": {
+      "file": "Hd+i7gdTxD+B9Y42wzLsHVElATJklmUhQiXcMSv1Cn5Qkz24+fpVXJnk6aHTAkBVYYlZED5KVta4BFtb",
+      "natural": [
+        1312,
+        1199
+      ],
+      "box": [
+        366,
+        -6,
+        1188,
+        1085
+      ],
+      "opacity": "1"
+    },
+    "sphereCards": 36,
+    "filmRibbons": 3,
+    "filmFrames": 122,
+    "dockVisible": false,
+    "chapterRailVisible": true,
+    "navVisible": true,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "1440x900",
+    "loadMs": 30715,
+    "title": "Salim Bakhouch Portfolio Website",
+    "layout": "desktop",
+    "pointer": "fine",
+    "scrollHeight": 8140,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "hero": {
+      "top": 0,
+      "left": 0,
+      "w": 1440,
+      "h": 900
+    },
+    "photography": {
+      "top": 1008,
+      "left": 0,
+      "w": 1440,
+      "h": 900
+    },
+    "filmography": {
+      "top": 1908,
+      "left": 0,
+      "w": 1440,
+      "h": 3119
+    },
+    "featured": {
+      "top": 5028,
+      "left": 0,
+      "w": 1440,
+      "h": 1023
+    },
+    "about": {
+      "top": 6354,
+      "left": 0,
+      "w": 1440,
+      "h": 874
+    },
+    "contact": {
+      "top": 7227,
+      "left": 0,
+      "w": 1440,
+      "h": 913
+    },
+    "smallTextNodeCounts": {
+      "7": 7,
+      "8": 4,
+      "9": 19,
+      "10": 21,
+      "8.5": 26,
+      "7.5": 24,
+      "6.5": 4
+    },
+    "portrait": {
+      "file": "Hd+i7gdTxD+B9Y42wzLsHVElATJklmUhQiXcMSv1Cn5Qkz24+fpVXJnk6aHTAkBVYYlZED5KVta4BFtb",
+      "natural": [
+        1312,
+        1199
+      ],
+      "box": [
+        207,
+        -5,
+        990,
+        904
+      ],
+      "opacity": "1"
+    },
+    "sphereCards": 36,
+    "filmRibbons": 3,
+    "filmFrames": 122,
+    "dockVisible": false,
+    "chapterRailVisible": true,
+    "navVisible": true,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "1024x768",
+    "loadMs": 26100,
+    "title": "Salim Bakhouch Portfolio Website",
+    "layout": "tablet",
+    "pointer": "fine",
+    "scrollHeight": 7001,
+    "scrollWidth": 1024,
+    "clientWidth": 1024,
+    "hero": {
+      "top": 0,
+      "left": 0,
+      "w": 1024,
+      "h": 768
+    },
+    "photography": {
+      "top": 847,
+      "left": 0,
+      "w": 1024,
+      "h": 768
+    },
+    "filmography": {
+      "top": 1615,
+      "left": 0,
+      "w": 1024,
+      "h": 2750
+    },
+    "featured": {
+      "top": 4365,
+      "left": 0,
+      "w": 1024,
+      "h": 878
+    },
+    "about": {
+      "top": 5463,
+      "left": 0,
+      "w": 1024,
+      "h": 709
+    },
+    "contact": {
+      "top": 6172,
+      "left": 0,
+      "w": 1024,
+      "h": 755
+    },
+    "smallTextNodeCounts": {
+      "7": 7,
+      "8": 9,
+      "9": 19,
+      "10": 21,
+      "7.5": 25,
+      "8.5": 26,
+      "6.5": 4
+    },
+    "portrait": {
+      "file": "Hd+i7gdTxD+B9Y42wzLsHVElATJklmUhQiXcMSv1Cn5Qkz24+fpVXJnk6aHTAkBVYYlZED5KVta4BFtb",
+      "natural": [
+        1312,
+        1199
+      ],
+      "box": [
+        215,
+        233,
+        557,
+        509
+      ],
+      "opacity": "1"
+    },
+    "sphereCards": 36,
+    "filmRibbons": 3,
+    "filmFrames": 122,
+    "dockVisible": true,
+    "chapterRailVisible": false,
+    "navVisible": true,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "768x1024",
+    "loadMs": 22968,
+    "title": "Salim Bakhouch Portfolio Website",
+    "layout": "tablet",
+    "pointer": "coarse",
+    "scrollHeight": 7988,
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "hero": {
+      "top": 0,
+      "left": 0,
+      "w": 768,
+      "h": 1024
+    },
+    "photography": {
+      "top": 1085,
+      "left": 0,
+      "w": 768,
+      "h": 1024
+    },
+    "filmography": {
+      "top": 2109,
+      "left": 0,
+      "w": 768,
+      "h": 3394
+    },
+    "featured": {
+      "top": 5502,
+      "left": 0,
+      "w": 768,
+      "h": 796
+    },
+    "about": {
+      "top": 6463,
+      "left": 0,
+      "w": 768,
+      "h": 812
+    },
+    "contact": {
+      "top": 7275,
+      "left": 0,
+      "w": 768,
+      "h": 639
+    },
+    "smallTextNodeCounts": {
+      "7": 7,
+      "8": 9,
+      "9": 19,
+      "10": 21,
+      "7.5": 25,
+      "8.5": 26,
+      "6.5": 4
+    },
+    "portrait": {
+      "file": "Hd+i7gdTxD+B9Y42wzLsHVElATJklmUhQiXcMSv1Cn5Qkz24+fpVXJnk6aHTAkBVYYlZED5KVta4BFtb",
+      "natural": [
+        1312,
+        1199
+      ],
+      "box": [
+        54,
+        427,
+        625,
+        571
+      ],
+      "opacity": "1"
+    },
+    "sphereCards": 36,
+    "filmRibbons": 3,
+    "filmFrames": 122,
+    "dockVisible": true,
+    "chapterRailVisible": false,
+    "navVisible": true,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "390x844",
+    "loadMs": 20719,
+    "title": "Salim Bakhouch Portfolio Website",
+    "layout": "phone",
+    "pointer": "coarse",
+    "scrollHeight": 7638,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "hero": {
+      "top": 0,
+      "left": 0,
+      "w": 390,
+      "h": 844
+    },
+    "photography": {
+      "top": 898,
+      "left": 0,
+      "w": 390,
+      "h": 844
+    },
+    "filmography": {
+      "top": 1742,
+      "left": 0,
+      "w": 390,
+      "h": 2960
+    },
+    "featured": {
+      "top": 4701,
+      "left": 0,
+      "w": 390,
+      "h": 965
+    },
+    "about": {
+      "top": 5869,
+      "left": 0,
+      "w": 390,
+      "h": 1027
+    },
+    "contact": {
+      "top": 6895,
+      "left": 0,
+      "w": 390,
+      "h": 743
+    },
+    "smallTextNodeCounts": {
+      "7": 11,
+      "9": 19,
+      "10": 20,
+      "8.5": 20,
+      "6.5": 8,
+      "7.5": 30
+    },
+    "portrait": {
+      "file": "Hd+i7gdTxD+B9Y42wzLsHVElATJklmUhQiXcMSv1Cn5Qkz24+fpVXJnk6aHTAkBVYYlZED5KVta4BFtb",
+      "natural": [
+        1312,
+        1199
+      ],
+      "box": [
+        -1,
+        51,
+        392,
+        510
+      ],
+      "opacity": "1"
+    },
+    "sphereCards": 36,
+    "filmRibbons": 3,
+    "filmFrames": 122,
+    "dockVisible": true,
+    "chapterRailVisible": false,
+    "navVisible": true,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "360x800",
+    "loadMs": 20190,
+    "title": "Salim Bakhouch Portfolio Website",
+    "layout": "phone",
+    "pointer": "coarse",
+    "scrollHeight": 7561,
+    "scrollWidth": 360,
+    "clientWidth": 360,
+    "hero": {
+      "top": 0,
+      "left": 0,
+      "w": 360,
+      "h": 800
+    },
+    "photography": {
+      "top": 852,
+      "left": 0,
+      "w": 360,
+      "h": 800
+    },
+    "filmography": {
+      "top": 1652,
+      "left": 0,
+      "w": 360,
+      "h": 2910
+    },
+    "featured": {
+      "top": 4562,
+      "left": 0,
+      "w": 360,
+      "h": 949
+    },
+    "about": {
+      "top": 5705,
+      "left": 0,
+      "w": 360,
+      "h": 1092
+    },
+    "contact": {
+      "top": 6797,
+      "left": 0,
+      "w": 360,
+      "h": 764
+    },
+    "smallTextNodeCounts": {
+      "7": 11,
+      "9": 19,
+      "10": 20,
+      "8.5": 20,
+      "6.5": 8,
+      "7.5": 30
+    },
+    "portrait": {
+      "file": "Hd+i7gdTxD+B9Y42wzLsHVElATJklmUhQiXcMSv1Cn5Qkz24+fpVXJnk6aHTAkBVYYlZED5KVta4BFtb",
+      "natural": [
+        1312,
+        1199
+      ],
+      "box": [
+        -1,
+        51,
+        362,
+        470
+      ],
+      "opacity": "1"
+    },
+    "sphereCards": 36,
+    "filmRibbons": 3,
+    "filmFrames": 122,
+    "dockVisible": true,
+    "chapterRailVisible": false,
+    "navVisible": true,
+    "errors": [],
+    "failed": []
+  }
+]

@@ -1,0 +1,286 @@
+{
+  "generated": "phase-01 forensic baseline",
+  "viewports": [
+    {
+      "viewport": "1920x1080",
+      "layout": "desktop",
+      "height": 9092,
+      "overflow": 0,
+      "errors": 0,
+      "portrait": [
+        1312,
+        1199
+      ],
+      "sphereCards": 36,
+      "ribbons": 3,
+      "frames": 122
+    },
+    {
+      "viewport": "1440x900",
+      "layout": "desktop",
+      "height": 8140,
+      "overflow": 0,
+      "errors": 0,
+      "portrait": [
+        1312,
+        1199
+      ],
+      "sphereCards": 36,
+      "ribbons": 3,
+      "frames": 122
+    },
+    {
+      "viewport": "1024x768",
+      "layout": "tablet",
+      "height": 7001,
+      "overflow": 0,
+      "errors": 0,
+      "portrait": [
+        1312,
+        1199
+      ],
+      "sphereCards": 36,
+      "ribbons": 3,
+      "frames": 122
+    },
+    {
+      "viewport": "768x1024",
+      "layout": "tablet",
+      "height": 7988,
+      "overflow": 0,
+      "errors": 0,
+      "portrait": [
+        1312,
+        1199
+      ],
+      "sphereCards": 36,
+      "ribbons": 3,
+      "frames": 122
+    },
+    {
+      "viewport": "390x844",
+      "layout": "phone",
+      "height": 7638,
+      "overflow": 0,
+      "errors": 0,
+      "portrait": [
+        1312,
+        1199
+      ],
+      "sphereCards": 36,
+      "ribbons": 3,
+      "frames": 122
+    },
+    {
+      "viewport": "360x800",
+      "layout": "phone",
+      "height": 7561,
+      "overflow": 0,
+      "errors": 0,
+      "portrait": [
+        1312,
+        1199
+      ],
+      "sphereCards": 36,
+      "ribbons": 3,
+      "frames": 122
+    }
+  ],
+  "interaction": {
+    "desktopCore": {
+      "audioInitial": "true",
+      "audioAfterClick": "false",
+      "audioPersisted": "0",
+      "menuOpen": true,
+      "menuItems": 5,
+      "focusInMenu": false,
+      "menuAfterEscape": 1,
+      "faceZone": 1,
+      "viewfinderPressed": "true",
+      "sphereCardCount": 36,
+      "sphereTabIndices": [
+        "0",
+        "0",
+        "0"
+      ],
+      "sphereViewerOpen": 1,
+      "sphereViewerRole": "dialog",
+      "sphereViewerTitle": "The Measure of Space",
+      "sphereFocusInDialog": true,
+      "sphereViewerClosed": 0,
+      "sphereFocusRestored": true,
+      "sphereDragOk": true
+    },
+    "photoArchive": {
+      "archiveOpen": 1,
+      "albumCount": 16,
+      "albumNames": [
+        "The Measure of Space\nARCHITECTURE \u00b7 5",
+        "Silver / Shadow\nMONOCHROME \u00b7 2",
+        "Mermaid \u2014 A Fable in Silver\nMONOCHROME \u00b7 PORTRAIT SERIES \u00b7 2",
+        "Cosmito \u2014 The Surface of Light\nCOMMERCIAL PHOTOGRAPHY \u00b7 14",
+        "Elring \u2014 The Human Detail\nPROJECT PHOTOGRAPHY \u00b7 5",
+        "Melek \u2014 A Study in Motion\nPORTRAIT \u00b7 MOVEMENT \u00b7 2",
+        "IYED \u2014 Notes on Presence\nPORTRAIT PHOTOGRAPHY \u00b7 6",
+        "Lilith \u2014 In Her Own Light\nPORTRAIT PHOTOGRAPHY \u00b7 4",
+        "Nighthawks \u2014 The City Thins\nNIGHT PHOTOGRAPHY \u00b7 4",
+        "Outside the Sequence\nINDEPENDENT WORKS \u00b7 4",
+        "Skate Up \u2014 The Ground in Motion\nSKATE PHOTOGRAPHY \u00b7 5",
+        "Mael \u2014 A Different Gravity\nSKATE PHOTOGRAPHY \u00b7 6",
+        "Willy \u2014 Moonwalk / The Great Descent\nSKATE PHOTOGRAPHY \u00b7 6",
+        "Yan \u2014 Between Air and Ground\nSKATE PHOTOGRAPHY \u00b7 4",
+        "Theatre of Shadows\nTHEATRICAL PHOTOGRAPHY \u00b7 3",
+        "Between Us \u2014 Youthful Exuberance\nCONCEPTUAL PORTRAITURE \u00b7 9"
+      ],
+      "titleVisible": true,
+      "titleText": "The Measure of Space",
+      "photoCountHeader": "81 PHOTOGRAPHS \u00b7 16 ALBUMS",
+      "gridTiles": 5,
+      "focusOnOpen": "Back to the portfolio",
+      "nestedAlbumTitle": "Mermaid \u2014 A Fable in Silver",
+      "nestedTiles": 2,
+      "lightboxOpen": 1,
+      "lightboxFocus": "Close photograph",
+      "lightboxAlt": "Mermaid \u2014 The First Enchantment \u2014 Mermaid \u2014 A Fable in Silver",
+      "lightboxCounterAfterArrow": "02 / 02",
+      "lightboxClosed": 0,
+      "archiveClosed": 0
+    },
+    "film": {
+      "ribbonCount": 3,
+      "frameCount": 122,
+      "ribbonSizes": [
+        [
+          1328,
+          594
+        ],
+        [
+          1328,
+          594
+        ],
+        [
+          1328,
+          594
+        ]
+      ],
+      "detailOpen": 1,
+      "showcaseOpen": 1,
+      "detailTitle": "Delusion of Negation",
+      "detailRole": "dialog",
+      "detailCounter": "10 / 29",
+      "afterEscapeDetail": 0,
+      "afterEscapeShowcase": 1,
+      "showcaseTiles": 29,
+      "showcaseClosed": 0,
+      "archiveOpen": 0
+    }
+  },
+  "perf": {
+    "domContentLoaded": 194,
+    "loadEvent": 196,
+    "transferSizeKB": 1419,
+    "resourceCount": 4,
+    "failedish": 0,
+    "paints": [
+      {
+        "name": "first-paint",
+        "t": 200
+      },
+      {
+        "name": "first-contentful-paint",
+        "t": 456
+      }
+    ],
+    "docHeight": 8140,
+    "embeddedDataURIs": 131,
+    "canvases": 1,
+    "svgs": 24,
+    "animatedEls": 15,
+    "fixedLayers": 5
+  },
+  "a11y": {
+    "headings": [
+      {
+        "tag": "H1",
+        "txt": "Crafting light for stories that refuse to ",
+        "hidden": false
+      },
+      {
+        "tag": "H2",
+        "txt": "Photography",
+        "hidden": false
+      },
+      {
+        "tag": "H2",
+        "txt": "Filmography",
+        "hidden": false
+      },
+      {
+        "tag": "H3",
+        "txt": "Delusion of Negation",
+        "hidden": false
+      },
+      {
+        "tag": "H3",
+        "txt": "Zakia\u2019s Clock",
+        "hidden": false
+      },
+      {
+        "tag": "H3",
+        "txt": "The Birth Permit",
+        "hidden": false
+      },
+      {
+        "tag": "H2",
+        "txt": "DELUSION of Negation",
+        "hidden": false
+      },
+      {
+        "tag": "H2",
+        "txt": "Light is a language. I write with it.",
+        "hidden": false
+      },
+      {
+        "tag": "H2",
+        "txt": "Let's shoot.",
+        "hidden": false
+      }
+    ],
+    "landmarks": {
+      "main": 1,
+      "header": 1,
+      "nav": 2,
+      "footer": 1
+    },
+    "focusableAriaHidden": [],
+    "imagesNoAlt": 0,
+    "imagesTotal": 160,
+    "emptyAlt": 0,
+    "unnamedButtons": 0,
+    "tinyText": {
+      "7": 7,
+      "8": 4,
+      "9": 19,
+      "10": 21,
+      "11": 3,
+      "8.5": 26,
+      "7.5": 24,
+      "6.5": 4
+    },
+    "ribbonFocus": [],
+    "reducedMotion": {
+      "animations": 1,
+      "loader": 0,
+      "developOpacity": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "grainAnim": "none",
+      "bloomAnim": "none",
+      "sphereRunning": 36
+    }
+  }
+}

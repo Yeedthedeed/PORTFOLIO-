@@ -1,0 +1,219 @@
+[
+  {
+    "viewport": "1920x1080",
+    "overflow": 0,
+    "captionNodes": 0,
+    "noteNodes": 0,
+    "cardTextElements": 0,
+    "visibleCaptionBoxes": 0,
+    "frames": 122,
+    "imageFiltersUnique": [
+      "none"
+    ],
+    "tiers": {
+      "d": "#7ec4ff",
+      "z": "#cd6742",
+      "b": "#a94f32"
+    },
+    "planes": {
+      "p": "rgb(13, 35, 64)",
+      "photo": "rgb(13, 35, 64)",
+      "d": "rgb(8, 22, 41)",
+      "z": "rgb(13, 35, 64)",
+      "b": "rgb(18, 56, 88)",
+      "f": "rgb(8, 22, 41)",
+      "a": "rgb(5, 9, 18)"
+    },
+    "orange": {
+      "copper": "#cd6742",
+      "burnt": "#a94f32"
+    },
+    "errors": []
+  },
+  {
+    "viewport": "1440x900",
+    "overflow": 0,
+    "captionNodes": 0,
+    "noteNodes": 0,
+    "cardTextElements": 0,
+    "visibleCaptionBoxes": 0,
+    "frames": 122,
+    "imageFiltersUnique": [
+      "none"
+    ],
+    "tiers": {
+      "d": "#7ec4ff",
+      "z": "#cd6742",
+      "b": "#a94f32"
+    },
+    "planes": {
+      "p": "rgb(13, 35, 64)",
+      "photo": "rgb(13, 35, 64)",
+      "d": "rgb(8, 22, 41)",
+      "z": "rgb(13, 35, 64)",
+      "b": "rgb(18, 56, 88)",
+      "f": "rgb(8, 22, 41)",
+      "a": "rgb(5, 9, 18)"
+    },
+    "orange": {
+      "copper": "#cd6742",
+      "burnt": "#a94f32"
+    },
+    "errors": []
+  },
+  {
+    "viewport": "1024x768",
+    "overflow": 0,
+    "captionNodes": 0,
+    "noteNodes": 0,
+    "cardTextElements": 0,
+    "visibleCaptionBoxes": 0,
+    "frames": 122,
+    "imageFiltersUnique": [
+      "none"
+    ],
+    "tiers": {
+      "d": "#7ec4ff",
+      "z": "#cd6742",
+      "b": "#a94f32"
+    },
+    "planes": {
+      "p": "rgb(13, 35, 64)",
+      "photo": "rgb(13, 35, 64)",
+      "d": "rgb(8, 22, 41)",
+      "z": "rgb(13, 35, 64)",
+      "b": "rgb(18, 56, 88)",
+      "f": "rgb(8, 22, 41)",
+      "a": "rgb(5, 9, 18)"
+    },
+    "orange": {
+      "copper": "#cd6742",
+      "burnt": "#a94f32"
+    },
+    "errors": []
+  },
+  {
+    "viewport": "768x1024",
+    "overflow": 0,
+    "captionNodes": 0,
+    "noteNodes": 0,
+    "cardTextElements": 0,
+    "visibleCaptionBoxes": 0,
+    "frames": 122,
+    "imageFiltersUnique": [
+      "none"
+    ],
+    "tiers": {
+      "d": "#7ec4ff",
+      "z": "#cd6742",
+      "b": "#a94f32"
+    },
+    "planes": {
+      "p": "rgb(13, 35, 64)",
+      "photo": "rgb(13, 35, 64)",
+      "d": "rgb(8, 22, 41)",
+      "z": "rgb(13, 35, 64)",
+      "b": "rgb(18, 56, 88)",
+      "f": "rgb(8, 22, 41)",
+      "a": "rgb(5, 9, 18)"
+    },
+    "orange": {
+      "copper": "#cd6742",
+      "burnt": "#a94f32"
+    },
+    "errors": []
+  },
+  {
+    "viewport": "390x844",
+    "overflow": 0,
+    "captionNodes": 0,
+    "noteNodes": 0,
+    "cardTextElements": 0,
+    "visibleCaptionBoxes": 0,
+    "frames": 122,
+    "imageFiltersUnique": [
+      "none"
+    ],
+    "tiers": {
+      "d": "#7ec4ff",
+      "z": "#cd6742",
+      "b": "#a94f32"
+    },
+    "planes": {
+      "p": "rgb(13, 35, 64)",
+      "photo": "rgb(13, 35, 64)",
+      "d": "rgb(8, 22, 41)",
+      "z": "rgb(13, 35, 64)",
+      "b": "rgb(18, 56, 88)",
+      "f": "rgb(8, 22, 41)",
+      "a": "rgb(5, 9, 18)"
+    },
+    "orange": {
+      "copper": "#cd6742",
+      "burnt": "#a94f32"
+    },
+    "errors": []
+  },
+  {
+    "viewport": "360x800",
+    "overflow": 0,
+    "captionNodes": 0,
+    "noteNodes": 0,
+    "cardTextElements": 0,
+    "visibleCaptionBoxes": 0,
+    "frames": 122,
+    "imageFiltersUnique": [
+      "none"
+    ],
+    "tiers": {
+      "d": "#7ec4ff",
+      "z": "#cd6742",
+      "b": "#a94f32"
+    },
+    "planes": {
+      "p": "rgb(13, 35, 64)",
+      "photo": "rgb(13, 35, 64)",
+      "d": "rgb(8, 22, 41)",
+      "z": "rgb(13, 35, 64)",
+      "b": "rgb(18, 56, 88)",
+      "f": "rgb(8, 22, 41)",
+      "a": "rgb(5, 9, 18)"
+    },
+    "orange": {
+      "copper": "#cd6742",
+      "burnt": "#a94f32"
+    },
+    "errors": []
+  },
+  {
+    "viewport": "844x390",
+    "overflow": 0,
+    "captionNodes": 0,
+    "noteNodes": 0,
+    "cardTextElements": 0,
+    "visibleCaptionBoxes": 0,
+    "frames": 122,
+    "imageFiltersUnique": [
+      "none"
+    ],
+    "tiers": {
+      "d": "#7ec4ff",
+      "z": "#cd6742",
+      "b": "#a94f32"
+    },
+    "planes": {
+      "p": "rgb(13, 35, 64)",
+      "photo": "rgb(13, 35, 64)",
+      "d": "rgb(8, 22, 41)",
+      "z": "rgb(13, 35, 64)",
+      "b": "rgb(18, 56, 88)",
+      "f": "rgb(8, 22, 41)",
+      "a": "rgb(5, 9, 18)"
+    },
+    "orange": {
+      "copper": "#cd6742",
+      "burnt": "#a94f32"
+    },
+    "errors": []
+  }
+]

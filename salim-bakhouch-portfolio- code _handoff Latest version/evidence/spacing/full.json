@@ -1,0 +1,128 @@
+[
+  {
+    "viewport": "1920x1080",
+    "overflow": 0,
+    "rows": [
+      917,
+      955,
+      955
+    ],
+    "filmH": 3373,
+    "emptyGeo": 0,
+    "frames": 122,
+    "captions": 0,
+    "filtered": 0,
+    "fieldZ": "0",
+    "cards": 36,
+    "apertureDifferentialPct": 10.84,
+    "errors": []
+  },
+  {
+    "viewport": "1440x900",
+    "overflow": 0,
+    "rows": [
+      798,
+      830,
+      830
+    ],
+    "filmH": 2934,
+    "emptyGeo": 0,
+    "frames": 122,
+    "captions": 0,
+    "filtered": 0,
+    "fieldZ": "0",
+    "cards": 36,
+    "apertureDifferentialPct": 11.79,
+    "errors": []
+  },
+  {
+    "viewport": "1024x768",
+    "overflow": 0,
+    "rows": [
+      705,
+      732,
+      744
+    ],
+    "filmH": 2593,
+    "emptyGeo": 0,
+    "frames": 122,
+    "captions": 0,
+    "filtered": 0,
+    "fieldZ": "0",
+    "cards": 36,
+    "apertureDifferentialPct": 12.57,
+    "errors": []
+  },
+  {
+    "viewport": "768x1024",
+    "overflow": 0,
+    "rows": [
+      953,
+      988,
+      988
+    ],
+    "filmH": 3421,
+    "emptyGeo": 0,
+    "frames": 122,
+    "captions": 0,
+    "filtered": 0,
+    "fieldZ": "0",
+    "cards": 36,
+    "apertureDifferentialPct": 21.38,
+    "errors": []
+  },
+  {
+    "viewport": "390x844",
+    "overflow": 0,
+    "rows": [
+      865,
+      872,
+      895
+    ],
+    "filmH": 3081,
+    "emptyGeo": 0,
+    "frames": 122,
+    "captions": 0,
+    "filtered": 0,
+    "fieldZ": "0",
+    "cards": 36,
+    "apertureDifferentialPct": 3.14,
+    "errors": []
+  },
+  {
+    "viewport": "360x800",
+    "overflow": 0,
+    "rows": [
+      859,
+      855,
+      887
+    ],
+    "filmH": 3037,
+    "emptyGeo": 0,
+    "frames": 122,
+    "captions": 0,
+    "filtered": 0,
+    "fieldZ": "0",
+    "cards": 36,
+    "apertureDifferentialPct": 3.49,
+    "errors": []
+  },
+  {
+    "viewport": "844x390",
+    "overflow": 0,
+    "rows": [
+      776,
+      799,
+      799
+    ],
+    "filmH": 2738,
+    "emptyGeo": 0,
+    "frames": 122,
+    "captions": 0,
+    "filtered": 0,
+    "fieldZ": "0",
+    "cards": 36,
+    "apertureDifferentialPct": 29.28,
+    "errors": []
+  }
+]

@@ -1,0 +1,128 @@
+{
+  "1920x1080": {
+    "layout": "desktop",
+    "dock": 0,
+    "progress": 1,
+    "overflow": 0,
+    "bodyPad": "0px",
+    "sphereCards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "navOverlaps": [],
+    "albumOpened": 1,
+    "albumClosed": 0,
+    "bodyOverflowAfter": "",
+    "errors": []
+  },
+  "1440x900": {
+    "layout": "desktop",
+    "dock": 0,
+    "progress": 1,
+    "overflow": 0,
+    "bodyPad": "0px",
+    "sphereCards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "navOverlaps": [],
+    "albumOpened": 1,
+    "albumClosed": 0,
+    "bodyOverflowAfter": "",
+    "errors": []
+  },
+  "1024x768": {
+    "layout": "tablet",
+    "dock": 0,
+    "progress": 1,
+    "overflow": 0,
+    "bodyPad": "0px",
+    "sphereCards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "navOverlaps": [],
+    "albumOpened": 1,
+    "albumClosed": 0,
+    "bodyOverflowAfter": "",
+    "errors": []
+  },
+  "768x1024": {
+    "layout": "tablet",
+    "dock": 0,
+    "progress": 1,
+    "overflow": 0,
+    "bodyPad": "0px",
+    "sphereCards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "navOverlaps": [],
+    "albumOpened": 1,
+    "albumClosed": 0,
+    "bodyOverflowAfter": "",
+    "errors": []
+  },
+  "390x844": {
+    "layout": "phone",
+    "dock": 0,
+    "progress": 1,
+    "overflow": 0,
+    "bodyPad": "0px",
+    "sphereCards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "navOverlaps": [],
+    "albumOpened": 1,
+    "albumClosed": 0,
+    "bodyOverflowAfter": "",
+    "errors": []
+  },
+  "360x800": {
+    "layout": "phone",
+    "dock": 0,
+    "progress": 1,
+    "overflow": 0,
+    "bodyPad": "0px",
+    "sphereCards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "navOverlaps": [],
+    "albumOpened": 1,
+    "albumClosed": 0,
+    "bodyOverflowAfter": "",
+    "errors": []
+  },
+  "844x390": {
+    "layout": "phone",
+    "dock": 0,
+    "progress": 1,
+    "overflow": 0,
+    "bodyPad": "0px",
+    "sphereCards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "navOverlaps": [],
+    "albumOpened": 1,
+    "albumClosed": 0,
+    "bodyOverflowAfter": "",
+    "errors": []
+  },
+  "watchLanding": [
+    {
+      "film": "Delusion of Negation",
+      "label": "WATCH THE FILM →",
+      "href": "#featured-project",
+      "target": null
+    },
+    {
+      "film": "Zakia’s Clock",
+      "label": "WATCH THE FILM ↗",
+      "href": "https://drive.google.com/file/d/1c9mrOUBP92CuX9-AKg4dZaXPSq5IqSqC/view?usp=drive_link",
+      "target": "_blank"
+    },
+    {
+      "film": "The Birth Permit",
+      "label": "WATCH THE FILM ↗",
+      "href": "https://vimeo.com/1185788174?fl=pl&fe=sh",
+      "target": "_blank"
+    }
+  ],
+  "heroNoGuide": true
+}

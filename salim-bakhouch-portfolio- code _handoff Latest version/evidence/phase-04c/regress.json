@@ -1,0 +1,93 @@
+{
+  "1920x1080": {
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "rigs": 0,
+    "dock": 0,
+    "heroBg": "radial-gradient(78% 92% at 68% 32%, rgba(146, 190, 240, 0.08",
+    "delusionBg": "radial-gradient(64% 88% at 90% 34%, rgba(208, 140, 126, 0.06",
+    "navZ": "40",
+    "errors": []
+  },
+  "1440x900": {
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "rigs": 0,
+    "dock": 0,
+    "heroBg": "radial-gradient(78% 92% at 68% 32%, rgba(146, 190, 240, 0.08",
+    "delusionBg": "radial-gradient(64% 88% at 90% 34%, rgba(208, 140, 126, 0.06",
+    "navZ": "40",
+    "errors": []
+  },
+  "1024x768": {
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "rigs": 0,
+    "dock": 0,
+    "heroBg": "radial-gradient(78% 92% at 68% 32%, rgba(146, 190, 240, 0.08",
+    "delusionBg": "radial-gradient(64% 88% at 90% 34%, rgba(208, 140, 126, 0.06",
+    "navZ": "40",
+    "errors": []
+  },
+  "768x1024": {
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "rigs": 0,
+    "dock": 0,
+    "heroBg": "radial-gradient(78% 92% at 68% 32%, rgba(146, 190, 240, 0.08",
+    "delusionBg": "radial-gradient(64% 88% at 90% 34%, rgba(208, 140, 126, 0.06",
+    "navZ": "40",
+    "errors": []
+  },
+  "390x844": {
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "rigs": 0,
+    "dock": 0,
+    "heroBg": "radial-gradient(130% 86% at 60% 40%, rgba(146, 190, 240, 0.0",
+    "delusionBg": "radial-gradient(64% 88% at 90% 34%, rgba(208, 140, 126, 0.06",
+    "navZ": "40",
+    "errors": []
+  },
+  "360x800": {
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "rigs": 0,
+    "dock": 0,
+    "heroBg": "radial-gradient(130% 86% at 60% 40%, rgba(146, 190, 240, 0.0",
+    "delusionBg": "radial-gradient(64% 88% at 90% 34%, rgba(208, 140, 126, 0.06",
+    "navZ": "40",
+    "errors": []
+  },
+  "844x390": {
+    "overflow": 0,
+    "cards": 36,
+    "ribbons": 3,
+    "frames": 122,
+    "rigs": 0,
+    "dock": 0,
+    "heroBg": "radial-gradient(78% 92% at 68% 32%, rgba(146, 190, 240, 0.08",
+    "delusionBg": "radial-gradient(64% 88% at 90% 34%, rgba(208, 140, 126, 0.06",
+    "navZ": "40",
+    "errors": []
+  },
+  "viewer": {
+    "detail": 1
+  },
+  "archive": {
+    "open": 1,
+    "albums": 16
+  }
+}

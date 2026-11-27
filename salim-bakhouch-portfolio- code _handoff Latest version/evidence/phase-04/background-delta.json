@@ -1,0 +1,98 @@
+[
+  {
+    "section": "hero",
+    "backgroundOff": [
+      5.05,
+      8.66,
+      13.65
+    ],
+    "backgroundOn": [
+      5.78,
+      10.19,
+      15.46
+    ],
+    "lumOff": 0.0025,
+    "lumOn": 0.0029,
+    "delta": 0.0004
+  },
+  {
+    "section": "photography",
+    "backgroundOff": [
+      3.29,
+      4.5,
+      5.99
+    ],
+    "backgroundOn": [
+      3.59,
+      6.07,
+      8.74
+    ],
+    "lumOff": 0.0013,
+    "lumOn": 0.0017,
+    "delta": 0.0004
+  },
+  {
+    "section": "filmography",
+    "backgroundOff": [
+      4.51,
+      6.97,
+      10.55
+    ],
+    "backgroundOn": [
+      6.57,
+      8.14,
+      11.22
+    ],
+    "lumOff": 0.002,
+    "lumOn": 0.0024,
+    "delta": 0.0004
+  },
+  {
+    "section": "featured",
+    "backgroundOff": [
+      4.48,
+      6.95,
+      10.53
+    ],
+    "backgroundOn": [
+      6.01,
+      7.77,
+      10.92
+    ],
+    "lumOff": 0.002,
+    "lumOn": 0.0023,
+    "delta": 0.0003
+  },
+  {
+    "section": "about",
+    "backgroundOff": [
+      4.44,
+      6.92,
+      10.51
+    ],
+    "backgroundOn": [
+      5.09,
+      8.2,
+      12.15
+    ],
+    "lumOff": 0.002,
+    "lumOn": 0.0024,
+    "delta": 0.0004
+  },
+  {
+    "section": "contact",
+    "backgroundOff": [
+      4.42,
+      6.91,
+      10.52
+    ],
+    "backgroundOn": [
+      4.39,
+      7.68,
+      11.99
+    ],
+    "lumOff": 0.002,
+    "lumOn": 0.0022,
+    "delta": 0.0002
+  }
+]

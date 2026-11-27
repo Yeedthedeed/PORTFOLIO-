@@ -1,0 +1,169 @@
+{
+  "initial": {
+    "lighting": "active",
+    "surfaces": 6,
+    "key": "0.3400",
+    "rim": "0.2000",
+    "fill": "0.1500",
+    "bounce": "0.0450",
+    "ambient": "0.1200",
+    "falloff": "1.5000",
+    "occlusion": "0.0300",
+    "accent": "126 196 255",
+    "keyX": "0.3100",
+    "cursorNX": "0",
+    "keyGradient": "radial-gradient(ellipse 62% 54% at 31.00% 30.00%, rgba(205,226,255,0.1020) 0%, rgba(160,20",
+    "rimGradient": "radial-gradient(ellipse 30% 46% at 92% 14%, rgba(126,196,255,0.2432) 0%, transparent 68%)",
+    "aoGradient": "radial-gradient(ellipse 78% 66% at 50% 50%, transparent 42%, rgba(0,0,0,0.054) 100%)"
+  },
+  "presets": {
+    "hero": {
+      "lighting": "active",
+      "surfaces": 6,
+      "key": "0.3400",
+      "rim": "0.2000",
+      "fill": "0.1500",
+      "bounce": "0.0450",
+      "ambient": "0.1200",
+      "falloff": "1.5000",
+      "occlusion": "0.0300",
+      "accent": "126 196 255",
+      "keyX": "0.3100",
+      "cursorNX": "0",
+      "keyGradient": "radial-gradient(ellipse 62% 54% at 31.00% 30.00%, rgba(205,226,255,0.1020) 0%, rgba(160,20",
+      "rimGradient": "radial-gradient(ellipse 30% 46% at 92% 14%, rgba(126,196,255,0.2432) 0%, transparent 68%)",
+      "aoGradient": "radial-gradient(ellipse 78% 66% at 50% 50%, transparent 42%, rgba(0,0,0,0.054) 100%)"
+    },
+    "photography": {
+      "lighting": "active",
+      "surfaces": 6,
+      "key": "0.3000",
+      "rim": "0.2200",
+      "fill": "0.1400",
+      "bounce": "0.0350",
+      "ambient": "0.1300",
+      "falloff": "1.6000",
+      "occlusion": "0.0280",
+      "accent": "61 159 255",
+      "keyX": "0.2000",
+      "cursorNX": "0",
+      "keyGradient": "radial-gradient(ellipse 62% 54% at 20.00% 24.00%, rgba(205,226,255,0.0900) 0%, rgba(160,20",
+      "rimGradient": "radial-gradient(ellipse 30% 46% at 92% 14%, rgba(61,159,255,0.2801) 0%, transparent 68%)",
+      "aoGradient": "radial-gradient(ellipse 78% 66% at 50% 50%, transparent 42%, rgba(0,0,0,0.050) 100%)"
+    },
+    "filmography": {
+      "lighting": "active",
+      "surfaces": 6,
+      "key": "0.3200",
+      "rim": "0.2200",
+      "fill": "0.1400",
+      "bounce": "0.0500",
+      "ambient": "0.1200",
+      "falloff": "1.5500",
+      "occlusion": "0.0300",
+      "accent": "208 140 126",
+      "keyX": "0.2200",
+      "cursorNX": "0",
+      "keyGradient": "radial-gradient(ellipse 62% 54% at 22.00% 26.00%, rgba(205,226,255,0.0960) 0%, rgba(160,20",
+      "rimGradient": "radial-gradient(ellipse 30% 46% at 92% 14%, rgba(208,140,126,0.2717) 0%, transparent 68%)",
+      "aoGradient": "radial-gradient(ellipse 78% 66% at 50% 50%, transparent 42%, rgba(0,0,0,0.054) 100%)"
+    },
+    "featured": {
+      "lighting": "active",
+      "surfaces": 6,
+      "key": "0.3200",
+      "rim": "0.2000",
+      "fill": "0.1300",
+      "bounce": "0.0450",
+      "ambient": "0.1200",
+      "falloff": "1.5000",
+      "occlusion": "0.0320",
+      "accent": "208 140 126",
+      "keyX": "0.2200",
+      "cursorNX": "0",
+      "keyGradient": "radial-gradient(ellipse 62% 54% at 22.00% 28.00%, rgba(205,226,255,0.0960) 0%, rgba(160,20",
+      "rimGradient": "radial-gradient(ellipse 30% 46% at 92% 14%, rgba(208,140,126,0.2242) 0%, transparent 68%)",
+      "aoGradient": "radial-gradient(ellipse 78% 66% at 50% 50%, transparent 42%, rgba(0,0,0,0.058) 100%)"
+    },
+    "about": {
+      "lighting": "active",
+      "surfaces": 6,
+      "key": "0.2800",
+      "rim": "0.1800",
+      "fill": "0.1300",
+      "bounce": "0.0400",
+      "ambient": "0.1200",
+      "falloff": "1.6000",
+      "occlusion": "0.0260",
+      "accent": "126 196 255",
+      "keyX": "0.2600",
+      "cursorNX": "0",
+      "keyGradient": "radial-gradient(ellipse 62% 54% at 26.00% 26.00%, rgba(205,226,255,0.0840) 0%, rgba(160,20",
+      "rimGradient": "radial-gradient(ellipse 30% 46% at 92% 14%, rgba(126,196,255,0.2086) 0%, transparent 68%)",
+      "aoGradient": "radial-gradient(ellipse 78% 66% at 50% 50%, transparent 42%, rgba(0,0,0,0.047) 100%)"
+    },
+    "contact": {
+      "lighting": "active",
+      "surfaces": 6,
+      "key": "0.2600",
+      "rim": "0.1600",
+      "fill": "0.1200",
+      "bounce": "0.0350",
+      "ambient": "0.1100",
+      "falloff": "1.7000",
+      "occlusion": "0.0220",
+      "accent": "61 159 255",
+      "keyX": "0.3000",
+      "cursorNX": "0",
+      "keyGradient": "radial-gradient(ellipse 62% 54% at 30.00% 30.00%, rgba(205,226,255,0.0780) 0%, rgba(160,20",
+      "rimGradient": "radial-gradient(ellipse 30% 46% at 92% 14%, rgba(61,159,255,0.1824) 0%, transparent 68%)",
+      "aoGradient": "radial-gradient(ellipse 78% 66% at 50% 50%, transparent 42%, rgba(0,0,0,0.040) 100%)"
+    }
+  },
+  "pointerIndependent": {
+    "keyXSame": false,
+    "cursorNX": "0",
+    "keyX": "0.3100"
+  },
+  "selected": {
+    "before": {
+      "key": "0.3000",
+      "rim": "0.2200"
+    },
+    "after": {
+      "key": "0.3434",
+      "rim": "0.2643"
+    },
+    "changed": true
+  },
+  "afterClose": {
+    "lighting": "active",
+    "surfaces": 6,
+    "key": "0.3000",
+    "rim": "0.2200",
+    "fill": "0.1400",
+    "bounce": "0.0350",
+    "ambient": "0.1300",
+    "falloff": "1.6000",
+    "occlusion": "0.0280",
+    "accent": "61 159 255",
+    "keyX": "0.2000",
+    "cursorNX": "0",
+    "keyGradient": "radial-gradient(ellipse 62% 54% at 20.00% 24.00%, rgba(205,226,255,0.0900) 0%, rgba(160,20",
+    "rimGradient": "radial-gradient(ellipse 30% 46% at 92% 14%, rgba(61,159,255,0.2801) 0%, transparent 68%)",
+    "aoGradient": "radial-gradient(ellipse 78% 66% at 50% 50%, transparent 42%, rgba(0,0,0,0.050) 100%)"
+  },
+  "restFrames": 20,
+  "errors": [],
+  "mobile": {
+    "lighting": "static",
+    "layer": 0,
+    "overflow": 0
+  },
+  "reduced": {
+    "lighting": "reduced",
+    "layer": 1,
+    "key": "0.3400",
+    "transition": "0s"
+  }
+}

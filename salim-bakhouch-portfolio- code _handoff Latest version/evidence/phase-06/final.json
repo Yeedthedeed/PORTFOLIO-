@@ -1,0 +1,65 @@
+[
+  {
+    "viewport": "1920x1080",
+    "overflow": 0,
+    "frames": 122,
+    "cards": 36,
+    "grainAboveContent": 0,
+    "overlays": 0,
+    "errors": []
+  },
+  {
+    "viewport": "1440x900",
+    "overflow": 0,
+    "frames": 122,
+    "cards": 36,
+    "grainAboveContent": 0,
+    "overlays": 0,
+    "errors": []
+  },
+  {
+    "viewport": "1024x768",
+    "overflow": 0,
+    "frames": 122,
+    "cards": 36,
+    "grainAboveContent": 0,
+    "overlays": 0,
+    "errors": []
+  },
+  {
+    "viewport": "768x1024",
+    "overflow": 0,
+    "frames": 122,
+    "cards": 36,
+    "grainAboveContent": 0,
+    "overlays": 0,
+    "errors": []
+  },
+  {
+    "viewport": "390x844",
+    "overflow": 0,
+    "frames": 122,
+    "cards": 36,
+    "grainAboveContent": 0,
+    "overlays": 0,
+    "errors": []
+  },
+  {
+    "viewport": "360x800",
+    "overflow": 0,
+    "frames": 122,
+    "cards": 36,
+    "grainAboveContent": 0,
+    "overlays": 0,
+    "errors": []
+  },
+  {
+    "viewport": "844x390",
+    "overflow": 0,
+    "frames": 122,
+    "cards": 36,
+    "grainAboveContent": 0,
+    "overlays": 0,
+    "errors": []
+  }
+]
